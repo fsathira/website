@@ -1,0 +1,84 @@
+@font-face {
+font-family: 'Armalite Rifle Regular';
+src: url('armalite_rifle.eot');
+src: local('Armalite Rifle Regular'), local('ArmaliteRifle'), url('armalite_rifle.woff') format('woff'), url('armalite_rifle.svg#ArmaliteRifle') format('svg'), url('armalite_rifle.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'BD Cartoon Shout Regular';
+src: url('BD_Cartoon_Shout.eot');
+src: local('BD Cartoon Shout Regular'), local('BDCartoonShout'), url('BD_Cartoon_Shout.woff') format('woff'), url('BD_Cartoon_Shout.svg#BDCartoonShout') format('svg'), url('BD_Cartoon_Shout.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Impact Label Regular';
+	src: url('Impact_label.eot');
+	src: local('Impact Label Regular'), local('ImpactLabel'), url('Impact_label.woff') format('woff'), url('Impact_label.svg#ImpactLabel') format('svg'), url('Impact_label.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Tuffy Regular';
+	src: url('Tuffy.eot');
+	src: local('Tuffy Regular'), local('Tuffy'), url('Tuffy.woff') format('woff'), url('Tuffy.svg#Tuffy') format('svg'), url('Tuffy.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Tuffy Italic';
+	src: url('Tuffy_Italic.eot');
+	src: local('Tuffy Italic'), local('Tuffy-Italic'), url('Tuffy_Italic.woff') format('woff'), url('Tuffy_Italic.svg#Tuffy-Italic') format('svg'), url('Tuffy_Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Tuffy Bold';
+	src: url('Tuffy_Bold.eot');
+	src: local('Tuffy Bold'), local('Tuffy-Bold'), url('Tuffy_Bold.woff') format('woff'), url('Tuffy_Bold.svg#Tuffy-Bold') format('svg'), url('Tuffy_Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Tuffy Bold-Italic';
+	src: url('Tuffy_Bold_Italic.eot');
+	src: local('Tuffy Bold-Italic'), local('Tuffy-Bold-Italic'), url('Tuffy_Bold_Italic.woff') format('woff'), url('Tuffy_Bold_Italic.svg#Tuffy-Bold-Italic') format('svg'), url('Tuffy_Bold_Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Old Script Regular';
+	src: url('Old_Script.eot');
+	src: local('Old Script Regular'), local('OldScrip'), url('Old_Script.woff') format('woff'), url('Old_Script.svg#OldScrip') format('svg'), url('Old_Script.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Riesling Regular';
+	src: url('riesling.eot');
+	src: local('Riesling Regular'), local('Riesling'), url('riesling.woff') format('woff'), url('riesling.svg#Riesling') format('svg'), url('riesling.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Hill House Regular';
+	src: url('Hill_House.eot');
+	src: local('Hill House Regular'), local('HillHouse'), url('Hill_House.woff') format('woff'), url('Hill_House.svg#HillHouse') format('svg'), url('Hill_House.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'UglyQua Regular';
+	src: url('UglyQua.eot');
+	src: local('UglyQua Regular'), local('UglyQua'), url('UglyQua.woff') format('woff'), url('UglyQua.svg#UglyQua') format('svg'), url('UglyQua.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'UglyQua Italic';
+	src: url('UglyQua-Italic.eot');
+	src: local('UglyQua Italic'), local('UglyQua-Italic'), url('UglyQua-Italic.woff') format('woff'), url('UglyQua-Italic.svg#UglyQua-Italic') format('svg'), url('UglyQua-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'MonospaceTypewriter Regular';
+	src: url('MonospaceTypewriter.eot');
+	src: local('MonospaceTypewriter Regular'), local('MonospaceTypewriter'), url('MonospaceTypewriter.woff') format('woff'), url('MonospaceTypewriter.svg#MonospaceTypewriter') format('svg'), url('MonospaceTypewriter.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'Notice Notice2';
+	src: url('Notice2Std.eot');
+	src: local('Notice Notice2'), local('Notice2Std'), url('Notice2Std.woff') format('woff'), url('Notice2Std.svg#Notice2Std') format('svg'), url('Notice2Std.otf') format('opentype');
+}

@@ -1,0 +1,206 @@
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	text-align: left;
+//	text-transform: lowercase;
+}
+
+p {
+	font-weight: normal;
+}
+
+a img {
+	border: none;
+}
+
+#bodyparagraph {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#story {
+	padding: 5px;
+	width: 730px;
+}
+
+#story :hover {
+	background-color: #EDE8DD;
+}
+
+#storycol {
+	width: 150px;
+}
+
+#headerbar {
+	font-size: 15pt;
+//	font-variant: small-caps;
+	font-weight: bold;
+	padding: 5px;
+	width: 730px;
+	height: 25px;
+	color: #EDE8DD;
+	background-color: #990000;
+}
+
+#header {
+//	font-family: Optima, Geneva, sans-serif;
+	color: #006699;
+}
+
+#subheader {
+	color: #74001d;
+}
+
+#subsubheader {
+	color: grey;
+}
+
+#topic {
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+/* adapted from gumballcapital.org */
+
+/* background */
+
+#page-bg {
+	width: 805px;
+	min-height: 800px;
+	margin: auto;
+	background: white;
+}
+
+#page-bottom {
+	width: 805px;
+	height: 5px;
+	margin: auto;
+	background: url(images/page-bottom.gif);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	text-align: center;
+}
+
+#page {
+	width: 805px;
+	min-height: 800px;
+	margin: auto;
+//	background-image: url(images/fahlowerblur.jpg);
+	background-repeat: no-repeat;
+}
+
+#page-content {
+	padding: 25px;
+	padding-bottom: 0px;
+}
+
+#logo {
+	width: 805px;
+	height: 184px;
+	background-image: url(images/fahbanner.jpg);
+}
+
+#smalllogo {
+	width: 213px;
+	height: 105px;
+	text-align: right;
+	background-image: url(images/fahlowerblur.jpg);
+}
+
+#content {
+	width: 730px;
+  	float: left;
+  	line-height: 1.4em;
+}
+
+#copyright {
+	font-size: 11px;
+	color: #999;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/* Navigation Bar Formating */
+
+
+#nav {
+	width: 750px;
+	margin: auto;
+	border-top: 2px solid #efefef;
+	text-align: left;
+	padding-top: 7px;
+	margin-top: 7px;
+	margin-bottom: 20px;
+	height: 30px;
+}
+
+#nav a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-family: Optima, Geneva, sans-serif;
+//	font-variant: small-caps;
+	font-size: 19px;
+	padding: 10px;
+	padding-top: 9px;
+	padding-bottom: 7px;
+	color: #777;
+	height: 30px;
+}
+
+#nav a:hover {
+	color: #333;
+//	background-color: #ddd;
+	font-weight:bold;
+}
+
+#nav li ul a{
+	font-size: 14px;
+	height: 30px;
+	float: left;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	display: inline;
+	height: 30px;
+	position: relative;
+	}
+	
+#nav ul li {
+	position: relative;
+	display: inline;
+	height: 30px;
+	}
+		
+#nav li ul {
+	position: absolute;
+	left: 0;
+	top: auto;
+	display: none;
+	width: 100%;
+	height: 30px;
+			}
+#nav li ul li{
+	position: relative;
+	display: inline;
+	width: 100%
+	}
+			
+#nav li:hover ul {
+	display: inline; 
+	height: 30px; 
+	position: relative;}
+/* Hides from IE Mac \*/
+* html #nav li {
+    display: inline;
+    width: 14.2%; 
+}
+#transparent {
+	filter:alpha(opacity=60);   
+	-moz-opacity: 0.6;   
+	opacity: 0.6;
+	}

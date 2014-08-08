@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="../mainstyle.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" /> 
+	<title>Fah Sathirapongsasuti: Research</title>
+</head>
+
+<body>
+	<div id="page-bg">
+		<div id="page">
+			<div id="page-content">
+				<div id="logo" ></div>
+					<div id="nav">
+					  <ul> 
+					    <li><a href="../home.html">Home</a></li> 
+
+					    <li><a href="../life/personal.html">About Me</a>
+					    </li> 
+
+					    <li><a href="../projects/projects.html">Activities</a>
+					    </li> 
+
+					    <li><a href="../projects/research.html">Research</a>
+					    </li> 
+
+					    <li><a href="../cv/cv.html">Vitae</a> 
+					    </li> 
+
+					    <li><a href="../contact.html">Contact</a>
+					    </li>
+					  </ul>
+
+					</div>
+
+				<div id="content">
+
+<!-- Content goes here -->
+<h1 id="header">Research</h1>
+<h3 id="topic">Research Summary</h3>
+<p>Integration of genomic and clinical data and knowledge in order to realize personalized medicine, harnessing the power and promises of next-generation sequencing.</p>
+
+<h3 id="topic">Research Interest</h3>
+<p>Recent advancement and promises of genome technology have transformed medical research. Soon individual genome sequencing will be performed routinely, and the only challenge is how to make sense of the vast amount of genomic data.  The only way to realized personalized medicine is through integration of different genomic information: variants in DNA sequence, copy number variation, epigenetic signatures, genetic interaction networks, and environmental effects. And this is my research goal.</p>
+<p>I dream of a day when all clinical records, including patients' genetic information, are unified and stored on the cloud. With help of computational technology, physicians can harness the wealth of information and make best informed decision for patients. For this to happen, many things need to happen: electronic medical records, genome sequencing technology, and software that integrates all information together. My piece of the puzzle is the last one.</p>
+</p>
+
+<div id="projectList">
+<div id="studentGroupList">
+
+	<div id="headerbar">2012</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><a target="_blank" href="http://www.lung-genomics.org"><img src="lgrc.png" width="155" height="101" /></a> </div></th>
+		<th><h3 id="subheader">Lung Genomics Research Consortium: An Integrative Genomic Approach</h3>
+		<p>At John Quackenbush Lab, I am currently thinking about ways to analyze the large collection of data from the LGRC in an integrative way. Possible approaches include network analysis.</p>
+		</tr>
+		</table>
+	</div>
+
+	<div id="headerbar">2011</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><a target="_blank" href="http://commonfund.nih.gov/hmp/"><img src="hmp.png" width="150" height="111" /></a> </div></th>
+		<th><h3 id="subheader">Microbial Co-occurrence Relationships in the Human Microbiome</h3>
+		<p>As a part of <a target="_blank" href="http://commonfund.nih.gov/hmp/">the Human Microbiome Project (HMP)</a>, we provide the first comprehensive network of ecological relationships among microbes within and across different human body sites.</p>
+		<p>This is a close collaboration between me (in Curtis Huttenhower Lab) and Karoline Faust (in Jeroen Raes Lab, Vrije Universiteit Brussel) with
+		supports from Jacques Izard (Forsyth Institute) and Dirk Gevers (Broad Institute).</p>
+		<p>The work is published in <a target="_blank" href="http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1002606">PLoS Computational Biology</a>, along with the HMP consortium papers which appear in Nature (<a target="_blank" href="http://www.nature.com/nature/journal/v486/n7402/full/nature11234.html">1</a>,<a target="_blank" href="http://www.nature.com/nature/journal/v486/n7402/full/nature11209.html">2</a>).</p>
+		</tr>
+		</table>
+	</div>
+
+	<div id="headerbar">2010</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><a target="_blank" href="http://genome.ucla.edu/~fah/projects/research.html"><img src="eCNV.png" width="150" height="150" /></a> </div></th>
+		<th><h3 id="subheader">Detection of Copy Number Variation by Exome Sequencing</h3>
+		<p>In summer of 2010, I visited UCLA as an assistant researcher in <a target="_blank" href="http://genome.ucla.edu">Nelson Lab</a> where I worked with Dr. Hane Lee in developing a method to detect copy number variants (CNVs) using exome sequencing data.</p>
+		<p>The work was published in <a target="_blank" href="http://bioinformatics.oxfordjournals.org/content/early/2011/08/09/bioinformatics.btr462">Bioinformatics</a> along with an R package <a target="_blank" href="http://cran.r-project.org/web/packages/ExomeCNV/index.html">ExomeCNV</a>.</p></th>
+		</tr>
+		</table>
+	</div>
+
+	<div id="headerbar">2009</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><img src="ucs.jpg" width="150" height="89" /> </div></th>
+		<th><h3 id="subheader">Ultraconserved cDNA Segments</h3>		
+		<p>Inspired by the discovery of highly conserved segments in mlncRNAs, I identified 96 stretches of cDNA longer than 200 bps with perfect conservation between human, mouse, and rat. The elements are termed Ultraconserved cDNA Segments (UCSs). I performed Real Time RT-PCR to confirm the existence of the transcripts. GO and InterPro enrichment test the UCSs suggested function in RNA regulation and alternative splicing. By enrichment test, the UCS genes tend to be target for miRNA regulation and are also associated with alternative splicing and nonsense mediated decay (AF-NMD). A surprising number of UCSs in the 5'-UTR and across start codons with multiple upstream ATG's implied that these UCSs may function in ATG selection. Most interestingly, I found that the UCSs exhibit resistance to formation of secondary structure as the free energy of the predicted secondary structures appeared significantly higher than that of randomly selected cDNA sequences of the same length.</p>
+		<p>The work was published in <a target="_blank" href="http://nar.oxfordjournals.org/content/early/2010/11/08/nar.gkq949.full">Nucleic Acids Research</a>.</p></th>
+		</tr>
+		</table>
+	</div>
+
+	<div id="headerbar">2008</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><img align="right" src="pathway.png" alt="pathway" width="150" height="174" />
+		    </div></th>
+		<th><h3 id="subheader">PathwayED: Pathway Electrical Diagrams</h3>	
+		<p>In Fall 2008, I took CS272 Introduction to Biomedical Informatics Research Methodology, which is a project class in BMI. In the class, I partnered with Lillian To on a project on inferring regulatory pathways using PPI, TF-DNA, and knockout expression data. We were lucky to have Dr. Silpa Suthram, a postdoc in Atul Butte Lab, as our mentor. Below is the abstract:</p>
+		<p>Biomedical researchers have long studied biological pathways in hopes of further understanding the effect of disease on critical events and interactions within these pathways. In recent years, new bioinformatic approaches to pathway prediction have been developed, taking advantage of the availability of vast amounts of microarray data and efficient machine learning techniques. Recent years have also led to the large-scale identification of protein-protein interaction (PPI) networks and transcription-factor-DNA (TF-DNA) interaction datasets. These large datasets each provide unique information on gene interactions, but when used alone can result in a high rate of false positive predictions. To address this problem, we present a novel approach to pathway prediction which integrates knockout microarray data with protein interaction networks by modeling the two data sets as an electrical circuit. The Electric Circuit Model achieved 99% specificity and up to 69% sensitivity in predicting the pheromone signaling pathway.</p>
+		<p>click <a href="../projects/pathways_final_paper.pdf">here</a> for our final paper.</p></th>
+		</tr>
+		</table>
+	</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><a target="_blank" href="../projects/BMB2008.pdf"><img src="rna.jpg" width="150" height="177" /></a> </div></th>
+		<th><h3 id="subheader">mRNA-like Noncoding RNA (mlncRNA)</h3>		
+		<p>In summer 2008, I interned at Sugano Lab at the University of Tokyo. I assisted a study of mlncRNAs. Given the expression profile of mlncRNAs in 21 tissues and cell lines, I used clustering to classify the mlncRNAs by tissue specificity. I also investigated conservation of the mlncRNA and found that although the overall conservation appeared low, long stretches of highly conserved sequences within the mlncRNAs exist. These two analyses helped identify candidates for further experimental studies. Noticing that the list of mlncRNAs was outdated, I rescreen a new list of mlncRANs from a cDNA library. I coauthored the abstract which is accepted to Biochemistry and Molecular Biology (BMB2008), a peer-review conference organized by the Molecular Biology Society of Japan and the Japanese Biochemical Society.</p>
+		<p>click <a href="../projects/BMB2008.pdf">here</a> for the abstract.</p></th>
+		</tr>
+		</table>
+	</div>
+	
+	<div id="headerbar">2007</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center"><img src="3tests.jpg" width="150" height="121" /> </div></th>
+		<th><h3 id="subheader">Enrichment Test for Analysis of cis-Regulatory Elements</h3>		
+		<p>From spring to fall 2007, I worked with Prof. Bejerano on designing and developing a tool for statistical analysis of putative cis-regulatory elements. In particular, the tool performs three enrichment tests: binomial test, hypergeometric test, and foreground-background hypergeometric test. It offers choices of organism and annotation ontology. The tool was written in C with Kent source tree from UCSC. Prof. Bejerano and I worked closely together in platform choice, functional specification, architecture design, implementation, and testing.</p>
+		<p>Since I left the lab, the program has been taken over by Cory McLean.  Cory made it into a fully functional, web-based application now known as <a target="_blank" href="http://great.stanford.edu/">GREAT</a> and published it in <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/20436461">Nature Biotechnology</a>.</p>
+		<p>click <a target="_blank" href="http://bejerano.stanford.edu/">here</a> for more information about the lab.</p></th>
+		</tr>
+		</table>
+	</div>
+
+	<div id="headerbar">2006</div>
+
+	<div id="story">
+		<table><tr><th id="storycol">
+		  <div align="center">		      <a href="../projects/ecj-2007.pdf"><img align="top" src="waterfall.bmp" alt="waterfall" width="150" height="101" /></a>
+		    </div></th>
+		<th><h3 id="subheader">Waterfall-Generated Ground Vibrations: A Second Look</h3>		
+		<p>In summer 2006, Prof. Antony Fraser-Smith, Austin Haugen, and I reexamined a long-held linear relationship between the reciprocal of height of waterfalls and the frequency of waterfall-generated ground vibrations. I designed experiment, collect data, and performed data analysis using fast Fourier transform and regression. The new data and analysis cast doubt on the validity of the linear relationship and suggested new model. The paper was published in <a href="ecj-2007.pdf">the Stanford Electrical Engineering and Computer Science Research Journal</a> in 2007.</p>
+		</th>
+		</tr>
+		</table>
+	</div>	
+
+</div>
+
+<!-- Google CSE Search Box Begins -->
+  <form id="searchbox_009408533305800130436:xkx4srkjx9g" action="../search-results.html">
+    <input type="hidden" name="cx" value="009408533305800130436:xkx4srkjx9g" />
+    <input type="hidden" name="cof" value="FORID:9" />
+    <input name="q" type="text" size="40" />
+    <input type="submit" name="sa" value="Search" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_009408533305800130436%3Axkx4srkjx9g"></script>
+
+  <!-- Google CSE Search Box Ends -->
+
+				</div>
+
+			<br clear="all">
+			
+			
+			
+			<div id="copyright">&copy; Copyright 2009-2015 Fah Sathirapongsasuti. All rights reserved. </div>
+			</div>
+		<br clear="all">
+
+		</div>
+	<div id="page-bottom"></div>
+	</div>
+
+<!-- Google Analytics Begins -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-2424761-2");
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+
+<!-- Google Analytics Ends -->
+
+</body>
+</html>

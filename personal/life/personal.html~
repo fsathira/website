@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="../mainstyle.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" /> 
+	<title>Fah Sathirapongsasuti</title>
+	</head>
+
+<body>
+	<div id="page-bg">
+		<div id="page">
+			<div id="page-content">
+				<div id="logo" ></div>
+					<div id="nav">
+					  <ul> 
+					    <li><a href="../home.html">Home</a></li> 
+
+					    <li><a href="../life/personal.html">About Me</a>
+					    </li> 
+
+					    <li><a href="../projects/projects.html">Projects</a>
+					    </li> 
+
+					    <li><a href="../projects/research.html">Research</a>
+					    </li> 
+
+					    <li><a href="../cv/cv.html">Vitae</a> 
+					    </li> 
+
+					    <li><a href="../contact.html">Contact</a>
+					    </li>
+					  </ul>
+
+					</div>
+
+
+				<div id="content">
+
+<!-- Content goes here -->
+<h1 id="header">About Me</h1>
+<div align="left">
+	<p id="emphasis">So your full name is Jarupon Sathirapongsasuti. Where do you get "Fah" from?</p>
+	<p>It's a Thai custom for parents to name their kid a nickname separate from a first name.
+	"Fah" is my "given" nick name.</p>
+	<img src="./monk.jpg" alt="monk" width="469" height="319" align="right" />
+	<p id="emphasis">I saw a picture of you in a monk robe. Are you a monk?</p>
+	<p>No, I am not a monk. But I received full ordination from the Sangha of <a target="_blank" href="http://en.wikipedia.org/wiki/Wat_Bowonniwet_Vihara">Wat Bowonniwet Vihara</a> in the summer of 2008. Prior to that I have been in and out of the robe as a novice monk several times since I was nine. Becoming a monk for a finite period of time is a form of moral training in Thailand. During my monk-hood, I completed the highest level of <a target="_blank" href="http://en.wikipedia.org/wiki/Sanam_Luang_Dhamma_Studies">Sanam Luang Dharma Study</a> curriculum (customarily for monks of ten vassas and over) when I was fourteen, becoming one of the youngest to pass the exam.</p>
+	<p id="emphasis">So ... you were in a frat?</p>
+	<p>Well... you just have to not think about "frat" in a sterotypical way. Stanford's Phi Psi, my fraternity,
+	isn't quite like a typical frat that you may have in mind.  Alcohol isn't such a big thing for us. 
+	We pride ourselves with our high academic standard;	our average GPA is higher than Stanford's campus 
+	average and highest in any student organizations on campus (excluding the honor societies like 
+	Tao Beta Pi or Phi Beta Kappa).  We also value respect, especially for the opposite sex, and diversity: 
+	race, nationality, sexual orientation, and ideas.  So, yes, I was in a frat, and I'm damn proud to be a Phi Psi.</p>
+	<img src="./celeb.jpg" alt="celeb" width="450" height="386" align="right" />
+	<p id="emphasis">I heard you are a celebrity in Thailand. Is that right?</p>
+	<p>Yes and no, depending on how you define "celebrity". Yes, I am known by many people. Some of them
+	, perhaps most of them, I don't know. People sometimes would recognize me or my name or my work.</p>
+	<p>All this is because of a science project my friends and I did in my junior and senior years of high 
+	school. The project name is "Walking with the Millipede". It is an attempt to model how millipedes walk
+	mathematically. We came up with an equation that predict position of millipede's legs as a function of
+	time and the number of legs.</p> <p>What get us famous was the fact that we won the first prize for interdisciplinary 
+	team project in the 2004 Intel ISEF (Intel International Science and Engineering Fair). We got to appear
+	on many famous TV shows, made front page of the most famous national newspaper, got covered in countless
+	number of newspapers and magazines, got interviewed by many radio shows, was recognized by the Prime 
+	Minister, was hailed by our school, the Science Society of Thailand, the Math Association, the Biology
+	Association, the Physics Association, the Ministry of Science and Technology, even the royal family.</p>
+	<img src="./books.png" alt="books" width="500" height="415" align="left" />
+	<p id="emphasis">You wrote books?</p>
+	<p>In senior year of high school, I served as the president of my high school's mathematics club.
+	Because our high school (<a target="_blank" href="http://en.wikipedia.org/wiki/Triam_Udom_Suksa_School">Traim Udom Suksa School</a>) 
+	was well-known, and we had a lot of talented math students in the club, we afforded the credibility to publish a 
+	handbook for high school's mathematics. I contributed a fair bit of the book and served as an editor. 
+	The book title is "lek" (literally "math").	The book was distributed by 
+	<a target="_blank" href="http://www.chulabook.com/">Chulalongkorn University Book Center</a>, which has branches nationwide.</p>
+	<p>In summer between my high school and college, I had a couple of months free before college started,
+	so me and my friends, who were free and also waiting for school to start, got together and wrote
+	a book on how to get into American colleges. We did this to fill the gap for Thai students to learn
+	about the specifics of American college admissions system. I was the editor and one of the main contributors of the book,
+	so they put my name on the cover as "Jarupon Sathirapongsasuti and friends".</p>
+	<p>The book was published by <a target="_blank" href="http://www.raklukegroup.com/">Rakluke Family Group</a>, a leading Thai 
+	publisher, and was distributed nationally by <a target="_blank" href="http://www.se-ed.com/">SE-ED</a>. It was so well received
+	that the publisher published it twice, and the book became a bestseller in educational category.</p>
+</div>
+
+<!-- Google CSE Search Box Begins -->
+  <form id="searchbox_009408533305800130436:xkx4srkjx9g" action="../search-results.html">
+    <input type="hidden" name="cx" value="009408533305800130436:xkx4srkjx9g" />
+    <input type="hidden" name="cof" value="FORID:9" />
+    <input name="q" type="text" size="40" />
+    <input type="submit" name="sa" value="Search" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_009408533305800130436%3Axkx4srkjx9g"></script>
+<!-- Google CSE Search Box Ends -->
+
+				</div>
+
+			<br clear="all">
+			
+			
+			
+			<div id="copyright">&copy; Copyright 2009-2015 Fah Sathirapongsasuti. All rights reserved. </div>
+			</div>
+		<br clear="all">
+
+		</div>
+	<div id="page-bottom"></div>
+	</div>
+
+<!-- Google Analytics Begins -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-2424761-2");
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+
+<!-- Google Analytics Ends -->
+
+</body>
+</html>

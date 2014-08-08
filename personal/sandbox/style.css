@@ -1,0 +1,72 @@
+@font-face{
+    font-family: CFBacktoSchool;
+    src: url('CFBacktoSchool-Regular.ttf');
+    src: local('CFBacktoSchool-Regular'), local('CFBacktoSchool'), url('CFBacktoSchool-Regular.woff') format('woff');
+}
+
+@font-face{
+  font-family: KGLegoHouse;
+  src: url('KGLegoHouse.ttf');
+}
+
+@font-face{
+  font-family: VarsityPlaybook;
+  src: url('VarsityPlaybook-DEMO.ttf');
+}
+
+.school{
+    // font-family: CFBacktoSchool;
+    font-family: VarsityPlaybook;
+    font-size: 20pt;
+}
+
+.school-content{
+    font-family: KGLegoHouse;
+}
+
+body{
+	background-color : #fff;
+	font-family:"Helvetica Neue";
+	font-size:10pt;
+	margin:10px;
+}
+
+.greybackground{
+	background-color:#d6d6d6;
+	padding:10px;
+	//margin:22px;
+	border-radius:5px 5px 5px 5px;
+	
+}
+
+a{
+	color:#0072bc;
+}
+
+h3{
+	-webkit-margin-after: 0.2em;
+	-webkit-margin-before: 1.5em;
+}
+
+
+// copied from fah
+
+
+#page {
+	width: 805px;
+	min-height: 800px;
+	margin: auto;
+//	background-image: url(images/fahlowerblur.jpg);
+	background-repeat: no-repeat;
+}
+
+#page-content {
+	padding: 25px;
+	padding-bottom: 0px;
+}
+
+#logo {
+	width: 805px;
+	height: 184px;
+	background-image: url(images/fahbanner.jpg);
+}

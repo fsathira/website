@@ -1,0 +1,28 @@
+body		{font-family:Arial, Helvetica, sans-serif; font-size:16px; background:#EFEFEF; }
+h1			{font-size:26px; font-weight:normal; margin:0; padding:0 0 10px 0; }
+p			{line-height:140%; margin:0; padding:0 0 20px 0; }
+a			{color:#3E628E; text-decoration:underline; }
+a:hover		{text-decoration:none; }
+
+
+.textBox	{width:450px; float:left; border:1px dashed #CCCCCC; background:#FFFFFF; padding:20px 20px 0 20px; margin:0 10px 10px 0; height:280px }
+
+
+.one			{font-family:'Armalite Rifle Regular'; }
+.two			{font-family:'BD Cartoon Shout Regular'; font-size:12px; }
+.three			{font-family:'Impact Label Regular'; }
+
+.four			{font-family:'Tuffy Regular'; }
+.four strong	{font-family:'Tuffy Bold'; }
+.four strong em	{font-family:'Tuffy Bold-Italic'; }
+.four em		{font-family:'Tuffy Italic'; }
+
+.five			{font-family:'Old Script Regular'; font-size:22px; }
+.six			{font-family:'Riesling Regular'; }
+.seven			{font-family:'Hill House Regular'; }
+
+.eight			{font-family:'UglyQua Regular'; }
+.eight em		{font-family:'UglyQua Italic'; }
+
+.nine			{font-family:'MonospaceTypewriter Regular'; }
+.ten			{font-family:'Notice Notice2'; }
