@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <script src="https://api.23andme.com/res/js/ttam-0.3.js"></script>
+    </head>
+    <body>
+        <div id="rs7294919">Loading rs7294919...</div>
+        <br />
+        <div id="rs10784502">Loading rs10784502...</div>
+        <script>
+            window.onload = function () {
+                var ttam = TTAM('1146da52e7e533f958cff0c5b4fcbeef');
+                ttam.snpTable('rs7294919', 'rs7294919', {
+                              CC: 'Enhanced hippocampal volume',
+                              CT: 'Moderately enhanced hippocampal volume',
+                              TT: 'Average hippocampal volume',
+                              order: 'CC,CT,TT'
+                              }, {
+                              width: 500
+                              });
+                              ttam.snpTable('rs10784502', 'rs10784502', {
+                                            CC: 'Higher intracranial volume',
+                                            CT: 'Slightly higher intracranial volume',
+                                            TT: 'Lower intracranial volume',
+                                            order: 'CC,CT,TT'
+                                            }, {
+                                            width: 500
+                                            });
+            };
+        </script>
+    </body>
+</html>
