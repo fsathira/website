@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <script src="https://api.23andme.com/res/js/ttam-0.3.js"></script>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="./mainstyle.css" type="text/css" media="screen" charset="utf-8">
+            <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+            <title>Fah Sathirapongsasuti</title>
+            </head>
+    
+    <body>
+        <div id="page-bg">
+            
+            <div id="page">
+                <div id="page-content">
+                    <div id="logo" ></div>
+					<div id="nav">
+                        <ul>
+                            <li><a href="./home.html">Home</a></li>
+                            
+                            <li><a href="./projects/research.html">Research</a>
+                            </li>
+                            
+                            <li><a href="./cv/cv.html">Vitae</a>
+                            </li>
+                            
+                            <li><a href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        
+					</div>
+                    
+                    <div id="content">
+
+        <!-- start content -->
+        <div id="projectList">
+            <div id="studentGroupList">
+                
+                <div id="headerbar">Intelligence</div>
+                
+                <div id="story">
+                    <table><tr><th width=50>
+                        </th>
+                    <th><h3 id="subheader">Brain Volume and Size</h3>
+                        <p>This is based on the paper by <a href="http://www.nature.com/ng/journal/v44/n5/full/ng.2250.html" target="_blank">J Stein et al. Nature 2012.</a> Two SNPs were genotyped on 23andMe platform rs7294919 and rs10784502.</p>
+                        <div id="rs7294919">Loading rs7294919...</div>
+                        <br />
+                        <div id="rs10784502">Loading rs10784502...</div>
+                        <script>
+                            window.onload = function () {
+                                var ttam = TTAM('1146da52e7e533f958cff0c5b4fcbeef');
+                                ttam.snpTable('rs7294919', 'rs7294919', {
+                                              CC: 'Enhanced hippocampal volume',
+                                              CT: 'Moderately enhanced hippocampal volume',
+                                              TT: 'Average hippocampal volume',
+                                              order: 'CC,CT,TT'
+                                              }, {
+                                              width: 500
+                                              });
+                                ttam.snpTable('rs10784502', 'rs10784502', {
+                                              CC: 'Higher intracranial volume',
+                                              CT: 'Slightly higher intracranial volume',
+                                              TT: 'Lower intracranial volume',
+                                              order: 'CC,CT,TT'
+                                              }, {
+                                              width: 500
+                                              });
+                            };
+                        </script>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="headerbar">Sexual Orientation</div>
+                
+                <div id="story">
+                    <table><tr><th width=50>
+                    </th>
+                    <th><h3 id="subheader">Male Sexual Orientation</h3>
+                        <p>This is based on the paper by <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=9385646" target="_blank">AR Sanders et al. Psychological Medicine 2014 "Genome-wide scan demonstrates significant linkage for male sexual orientation".</a></p>
+                        <div id="rs6990254">Loading rs6990254...</div>
+                        <br />
+                        <div id="rs2221108">Loading rs2221108...</div>
+                        <br />
+                        <div id="rs5925403">Loading rs5925403...</div>
+                        <script>
+                        window.onload = function () {
+                            var ttam = TTAM('8aa9c7e5770773b7c91bab5e9584ffbe');
+                            ttam.snpTable('rs6990254', 'rs6990254' {
+                                          GG: 'More likely homosexual',
+                                          GT: 'Moderately likely homosexual',
+                                          TT: 'Average likelihood',
+                                          order: 'GG,GT,TT'
+                                          }, {
+                                          width: 500
+                                          });
+                            ttam.snpTable('rs2221108', 'rs2221108', {
+                                          GG: 'More likely homosexual',
+                                          AG: 'Moderately likely homosexual',
+                                          AA: 'Average likelihood',
+                                          order: 'GG,AG,AA'
+                                          }, {
+                                          width: 500
+                                          });
+                            ttam.snpTable('rs5925403', 'rs5925403', {
+                                          T: 'More likely homosexual',
+                                          G: 'Moderately likely homosexual',
+                                          order: 'T,G'
+                                          }, {
+                                          width: 500
+                                          });
+                        };
+                        </script>
+                        <!-- client_id: 8aa9c7e5770773b7c91bab5e9584ffbe
+                         client_secret: f7363f9e1099ccbe541bf404eaaaf241 -->
+                                
+
+                        </tr>
+                    </table>
+                </div>
+
+
+                    </div>
+                    
+                    <!--
+                     <table width="336" height="9">
+                     
+                     </table>
+                     -->
+                    <!-- Google CSE Search Box Begins -->
+                    <form id="searchbox_009408533305800130436:xkx4srkjx9g" action="./search-results.html">
+                        <input type="hidden" name="cx" value="009408533305800130436:xkx4srkjx9g" />
+                        <input type="hidden" name="cof" value="FORID:9" />
+                        <input name="q" type="text" size="40" />
+                        <input type="submit" name="sa" value="Search" />
+                    </form>
+                    <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_009408533305800130436%3Axkx4srkjx9g"></script>
+                    
+                    <!-- Google CSE Search Box Ends -->
+                </div>
+                
+                <br clear="all">
+                
+                
+                
+                <div id="copyright">&copy; Copyright 2009-2015 Fah Sathirapongsasuti. All rights reserved. </div>
+			</div>
+            <br clear="all">
+            
+		</div>
+        
+        <div id="page-bottom"></div>
+        </div>
+        
+        <!-- Google Analytics Begins -->
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-2424761-2");
+                pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
+        
+        <!-- Google Analytics Ends -->
+        
+    </body>
+</html>
