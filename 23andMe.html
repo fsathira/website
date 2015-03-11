@@ -46,7 +46,7 @@
                     <table><tr><th width=50>
                         </th>
                     <th><h3 id="subheader">Brain Volume and Size</h3>
-                        <p>This is based on the paper by <a href="http://www.nature.com/ng/journal/v44/n5/full/ng.2250.html" target="_blank">J Stein et al. Nature 2012.</a> Two SNPs were genotyped on 23andMe platform rs7294919 and rs10784502.</p>
+                        <p>This is based on a paper by <a href="http://www.nature.com/ng/journal/v44/n5/full/ng.2250.html" target="_blank">J Stein et al. Nature 2012.</a> Two SNPs were genotyped on 23andMe platform rs7294919 and rs10784502.</p>
                         <div id="rs7294919">Loading rs7294919...</div>
                         <br />
                         <div id="rs10784502">Loading rs10784502...</div>
@@ -60,12 +60,24 @@
                     <table><tr><th width=50>
                     </th>
                     <th><h3 id="subheader">Male Sexual Orientation</h3>
-                        <p>This is based on the paper by <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=9385646" target="_blank">AR Sanders et al. Psychological Medicine 2014 "Genome-wide scan demonstrates significant linkage for male sexual orientation".</a></p>
+                        <p>This is based on a paper by <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=9385646" target="_blank">AR Sanders et al. Psychological Medicine 2014 "Genome-wide scan demonstrates significant linkage for male sexual orientation."</a> The followings are a few top SNPs which are genotyped by 23andMe.</p>
                         <div id="rs6990254">Loading rs6990254...</div>
                         <br />
                         <div id="rs2221108">Loading rs2221108...</div>
                         <br />
                         <div id="rs5925403">Loading rs5925403...</div>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="headerbar">Anxiety and Drug/Alcohol Abuse</div>
+                
+                <div id="story">
+                    <table><tr><th width=50>
+                    </th>
+                    <th><h3 id="subheader">Male Sexual Orientation</h3>
+                        <p>This is based on a paper by <a href="http://www.nature.com/ncomms/2015/150303/ncomms7395/full/ncomms7395.html" target="_blank">Iva Dincheva et al. Nature Communications 2014 "​FAAH genetic variation enhances fronto-amygdala function in mouse and human"</a> and a paper by <a href="http://www.pnas.org/cgi/pmidlookup?view=long&pmid=12060782" target="_blank">JC Sipe et al. PNAS 2002 "A missense mutation in human fatty acid amide hydrolase associated with problem drug use."</a></p>
+                        <div id="rs324420">Loading rs324420...</div>
                         </tr>
                     </table>
                 </div>
@@ -109,6 +121,14 @@
                                       TT: 'More likely homosexual',
                                       CC: 'Average likelihood',
                                       order: 'TT,CC'
+                                      }, {
+                                      width: 500
+                                      });
+                        ttam.snpTable('rs324420', 'rs324420', {
+                                      AA: 'Decreased anxiety. Higher odds of drug/alcohol abuse.',
+                                      AC: 'Decreased anxiety. Average odds of drug/alcohol abuse',
+                                      CC: 'Averge anxiety. Average odds of drug/alcohol abuse',
+                                      order: 'AA,AC,CC'
                                       }, {
                                       width: 500
                                       });
