@@ -84,6 +84,19 @@
                     </table>
                 </div>
                 
+                <div id="headerbar">Morphology</div>
+                
+                <div id="story">
+                    <table><tr><th width=50>
+                    </th>
+                    <th><h3 id="subheader">Obesity</h3>
+                        <p>Several studies have linked this mutation in FTO gene to brain circuits that control appetite (e.g. 23andMe's sweet-vs-salty report) or propensity to exercise, a recent study (<a href="http://www.nejm.org/doi/full/10.1056/NEJMoa1502214">Claussnitzer et al. <i>NEJM</i> 2015</a>; covered <a href="http://www.biospace.com/News/scientists-discover-how-the-obesity-gene-works-mit/388683">here</a>) points to fat storage and metabolism. Here's really a chance for you to blame it on the gene!</p>
+                        <div id="rs1421085">Loading rs1421085...</div>
+                        <p><b>In context</b>: Minor allele frequencies (MAF) of these two alleles are 11.9% (rs7294919) and 45.1% (rs10784502). Of note, MAF of rs7294919 C allele is higher in African population (33.6%) while MAF of rs10784502 C allele is lower in Asian population (11.6%).</p>
+                        </tr>
+                    </table>
+                </div>
+                
                 <div id="headerbar">Sexual Orientation</div>
                 
                 <div id="story">
@@ -96,7 +109,7 @@
                         <div id="rs2221108">Loading rs2221108...</div>
                         <br />
                         <div id="rs5925403">Loading rs5925403...</div>
-                        <p><b>In context</b>: Minor allele frequencies (MAF) of these alleles are 23.1% (rs6990254), 4.6% (rs2221108; 24.7% in Africans) and 30.4% (rs5925403). Of note, the allele frequency of rs6990254 T allele is much higher in Asians (74.0%) and Africans (62.3%). Since the study was done in Caucasians, the applicability of this result in other populations is uncertain.</p>
+                        <p><b>In context</b>: Minor allele frequencies (MAF) of this allele is 41.2% in Caucasians, 31.9% in Latinos, 14.7% in Afircans, and 13.7% in Asians. Does this explain why Asians are genearlly leaner? I wouldn't go that far. Diet still plays a major role in obesity; the gene just exacerbates it.</p>
                         </tr>
                     </table>
                 </div>
@@ -164,6 +177,14 @@
                                       TT: 'More likely homosexual',
                                       CC: 'Average likelihood',
                                       order: 'TT,CC'
+                                      }, {
+                                      width: 500
+                                      });
+                        ttam.snpTable('rs1421085', 'rs1421085', {
+                                      CC: 'Higher risk of obesity',
+                                      CT: 'Slightly higher risk of obesity',
+                                      TT: 'Average risk of obesity'
+                                      order: 'CC,CT,TT'
                                       }, {
                                       width: 500
                                       });
