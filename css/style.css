@@ -514,6 +514,40 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
+.pub-role-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.pub-role-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pub-role-chip:hover,
+.pub-role-chip.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.pub-card-first {
+  border-left: 3px solid var(--primary);
+}
+
+.pub-card-named {
+  border-left: 3px solid var(--accent);
+}
+
 .pub-filter-chip {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;

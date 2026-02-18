@@ -16,6 +16,7 @@
 
   var publications = [];
   var activeFilter = 'all';
+  var activeRole = 'all';
 
   // --- Load Data ---
   fetch('data/publications.json')
@@ -40,8 +41,34 @@
 
     var tags = Object.keys(tagSet).sort();
     // Pick the most common/interesting tags to show as chips
-    var displayTags = ['genomics', 'microbiome', 'bioinformatics', 'drug-discovery', 'statistical-methods', 'AI-drug-development'];
+    var displayTags = ['GWAS', 'microbiome', 'neurogenetics', 'bioinformatics', 'COVID-19', 'psychiatric-genetics', 'cancer', 'sleep-genetics', 'drug-discovery', 'statistical-methods'];
     var availableTags = displayTags.filter(function (t) { return tagSet[t]; });
+
+    // Role filter buttons
+    var roleFilters = document.createElement('div');
+    roleFilters.className = 'pub-role-filters';
+    var roles = [
+      { value: 'all', label: 'All' },
+      { value: 'first', label: 'First / co-first author' },
+      { value: 'named', label: 'Named author' },
+      { value: 'consortium', label: 'Consortium' }
+    ];
+    roles.forEach(function (role) {
+      var btn = document.createElement('button');
+      btn.className = 'pub-role-chip' + (role.value === 'all' ? ' active' : '');
+      btn.setAttribute('data-role', role.value);
+      btn.textContent = role.label;
+      btn.addEventListener('click', function () {
+        roleFilters.querySelectorAll('.pub-role-chip').forEach(function (c) {
+          c.classList.remove('active');
+        });
+        btn.classList.add('active');
+        activeRole = role.value;
+        renderPublications();
+      });
+      roleFilters.appendChild(btn);
+    });
+    pubFilters.parentNode.insertBefore(roleFilters, pubFilters);
 
     availableTags.forEach(function (tag) {
       var chip = document.createElement('button');
@@ -51,7 +78,7 @@
       pubFilters.appendChild(chip);
     });
 
-    // Event listeners for all chips
+    // Event listeners for tag chips
     pubFilters.querySelectorAll('.pub-filter-chip').forEach(function (chip) {
       chip.addEventListener('click', function () {
         pubFilters.querySelectorAll('.pub-filter-chip').forEach(function (c) {
@@ -84,6 +111,18 @@
     var sort = sortSelect ? sortSelect.value : 'year-desc';
 
     var filtered = publications.filter(function (pub) {
+      // Role filter
+      if (activeRole !== 'all') {
+        var role = pub.role || 'consortium';
+        if (activeRole === 'first') {
+          if (role !== 'first_author' && role !== 'co_first_author') return false;
+        } else if (activeRole === 'named') {
+          if (role !== 'named_author') return false;
+        } else if (activeRole === 'consortium') {
+          if (role !== 'consortium') return false;
+        }
+      }
+
       // Tag filter
       if (activeFilter !== 'all') {
         if (!pub.tags || pub.tags.indexOf(activeFilter) === -1) return false;
@@ -147,7 +186,10 @@
           '<div class="pub-abstract">' + escapeHtml(pub.abstract) + '</div>';
       }
 
-      return '<div class="pub-card">' +
+      var roleClass = (pub.role === 'first_author' || pub.role === 'co_first_author') ? ' pub-card-first' :
+                      pub.role === 'named_author' ? ' pub-card-named' : '';
+
+      return '<div class="pub-card' + roleClass + '">' +
         '<span class="pub-year-badge">' + pub.year + '</span>' +
         '<h3 class="pub-title">' + escapeHtml(pub.title) + '</h3>' +
         '<p class="pub-authors">' + authors + '</p>' +
@@ -174,6 +216,9 @@
     }
     if (pub.pubmed_id) {
       links.push('<a href="https://pubmed.ncbi.nlm.nih.gov/' + encodeURIComponent(pub.pubmed_id) + '/" target="_blank" class="pub-link">PubMed</a>');
+    }
+    if (pub.pmcid) {
+      links.push('<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/' + encodeURIComponent(pub.pmcid) + '/" target="_blank" class="pub-link">PMC</a>');
     }
     return links.join('');
   }
