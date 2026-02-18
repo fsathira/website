@@ -953,43 +953,55 @@ h1, h2, h3, h4 {
 }
 
 .instagram-placeholder {
-  padding: 3rem 1.5rem;
   text-align: center;
 }
 
-.instagram-placeholder-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  opacity: 0.3;
+.instagram-placeholder-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 8px 8px 0 0;
 }
 
-.instagram-placeholder-text {
+.instagram-placeholder-banner-text {
+  color: #fff;
+}
+
+.instagram-placeholder-handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.instagram-placeholder-desc {
   font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  padding: 1rem 1.5rem 0;
   line-height: 1.6;
 }
 
-.instagram-placeholder-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  max-width: 300px;
-  margin: 0 auto 1.5rem;
-}
-
-.instagram-placeholder-tile {
-  aspect-ratio: 1;
-  border-radius: 6px;
+.instagram-cta-btn {
+  display: inline-block;
+  margin: 1rem 1.5rem 1.5rem;
   background: var(--bg-surface);
-  animation: shimmer 2s ease-in-out infinite;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
-.instagram-placeholder-tile:nth-child(2) { animation-delay: 0.15s; }
-.instagram-placeholder-tile:nth-child(3) { animation-delay: 0.3s; }
-.instagram-placeholder-tile:nth-child(4) { animation-delay: 0.45s; }
-.instagram-placeholder-tile:nth-child(5) { animation-delay: 0.6s; }
-.instagram-placeholder-tile:nth-child(6) { animation-delay: 0.75s; }
+.instagram-cta-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
 
 .instagram-feed-footer {
   padding: 1rem 1.5rem;

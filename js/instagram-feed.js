@@ -26,6 +26,8 @@
         username: 'fah_shine',
         displayName: 'Fah Sathirapongsasuti',
         label: 'Personal',
+        description: 'Life adventures, travel, and behind-the-scenes moments.',
+        gradient: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
         profileUrl: 'https://instagram.com/fah_shine',
         accessToken: '', // Set for live feed
         featuredPosts: [
@@ -37,6 +39,8 @@
         username: 'fahshinewine',
         displayName: 'Sunset Cellars',
         label: 'Wine',
+        description: 'Winemaking journey from vineyard to bottle in Sonoma County.',
+        gradient: 'linear-gradient(135deg, #7c3aed, #a855f7, #c084fc)',
         profileUrl: 'https://instagram.com/fahshinewine',
         accessToken: '', // Set for live feed
         featuredPosts: []
@@ -171,18 +175,18 @@
   }
 
   function renderPlaceholder(account) {
+    var grad = account.gradient || 'linear-gradient(135deg, #374151, #4b5563)';
+    var desc = account.description ? '<p class="instagram-placeholder-desc">' + escapeHtml(account.description) + '</p>' : '';
+
     return '<div class="instagram-placeholder">' +
-      '<div class="instagram-placeholder-grid">' +
-        '<div class="instagram-placeholder-tile"></div>' +
-        '<div class="instagram-placeholder-tile"></div>' +
-        '<div class="instagram-placeholder-tile"></div>' +
-        '<div class="instagram-placeholder-tile"></div>' +
-        '<div class="instagram-placeholder-tile"></div>' +
-        '<div class="instagram-placeholder-tile"></div>' +
+      '<div class="instagram-placeholder-banner" style="background:' + grad + ';">' +
+        '<svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,0.6)" stroke="none"/></svg>' +
+        '<div class="instagram-placeholder-banner-text">' +
+          '<span class="instagram-placeholder-handle">@' + escapeHtml(account.username) + '</span>' +
+        '</div>' +
       '</div>' +
-      '<p class="instagram-placeholder-text">Live feed available when Instagram API is configured.<br>' +
-        'Visit <a href="' + escapeAttr(account.profileUrl) + '" target="_blank">@' + escapeHtml(account.username) + '</a> on Instagram.</p>' +
-      '<a href="' + escapeAttr(account.profileUrl) + '" target="_blank" class="btn btn-sm btn-outline">Open in Instagram</a>' +
+      desc +
+      '<a href="' + escapeAttr(account.profileUrl) + '" target="_blank" class="btn btn-sm instagram-cta-btn">View on Instagram &rarr;</a>' +
     '</div>';
   }
 
