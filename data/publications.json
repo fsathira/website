@@ -1,0 +1,153 @@
+[
+  {
+    "id": "south-asian-cohorts-2023",
+    "title": "South Asian medical cohorts reveal strong founder effects and high rates of homozygosity",
+    "authors": "Jeffrey D Wall, Ravi Gupta, Asif Rasheed, et al., including Sathirapongsasuti JF",
+    "journal": "Nature Communications",
+    "year": 2023,
+    "volume": "14(1):3377",
+    "doi": "10.1038/s41467-023-38766-1",
+    "pubmed_id": "37291107",
+    "abstract": "South Asian populations are underrepresented in genetic studies despite harboring substantial genetic diversity. We analyze whole-genome sequencing data from multiple South Asian medical cohorts, revealing strong founder effects and high rates of homozygosity with implications for precision medicine in these populations.",
+    "tags": ["population-genetics", "precision-medicine", "genomics"]
+  },
+  {
+    "id": "upd-2019",
+    "title": "Characterization of prevalence and health consequences of uniparental disomy in four million individuals from the general population",
+    "authors": "Priyanka Nakka, Sathirapongsasuti JF, et al.",
+    "journal": "American Journal of Human Genetics",
+    "year": 2019,
+    "volume": "105(5):921-932",
+    "doi": "10.1016/j.ajhg.2019.09.016",
+    "pubmed_id": "31607426",
+    "abstract": "We characterized uniparental disomy (UPD) events in approximately four million 23andMe research participants. We mapped UPD across all chromosomes and identified health consequences associated with UPD events, providing the largest population-based study of UPD to date.",
+    "tags": ["23andMe", "human-genetics", "genomics"]
+  },
+  {
+    "id": "phewas-drug-2014",
+    "title": "Accelerating drug development with phenome-wide association studies",
+    "authors": "Sathirapongsasuti JF, Informatics Team, 23andMe Research",
+    "journal": "ASHG Annual Meeting (poster)",
+    "year": 2014,
+    "doi": "",
+    "pubmed_id": "",
+    "abstract": "Viewing human genetics as 'experiments of nature' allows us to predict the efficacy and side effects of drugs in development. We present the first statistical evidence of the effectiveness of this approach, using 23andMe phenome-wide association studies (PheWAS) and historical data on drug approval to accelerate pharmaceutical R&D.",
+    "tags": ["drug-discovery", "PheWAS", "23andMe", "AI-drug-development"]
+  },
+  {
+    "id": "bber-2013",
+    "title": "Bicluster-based error rate control for eQTL analysis",
+    "authors": "Sathirapongsasuti JF, Lange C",
+    "journal": "BMC Bioinformatics (submitted)",
+    "year": 2013,
+    "doi": "",
+    "pubmed_id": "",
+    "abstract": "We developed an efficient approach that addresses the inappropriate independence assumption in standard eQTL multiple-testing adjustment. By clustering highly correlated tests together, BBER reduces the effective number of tests to adjust for dramatically, improving statistical power in eQTL studies.",
+    "tags": ["eQTL", "statistical-methods", "bioinformatics"]
+  },
+  {
+    "id": "hmp-framework-2012",
+    "title": "A framework for human microbiome research",
+    "authors": "The Human Microbiome Project Consortium, including Sathirapongsasuti JF",
+    "journal": "Nature",
+    "year": 2012,
+    "volume": "486(7402):215-221",
+    "doi": "10.1038/nature11209",
+    "pubmed_id": "22699610",
+    "abstract": "A variety of methodologies for comprehensive characterization of human microbiomes are developed through the NIH Human Microbiome Project. Here we present a framework for human microbiome research, including the resources, analytical tools, and clinical protocols developed through this effort.",
+    "tags": ["microbiome", "HMP", "metagenomics"]
+  },
+  {
+    "id": "hmp-structure-2012",
+    "title": "Structure, function and diversity of the healthy human microbiome",
+    "authors": "The Human Microbiome Project Consortium, including Sathirapongsasuti JF",
+    "journal": "Nature",
+    "year": 2012,
+    "volume": "486(7402):207-214",
+    "doi": "10.1038/nature11234",
+    "pubmed_id": "22699609",
+    "abstract": "Studies of the human microbiome have revealed that even healthy individuals differ remarkably in the microbes that occupy habitats such as the gut, skin, and vagina. We present the analysis of the largest cohort and set of distinct, clinically relevant body habitats to characterize the ecology of human-associated microbial communities.",
+    "tags": ["microbiome", "HMP", "metagenomics"]
+  },
+  {
+    "id": "microbial-cooccurrence-2012",
+    "title": "Microbial co-occurrence relationships in the human microbiome",
+    "authors": "Faust K*, Sathirapongsasuti JF*, Izard J, Segata N, Gevers D, Raes J, Huttenhower C (*co-first authors)",
+    "journal": "PLoS Computational Biology",
+    "year": 2012,
+    "volume": "8(7):e1002606",
+    "doi": "10.1371/journal.pcbi.1002606",
+    "pubmed_id": "22807668",
+    "abstract": "The healthy human body is colonized by communities of commensal microbes varying widely across individuals and body habitats. We provide the first comprehensive network of ecological relationships among microbes within and across different human body sites, revealing that microbial interactions are highly habitat-specific.",
+    "tags": ["microbiome", "HMP", "network-analysis", "computational-biology"]
+  },
+  {
+    "id": "exomecnv-2011",
+    "title": "Exome sequencing-based copy-number variation and loss of heterozygosity detection: ExomeCNV",
+    "authors": "Sathirapongsasuti JF, Lee H, Horst BAJ, Brunner G, Cochran AJ, Binder S, Quackenbush J, Nelson SF",
+    "journal": "Bioinformatics",
+    "year": 2011,
+    "volume": "27(19):2648-2654",
+    "doi": "10.1093/bioinformatics/btr462",
+    "pubmed_id": "21828086",
+    "abstract": "We developed ExomeCNV, a statistical method to detect copy number variation (CNV) and loss of heterozygosity (LOH) from exome sequencing data. ExomeCNV uses read depth and B-allele frequencies in a paired tumor-normal analysis, providing an R package for routine clinical and research use.",
+    "tags": ["CNV", "exome-sequencing", "bioinformatics", "cancer"]
+  },
+  {
+    "id": "propensity-score-2011",
+    "title": "Propensity score analysis in the Genetic Analysis Workshop 17 simulated data set on independent individuals",
+    "authors": "Lin CM, Sathirapongsasuti JF, Kerner B",
+    "journal": "BMC Proceedings",
+    "year": 2011,
+    "volume": "5(Suppl 9):S71",
+    "doi": "10.1186/1753-6561-5-S9-S71",
+    "pubmed_id": "22373338",
+    "abstract": "We applied propensity score methods to the Genetic Analysis Workshop 17 simulated data to assess the utility of propensity scores for adjusting confounding in genetic association studies of complex diseases.",
+    "tags": ["statistical-methods", "GWAS", "biostatistics"]
+  },
+  {
+    "id": "ucs-2010",
+    "title": "Exonic and intronic ultraconserved cDNA segments reveal aspects of mRNA biogenesis",
+    "authors": "Sathirapongsasuti JF, Sugano S",
+    "journal": "Nucleic Acids Research",
+    "year": 2010,
+    "volume": "39(5):1934-1946",
+    "doi": "10.1093/nar/gkq949",
+    "pubmed_id": "21062818",
+    "abstract": "We identified 96 stretches of cDNA longer than 200bp with perfect conservation between human, mouse, and rat, termed Ultraconserved cDNA Segments (UCSs). GO and InterPro enrichment tests suggest function in RNA regulation and alternative splicing. The UCSs exhibit resistance to secondary structure formation, implying functional roles in mRNA biogenesis.",
+    "tags": ["conservation", "non-coding-RNA", "genomics", "splicing"]
+  },
+  {
+    "id": "mlncrna-2008",
+    "title": "Characterization of mRNA-like noncoding RNAs by tissue-specific expression profiling",
+    "authors": "Sathirapongsasuti JF, et al.",
+    "journal": "BMB Conference (Molecular Biology Society of Japan)",
+    "year": 2008,
+    "doi": "",
+    "pubmed_id": "",
+    "abstract": "We characterized mRNA-like noncoding RNAs (mlncRNAs) through expression profiling across 21 tissues and cell lines. Clustering analysis classified mlncRNAs by tissue specificity, and conservation analysis revealed long stretches of highly conserved sequences within mlncRNAs, identifying candidates for further experimental study.",
+    "tags": ["non-coding-RNA", "expression-profiling", "genomics"]
+  },
+  {
+    "id": "great-2007",
+    "title": "Enrichment test for analysis of cis-regulatory elements (precursor to GREAT)",
+    "authors": "Sathirapongsasuti JF, Bejerano G",
+    "journal": "Stanford University (evolved into GREAT, published in Nature Biotechnology 2010)",
+    "year": 2007,
+    "doi": "",
+    "pubmed_id": "",
+    "abstract": "Designed and developed a tool for statistical analysis of putative cis-regulatory elements, performing binomial, hypergeometric, and foreground-background hypergeometric enrichment tests. This work was later developed into GREAT (Genomic Regions Enrichment of Annotations Tool) by Cory McLean and published in Nature Biotechnology.",
+    "tags": ["cis-regulatory", "enrichment-analysis", "tool-development"]
+  },
+  {
+    "id": "waterfall-2007",
+    "title": "Waterfall-generated ground vibrations: a second look",
+    "authors": "Sathirapongsasuti JF, Haugen A, Fraser-Smith AC",
+    "journal": "Stanford EE/CS Research Journal",
+    "year": 2007,
+    "doi": "",
+    "pubmed_id": "",
+    "abstract": "We reexamined the long-held linear relationship between the reciprocal of waterfall height and the frequency of waterfall-generated ground vibrations. New data and analysis using fast Fourier transform and regression cast doubt on the validity of the linear model and suggest alternative explanations.",
+    "tags": ["signal-processing", "geophysics"]
+  }
+]
