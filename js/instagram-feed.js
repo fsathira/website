@@ -39,7 +39,7 @@
         username: 'fahshinewine',
         displayName: 'Sunset Cellars',
         label: 'Wine',
-        description: 'Zen Zin philosophy. Small batch, hand craft wine, pioneering since 1997. SF Inner Sunset born, Suisun Valley raised, globally inspired.',
+        description: 'Taste wine for science.',
         gradient: 'linear-gradient(135deg, #7c3aed, #a855f7, #c084fc)',
         profileUrl: 'https://instagram.com/fahshinewine',
         accessToken: '', // Set for live feed
