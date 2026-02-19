@@ -27,7 +27,8 @@
       renderPublications();
     })
     .catch(function (err) {
-      pubList.innerHTML = '<div class="pub-empty">Failed to load publications. Please try refreshing.</div>';
+      console.error('Publications load error:', err);
+      pubList.innerHTML = '<div class="pub-empty">Failed to load publications (' + (err.message || err) + '). Please try refreshing.</div>';
     });
 
   // --- Build Filter Chips from Tags ---
