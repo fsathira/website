@@ -30,14 +30,14 @@
     "image_placeholder": "wine-interview"
   },
   {
-    "id": "wine-enthusiast-2022",
-    "title": "'There Aren't Enough of Us': 5 Questions With Fah Sathirapongsasuti",
-    "source": "Wine Enthusiast",
-    "date": "2022-05-03",
-    "url": "https://www.wineenthusiast.com/culture/industry-news/fah-sathirapongsasuti-sunset-cellars/",
-    "excerpt": "Winemaker and co-owner of Sunset Cellars, marketing director of the Suisun Valley Wine Co-op, PhD statistician, computer scientist and genome researcher — Fah talks about AAPI representation in wine and the #drinkAAPIwine campaign.",
-    "category": "Wine",
-    "image_placeholder": "wine-enthusiast"
+    "id": "scitechdaily-rhythm-2022",
+    "title": "Your Genes Can Determine How Well You Dance",
+    "source": "SciTechDaily",
+    "date": "2022-10-13",
+    "url": "https://scitechdaily.com/your-genes-can-determine-how-well-you-dance/",
+    "excerpt": "Coverage of a GWAS of 606,825 individuals that identified 69 genetic loci associated with musical beat synchronization. The Vanderbilt-23andMe collaboration, with Fah as co-author, revealed shared genetics between rhythm and biological processes like walking and breathing.",
+    "category": "Science",
+    "image_placeholder": "rhythm"
   },
   {
     "id": "exploring-wine-glass-2022",
@@ -48,6 +48,26 @@
     "excerpt": "Fah's story begins in Thailand and travels through Stanford, Harvard, and 23andMe before landing at Sunset Cellars in Suisun Valley. A podcast conversation about science, wine, and finding home.",
     "category": "Wine",
     "image_placeholder": "podcast"
+  },
+  {
+    "id": "vumc-rhythm-2022",
+    "title": "Scientists at Vanderbilt and 23andMe Find Genetic Link to People's Ability to Move to a Musical Beat",
+    "source": "Vanderbilt University Medical Center",
+    "date": "2022-06-16",
+    "url": "https://news.vumc.org/2022/06/16/scientists-at-vanderbilt-university-medical-center-and-23andme-find-genetic-link-to-peoples-ability-to-move-to-a-musical-beat/",
+    "excerpt": "Vanderbilt Genetics Institute and 23andMe researchers identified 69 genetic variants linked to musical beat synchronization in over 600,000 people, revealing connections between rhythm, brain development, and biological rhythms.",
+    "category": "Science",
+    "image_placeholder": "rhythm"
+  },
+  {
+    "id": "wine-enthusiast-2022",
+    "title": "'There Aren't Enough of Us': 5 Questions With Fah Sathirapongsasuti",
+    "source": "Wine Enthusiast",
+    "date": "2022-05-03",
+    "url": "https://www.wineenthusiast.com/culture/industry-news/fah-sathirapongsasuti-sunset-cellars/",
+    "excerpt": "Winemaker and co-owner of Sunset Cellars, marketing director of the Suisun Valley Wine Co-op, PhD statistician, computer scientist and genome researcher — Fah talks about AAPI representation in wine and the #drinkAAPIwine campaign.",
+    "category": "Wine",
+    "image_placeholder": "wine-enthusiast"
   },
   {
     "id": "alloy-deepcdr-2022",
@@ -70,14 +90,84 @@
     "image_placeholder": "wine-interview"
   },
   {
+    "id": "scientific-american-samesex-2019",
+    "title": "Massive Study Finds No Single Genetic Cause of Same-Sex Sexual Behavior",
+    "source": "Scientific American",
+    "date": "2019-08-29",
+    "url": "https://www.scientificamerican.com/article/massive-study-finds-no-single-genetic-cause-of-same-sex-sexual-behavior/",
+    "excerpt": "Fah called the study \"the final nail in the coffin for Xq28\" and spoke about its personal significance: \"This is a very, very personal topic for me — both as a scientist and as a gay man.\"",
+    "category": "Science",
+    "image_placeholder": "aaas"
+  },
+  {
+    "id": "pbs-samesex-2019",
+    "title": "There Is No 'Gay Gene.' There Is No 'Straight Gene.' Sexuality Is Just Complex, Study Confirms",
+    "source": "PBS NewsHour",
+    "date": "2019-08-29",
+    "url": "https://www.pbs.org/newshour/science/there-is-no-gay-gene-there-is-no-straight-gene-sexuality-is-just-complex-study-confirms",
+    "excerpt": "\"As a teenager trying to understand myself and understand my sexuality, I looked at the internet for 'the gay gene' and obviously came across Xq28,\" said Fah, a 23andMe senior scientist and study co-author.",
+    "category": "Science",
+    "image_placeholder": "aaas"
+  },
+  {
     "id": "aaas-same-sex-2019",
     "title": "Genes Can't Predict Same-sex Sexual Behavior, Large-Scale Study Shows",
     "source": "AAAS / Science",
     "date": "2019-08-29",
     "url": "https://www.aaas.org/news/genes-cant-predict-same-sex-sexual-behavior-large-scale-study-shows",
-    "excerpt": "Fah, a 23andMe senior scientist and co-author, spoke at the press conference for this landmark GWAS of 477,522 individuals. \"We are committed to diversity, and sexual diversity is a part of that,\" he said.",
+    "excerpt": "Fah spoke at the press conference for this landmark GWAS of 477,522 individuals. \"We are committed to diversity, and sexual diversity is a part of that,\" he said.",
     "category": "Science",
     "image_placeholder": "aaas"
+  },
+  {
+    "id": "harvard-mag-samesex-2019",
+    "title": "There's (Still) No Gay Gene",
+    "source": "Harvard Magazine",
+    "date": "2019-08-30",
+    "url": "https://www.harvardmagazine.com/2019/08/there-s-still-no-gay-gene",
+    "excerpt": "Harvard Magazine covered the landmark same-sex sexual behavior GWAS co-authored by Fah, a Harvard biostatistics PhD alumnus, noting that genetics accounts for 8-25% of variation in same-sex behavior.",
+    "category": "Science",
+    "image_placeholder": "harvard"
+  },
+  {
+    "id": "livescience-samesex-2019",
+    "title": "There's No Such Thing as a 'Gay Gene,' Massive Study Concludes",
+    "source": "Live Science",
+    "date": "2019-08-29",
+    "url": "https://www.livescience.com/no-single-gene-makes-someone-gay.html",
+    "excerpt": "Fah told Live Science that \"funding has historically been limited and recruitment of participants was difficult\" due to the topic's controversial nature. The study found no one gene linked to same-sex behavior.",
+    "category": "Science",
+    "image_placeholder": "aaas"
+  },
+  {
+    "id": "sciencenews-samesex-2019",
+    "title": "There's No Evidence That a Single 'Gay Gene' Exists",
+    "source": "Science News",
+    "date": "2019-08-29",
+    "url": "https://www.sciencenews.org/article/no-evidence-that-gay-gene-exists",
+    "excerpt": "\"Just because something is not completely genetic or something has an environmental, or what we call nongenetic, component doesn't mean it's a choice,\" Fah told Science News.",
+    "category": "Science",
+    "image_placeholder": "aaas"
+  },
+  {
+    "id": "fastcompany-dress-2015",
+    "title": "Old People Saw White And Gold, And More Insights From a 23andMe Study of #TheDress",
+    "source": "Fast Company",
+    "date": "2015-03-20",
+    "url": "https://www.fastcompany.com/3044116/old-people-saw-white-and-gold-and-more-insights-from-a-23andme-study-of-thedress",
+    "excerpt": "Fah led a 23andMe study of 25,000 people on #TheDress. He found genetics doesn't determine what you see, but age, eye health, and even where you grew up play surprising roles in color perception.",
+    "category": "Science",
+    "image_placeholder": "dress"
+  },
+  {
+    "id": "buzzfeed-dress-2015",
+    "title": "The Results Are In: DNA Cannot Explain #TheDress",
+    "source": "BuzzFeed News",
+    "date": "2015-03-20",
+    "url": "https://www.buzzfeednews.com/article/stephaniemlee/the-results-are-in-dna-cannot-explain-thedress",
+    "excerpt": "\"Genetics definitely doesn't determine what you see,\" Fah told BuzzFeed News, but his 23andMe study found that age, cataracts, and color blindness all shifted perception of the infamous dress.",
+    "category": "Science",
+    "image_placeholder": "dress"
   },
   {
     "id": "crimson-writer",
