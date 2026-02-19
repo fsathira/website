@@ -26,7 +26,7 @@
         username: 'fah_shine',
         displayName: 'Fah Sathirapongsasuti',
         label: 'Personal',
-        description: 'Life adventures, travel, and behind-the-scenes moments.',
+        description: 'Scientist. Winemaker. Innovator.',
         gradient: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)',
         profileUrl: 'https://instagram.com/fah_shine',
         accessToken: '', // Set for live feed
@@ -39,7 +39,7 @@
         username: 'fahshinewine',
         displayName: 'Sunset Cellars',
         label: 'Wine',
-        description: 'Winemaking journey from vineyard to bottle in Sonoma County.',
+        description: 'Zen Zin philosophy. Small batch, hand craft wine, pioneering since 1997. SF Inner Sunset born, Suisun Valley raised, globally inspired.',
         gradient: 'linear-gradient(135deg, #7c3aed, #a855f7, #c084fc)',
         profileUrl: 'https://instagram.com/fahshinewine',
         accessToken: '', // Set for live feed
