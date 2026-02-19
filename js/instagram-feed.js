@@ -81,7 +81,10 @@
       'wine-interview': 'linear-gradient(135deg, #7c3aed, #a855f7, #c084fc)',
       'wine-enthusiast': 'linear-gradient(135deg, #dc2626, #ef4444, #f87171)',
       'biotech': 'linear-gradient(135deg, #2563eb, #3b82f6, #60a5fa)',
-      'harvard': 'linear-gradient(135deg, #991b1b, #b91c1c, #dc2626)'
+      'harvard': 'linear-gradient(135deg, #991b1b, #b91c1c, #dc2626)',
+      'endpoints': 'linear-gradient(135deg, #0d9488, #14b8a6, #2dd4bf)',
+      'podcast': 'linear-gradient(135deg, #ea580c, #f97316, #fb923c)',
+      'aaas': 'linear-gradient(135deg, #1e40af, #2563eb, #3b82f6)'
     };
 
     newsGrid.innerHTML = articles.map(function (article) {
