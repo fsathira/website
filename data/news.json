@@ -1,5 +1,15 @@
 [
   {
+    "id": "california-historic-vineyards-2026",
+    "title": "California Historic Vineyards: Interactive Data Report",
+    "source": "Personal Project",
+    "date": "2026-03-01",
+    "url": "projects/california-vineyards/output/index.html",
+    "excerpt": "An interactive analysis and visualization of California's historic vineyards, featuring maps, variety breakdowns, and regional data from the Historic Vineyard Society registry.",
+    "category": "Wine",
+    "image_placeholder": "wine-data"
+  },
+  {
     "id": "hopscotch-grapes-2025",
     "title": "An Exclusive Interview with Fah Sathirapongsasuti, Co-owner & Winemaker of Sunset Cellars",
     "source": "Hopscotch & Grape",
