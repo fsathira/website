@@ -1098,6 +1098,10 @@ h1, h2, h3, h4 {
   transform: scale(1.05);
 }
 
+.playground-card:hover .carousel .carousel-track img {
+  transform: none;
+}
+
 .playground-card-body {
   padding: 1.5rem;
   flex: 1;
@@ -1204,25 +1208,26 @@ h1, h2, h3, h4 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  font-size: 1.3rem;
   line-height: 1;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.2s;
+  opacity: 0.7;
+  transition: opacity 0.2s, background 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
 }
 
-.carousel:hover .carousel-btn {
+.carousel-btn:hover {
   opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-btn-prev {
