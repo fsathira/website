@@ -1,78 +1,167 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="stylesheet" href="mainstyle.css" type="text/css" media="screen" charset="utf-8">
-	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" /> 
-	<title>Fah Sathirapongsasuti</title>
-	</head>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fah Sathirapongsasuti, PhD — AI & Computational Biology Leader. Stanford + Harvard. Accelerating drug discovery with machine learning.">
+  <title>Fah Sathirapongsasuti — AI & Computational Biology</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
 <body>
-	<div id="page-bg">
-		<div id="page">
-			<div id="page-content">
-				<a href="./home.html"><img src="images/fahrotate.jpg" alt="frontpage" /></a>
-				<h1 id="header" align="right">homepage</h1>
-				<div id="nav">
-					  <ul> 
-					    <li><a href="./home.html">Home</a></li> 
 
-					    <li><a href="./projects/research.html">Research</a>
-					    </li> 
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-accent">&gt;</span> fah.bio
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="playground.html">Playground</a></li>
+        <li><a href="updates.html">Updates</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">&#9790;</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </nav>
+  </header>
 
-					    <li><a href="./cv/cv.html">Vitae</a> 
-					    </li> 
+  <!-- Hero -->
+  <section class="hero">
+    <canvas class="hero-canvas" id="neuralCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting">// Hello, world</p>
+      <h1 class="hero-name">Fah Sathirapongsasuti</h1>
+      <p class="hero-tagline">AI &amp; Computational Biology Leader &bull; Winemaker &bull; Innovator</p>
+      <p class="hero-credentials">PhD Biostatistics, Harvard &nbsp;|&nbsp; MS Computer Science, Stanford &nbsp;|&nbsp; BS Mathematical &amp; Computational Science, Stanford</p>
+      <div class="hero-cta">
+        <a href="publications.html" class="btn btn-primary">View Publications</a>
+        <a href="updates.html" class="btn btn-outline">Latest Updates</a>
+      </div>
+    </div>
+  </section>
 
-					    <li><a href="./contact.html">Contact</a>
-					    </li>
-					  </ul>
+  <!-- Bio Generator -->
+  <section class="section section-alt" id="bioSection">
+    <div class="section-inner">
+      <div class="section-header" style="text-align:center;">
+        <p class="section-label">Interactive</p>
+        <h2 class="section-title">AI-Generated Bio</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Need a bio for a talk, article, or just for fun? Let AI craft one.</p>
+      </div>
 
-					</div>
+      <div class="bio-generator" id="bioGenerator">
+        <div class="bio-controls">
+          <div class="bio-control-group">
+            <label for="bioLength">Length</label>
+            <select id="bioLength" class="bio-select">
+              <option value="oneliner">One-liner</option>
+              <option value="short" selected>Short paragraph</option>
+              <option value="full">Full bio</option>
+            </select>
+          </div>
+          <div class="bio-control-group">
+            <label for="bioTone">Tone / Format</label>
+            <select id="bioTone" class="bio-select">
+              <option value="professional" selected>Professional</option>
+              <option value="casual">Casual</option>
+              <option value="academic">Academic</option>
+              <option value="haiku">Haiku</option>
+              <option value="limerick">Limerick</option>
+              <option value="eli5">Explain Like I'm 5</option>
+            </select>
+          </div>
+          <button class="btn btn-primary bio-generate-btn" id="bioGenerateBtn">
+            Generate &rarr;
+          </button>
+        </div>
 
-				<div id="content">
+        <div class="bio-output" id="bioOutput">
+          <div class="bio-output-text" id="bioOutputText">
+            <span style="color:var(--text-muted);">Click "Generate" to create an AI-powered bio...</span>
+          </div>
+          <div class="bio-output-actions" id="bioOutputActions" style="display:none;">
+            <button class="btn btn-sm btn-outline" id="bioCopyBtn" title="Copy to clipboard">
+              Copy
+            </button>
+            <button class="btn btn-sm btn-outline" id="bioRegenerateBtn" title="Regenerate">
+              Regenerate
+            </button>
+          </div>
+        </div>
 
-<!-- Content goes here -->
+        <p class="bio-powered-by">Powered by Claude &bull; <a href="#" id="bioConfigLink" style="color:var(--text-muted);">Configure API</a></p>
+      </div>
+    </div>
+  </section>
 
-<!-- Google CSE Search Box Begins -->
-  <form id="searchbox_009408533305800130436:xkx4srkjx9g" action="./search-results.html">
-    <input type="hidden" name="cx" value="009408533305800130436:xkx4srkjx9g" />
-    <input type="hidden" name="cof" value="FORID:9" />
-    <input name="q" type="text" size="40" />
-    <input type="submit" name="sa" value="Search" />
-  </form>
-  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_009408533305800130436%3Axkx4srkjx9g"></script>
-<!-- Google CSE Search Box Ends -->
+  <!-- Highlights -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header" style="text-align:center;">
+        <p class="section-label">At a Glance</p>
+        <h2 class="section-title">Career Highlights</h2>
+      </div>
+      <div class="highlights">
+        <div class="highlight-card fade-in">
+          <div class="highlight-number">86</div>
+          <div class="highlight-label">Publications in Nature, Science, Lancet, &amp; more</div>
+        </div>
+        <div class="highlight-card fade-in">
+          <div class="highlight-number">15+</div>
+          <div class="highlight-label">Years in Computational Biology &amp; AI</div>
+        </div>
+        <div class="highlight-card fade-in">
+          <div class="highlight-number">9</div>
+          <div class="highlight-label">Biotech Companies Created or Led</div>
+        </div>
+        <div class="highlight-card fade-in">
+          <div class="highlight-number">4M+</div>
+          <div class="highlight-label">Genomes Analyzed at 23andMe</div>
+        </div>
+      </div>
 
-				</div>
+      <div style="max-width:800px;margin:3rem auto 0;text-align:center;">
+        <p class="section-label">Career Journey</p>
+        <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-top:1rem;">
+          Founding scientist of the <strong style="color:var(--text);">23andMe</strong> Therapeutics Division,
+          leading drug discovery through phenome-wide association studies, fine-mapping, and CNV detection on 4M+ genomes.
+          Went on to direct bioinformatics and genomic medicine at
+          <strong style="color:var(--text);">MedGenome</strong>,
+          lead target discovery at <strong style="color:var(--text);">Alloy Therapeutics</strong> (contributing to the creation of 9 companies),
+          and build data science platforms at <strong style="color:var(--text);">BigHat Biosciences</strong>.
+          Currently consulting through <strong style="color:var(--text);">EpiCurious Innovations</strong>
+          &mdash; designing AI-driven personalized antibody-drug conjugates at <strong style="color:var(--text);">Decade Bio</strong>
+          and driving academic collaboration for <strong style="color:var(--text);">Novella Health</strong>.
+        </p>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:1rem;">
+          When not decoding genomes, I craft wines at <a href="https://instagram.com/fahshinewine" target="_blank">Sunset Cellars</a> in Suisun Valley, CA.
+        </p>
+      </div>
+    </div>
+  </section>
 
-			<br clear="all">
-			
-			
-			
-			<div id="copyright">&copy; Copyright 2009-2015 Fah Sathirapongsasuti. All rights reserved. </div>
-			</div>
-		<br clear="all">
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jsathirapongsasuti" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=r62lrt4AAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8157-3665" target="_blank">ORCID</a>
+        <a href="https://instagram.com/fah_shine" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Fah Sathirapongsasuti. All rights reserved.</p>
+    </div>
+  </footer>
 
-		</div>
-	<div id="page-bottom"></div>
-	</div>
-
-<!-- Google Analytics Begins -->
-<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-	try {
-		var pageTracker = _gat._getTracker("UA-2424761-2");
-		pageTracker._trackPageview();
-	} catch(err) {}
-</script>
-
-<!-- Google Analytics Ends -->
-
+  <script src="js/main.js"></script>
+  <script src="js/bio-generator.js"></script>
 </body>
 </html>

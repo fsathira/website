@@ -1,0 +1,3 @@
+[submodule "projects/california-vineyards"]
+	path = projects/california-vineyards
+	url = https://github.com/fsathira/CaliforniaHistoricVineyards.git

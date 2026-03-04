@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest updates from Fah Sathirapongsasuti — news articles, press coverage, and live feeds from Instagram.">
+  <title>Updates — Fah Sathirapongsasuti</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-accent">&gt;</span> fah.bio
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="playground.html">Playground</a></li>
+        <li><a href="updates.html" class="active">Updates</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">&#9790;</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Stay Connected</p>
+      <h1 class="section-title">Updates</h1>
+      <p class="section-subtitle">News coverage, press features, and live feeds from my personal and winemaking journeys.</p>
+    </div>
+  </div>
+
+  <!-- Instagram Feeds -->
+  <section class="section instagram-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">Live Feed</p>
+        <h2 class="section-title">Instagram</h2>
+        <p class="section-subtitle">Follow along on my personal adventures and winemaking journey.</p>
+      </div>
+
+      <div class="instagram-feeds" id="instagramFeeds"></div>
+    </div>
+  </section>
+
+  <!-- News & Press -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">Press &amp; Media</p>
+        <h2 class="section-title">In the News</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="pub-filters" style="margin-bottom:2rem;">
+        <button class="pub-filter-chip active" data-news-filter="all">All</button>
+        <button class="pub-filter-chip" data-news-filter="Science">Science</button>
+        <button class="pub-filter-chip" data-news-filter="Wine">Wine</button>
+        <button class="pub-filter-chip" data-news-filter="Personal">Personal</button>
+      </div>
+
+      <div class="news-grid" id="newsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jsathirapongsasuti" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=r62lrt4AAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8157-3665" target="_blank">ORCID</a>
+        <a href="https://instagram.com/fah_shine" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Fah Sathirapongsasuti. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/instagram-feed.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Playground — Side projects and experiments by Fah Sathirapongsasuti. Data pipelines, visualizations, and fun explorations.">
+  <title>Playground — Fah Sathirapongsasuti</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-accent">&gt;</span> fah.bio
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="playground.html" class="active">Playground</a></li>
+        <li><a href="updates.html">Updates</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">&#9790;</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Side Quests</p>
+      <h1 class="section-title">Playground</h1>
+      <p class="section-subtitle">Weekend experiments, data rabbit holes, and things I built for fun.</p>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="playground-grid">
+
+        <!-- California Historic Vineyards -->
+        <a href="projects/california-vineyards/output/index.html" class="playground-card">
+          <div class="playground-card-preview carousel" id="vineyardCarousel">
+            <div class="carousel-track">
+              <img src="projects/california-vineyards/output/screenshot2.png" alt="Interactive map of California AVAs colored by number of historic vineyards">
+              <img src="projects/california-vineyards/output/screenshot1.png" alt="Stacked bar chart of California historic vineyards planted per decade by grape variety">
+            </div>
+            <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide" onclick="event.preventDefault(); event.stopPropagation(); this.closest('.carousel').querySelector('.carousel-track').scrollBy({left:-this.closest('.carousel').offsetWidth,behavior:'smooth'});">&#8249;</button>
+            <button class="carousel-btn carousel-btn-next" aria-label="Next slide" onclick="event.preventDefault(); event.stopPropagation(); this.closest('.carousel').querySelector('.carousel-track').scrollBy({left:this.closest('.carousel').offsetWidth,behavior:'smooth'});">&#8250;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+            </div>
+          </div>
+          <div class="playground-card-body">
+            <div class="playground-card-tags">
+              <span class="playground-tag">Python</span>
+              <span class="playground-tag">Data Pipeline</span>
+              <span class="playground-tag">Visualization</span>
+            </div>
+            <h3 class="playground-card-title">California Historic Vineyards</h3>
+            <p class="playground-card-desc">A Python pipeline that scrapes the Historic Vineyard Society website, analyzes grape varieties and soil types from California's historic vineyards, and generates an HTML report with charts.</p>
+            <div class="playground-card-footer">
+              <span class="playground-card-link" onclick="event.preventDefault(); event.stopPropagation(); window.open('https://github.com/fsathira/CaliforniaHistoricVineyards', '_blank');" role="link" tabindex="0">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub
+              </span>
+              <span class="playground-card-arrow">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jsathirapongsasuti" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=r62lrt4AAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8157-3665" target="_blank">ORCID</a>
+        <a href="https://instagram.com/fah_shine" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Fah Sathirapongsasuti. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.carousel').forEach(function(carousel) {
+      var track = carousel.querySelector('.carousel-track');
+      var dots = carousel.querySelectorAll('.carousel-dot');
+      track.addEventListener('scroll', function() {
+        var index = Math.round(track.scrollLeft / track.offsetWidth);
+        dots.forEach(function(d, i) {
+          d.classList.toggle('active', i === index);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
