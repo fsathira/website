@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="../mainstyle.css" type="text/css" media="screen" charset="utf-8"/>
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"/>
+  <title>Commute Optimizer — Fah Sathirapongsasuti</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* ── Chat bubbles ──────────────────────────────────────────────────── */
+    .chat-wrap {
+      max-width: 480px;
+      margin: 18px 0 22px 10px;
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+    }
+    .bubble-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 6px;
+    }
+    .bubble-row.left  { align-items: flex-start; }
+    .bubble-row.right { align-items: flex-end; }
+    .speaker {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 3px;
+      font-family: Verdana, sans-serif;
+    }
+    .bubble {
+      padding: 10px 14px;
+      border-radius: 18px;
+      max-width: 78%;
+      line-height: 1.45;
+      word-wrap: break-word;
+    }
+    .bubble.mio { background: #34c759; color: #fff; border-bottom-left-radius: 4px; }
+    .bubble.fah { background: #007aff; color: #fff; border-bottom-right-radius: 4px; }
+
+    /* ── Route selector ─────────────────────────────────────────────────── */
+    .route-btns { margin: 10px 0 16px 0; }
+    .route-btn {
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 12px;
+      padding: 7px 13px;
+      margin: 3px 4px 3px 0;
+      border: 2px solid #990000;
+      border-radius: 4px;
+      background: #fff;
+      color: #990000;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .route-btn.active, .route-btn:hover {
+      background: #990000;
+      color: #fff;
+    }
+
+    /* ── Charts ─────────────────────────────────────────────────────────── */
+    .chart-label {
+      font-family: Verdana, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 14px 0 4px 0;
+    }
+    #chart-title {
+      font-family: Verdana, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin: 4px 0 8px 0;
+    }
+    .chart-wrap {
+      position: relative;
+      width: 720px;
+      height: 255px;
+      margin-bottom: 12px;
+    }
+    .chart-note {
+      font-size: 11px;
+      color: #aaa;
+      font-style: italic;
+      margin: 2px 0 20px 0;
+    }
+
+    /* ── STI key ────────────────────────────────────────────────────────── */
+    .sti-key {
+      font-size: 12px;
+      color: #555;
+      background: #fafafa;
+      border-left: 3px solid #990000;
+      padding: 7px 12px;
+      margin: 4px 0 8px 0;
+      line-height: 1.65;
+    }
+
+    /* ── Custom analysis panel ──────────────────────────────────────────── */
+    .custom-toggle {
+      font-family: Optima, Geneva, sans-serif;
+      font-size: 16px;
+      color: #74001d;
+      cursor: pointer;
+      user-select: none;
+      margin-top: 26px;
+      padding: 8px 0 6px 0;
+      border-top: 1px solid #ddd;
+    }
+    .custom-toggle:hover { color: #990000; }
+    .custom-body { display: none; margin-top: 10px; }
+    .form-row {
+      margin: 9px 0;
+      font-size: 13px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .form-row label.flabel {
+      width: 140px;
+      font-weight: bold;
+      color: #555;
+      padding-top: 5px;
+      flex-shrink: 0;
+    }
+    .form-row input[type="text"],
+    .form-row input[type="password"] {
+      font-family: Verdana, sans-serif;
+      font-size: 12px;
+      padding: 5px 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 310px;
+    }
+    .form-row select {
+      font-family: Verdana, sans-serif;
+      font-size: 12px;
+      padding: 5px 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 120px;
+    }
+    .day-checks { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-top: 4px; }
+    .day-checks label { font-weight: normal; color: #333; cursor: pointer; }
+    .token-note {
+      font-size: 11px;
+      color: #999;
+      margin: 3px 0 0 140px;
+    }
+    .analyze-btn {
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 9px 22px;
+      background: #990000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 14px;
+    }
+    .analyze-btn:hover   { background: #740000; }
+    .analyze-btn:disabled { background: #999; cursor: default; }
+    #progress-wrap { margin: 12px 0; display: none; }
+    #progress-bar  { width: 100%; height: 8px; }
+    #status-text   { font-size: 12px; color: #666; margin-top: 5px; }
+    .error-msg {
+      font-size: 13px;
+      color: #cc0000;
+      background: #fff0f0;
+      border: 1px solid #ffcccc;
+      border-radius: 3px;
+      padding: 8px 12px;
+      margin: 10px 0;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-bg">
+    <div id="page">
+      <div id="page-content">
+        <div id="logo"></div>
+
+        <div id="nav">
+          <ul>
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../projects/research.html">Research</a></li>
+            <li><a href="../cv/cv.html">Vitae</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div id="content">
+
+          <h1 id="header">Commute Optimizer</h1>
+
+          <p>
+            How does your commute change depending on when you leave? This tool charts
+            driving time for a route at every 30-minute departure window across the day,
+            for each weekday. Beneath the duration chart is the
+            <strong>STI — Sakata Traffic Index</strong>: the rate of change of commute
+            time with respect to departure time, in minutes per minute. An STI of&nbsp;2
+            means "each extra minute you wait costs you 2 extra minutes in traffic."
+            A negative STI means waiting actually <em>shortens</em> your drive (though
+            you still arrive later overall).
+          </p>
+
+          <!-- ── The Origin Story ───────────────────────────────────────── -->
+          <h3 id="topic">The Origin Story</h3>
+
+          <div class="chat-wrap">
+            <div class="bubble-row left">
+              <span class="speaker">Mio</span>
+              <div class="bubble mio">Fah, you really need to leave before 7 AM.</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">Mio 😩 7 AM is so early...</div>
+            </div>
+            <div class="bubble-row left">
+              <span class="speaker">Mio</span>
+              <div class="bubble mio">I'm serious. Every minute you leave after 7, you'll be stuck in traffic for 2 more minutes. Every. Single. Minute.</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">Two extra minutes <em>per minute</em>? That can't be right all morning. What about after 9 when traffic clears?</div>
+            </div>
+            <div class="bubble-row left">
+              <span class="speaker">Mio</span>
+              <div class="bubble mio">YES. Still terrible. Just leave early. I drive this every day.</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">...okay but I'm building a chart first. 📊</div>
+            </div>
+          </div>
+
+          <!-- ── Route selector + charts ───────────────────────────────── -->
+          <h3 id="topic">Explore the Data</h3>
+
+          <div class="route-btns">
+            <button class="route-btn" onclick="loadDemo('sf_winery', this)">SF &#x2192; Suisun Winery</button>
+            <button class="route-btn" onclick="loadDemo('sf_sj', this)">SF &#x2192; San Jose</button>
+            <button class="route-btn active" id="btn-home" onclick="loadDemo('home_23andme', this)">Fairfield &#x2192; 23andMe &#x2605;</button>
+          </div>
+
+          <div id="chart-title">Fairfield (Southlake Dr) &#x2192; 23andMe (Mountain View)</div>
+
+          <div class="chart-label">Commute Duration</div>
+          <div class="chart-wrap"><canvas id="durationCanvas"></canvas></div>
+
+          <div class="chart-label">STI &#x2014; Sakata Traffic Index</div>
+          <div class="sti-key">
+            <strong>How to read STI:</strong>
+            &nbsp;STI &gt; 0: leaving later adds to your commute time.
+            &nbsp;<strong>STI = 2</strong>: Mio's rule — every extra minute costs 2 minutes in traffic.
+            &nbsp;STI &lt; 0: traffic is clearing fast enough that <em>waiting</em> shortens your drive.
+            &nbsp;STI &#x2248; 0: departure time doesn't matter much.
+          </div>
+          <div class="chart-wrap"><canvas id="stiCanvas"></canvas></div>
+
+          <p class="chart-note">
+            Demo data is modeled on typical Bay Area traffic patterns (I-80, Bay Bridge,
+            US-101) using historical rush-hour curves. For live data based on current
+            conditions, use Custom Analysis below with your own Mapbox token.
+          </p>
+
+          <!-- ── Post-chart chat ───────────────────────────────────────── -->
+          <div class="chat-wrap">
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">Okay Mio, look at the charts above. &#x2191;</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">You were RIGHT about 7–8 AM! The STI peaks at ~2.0. Your "2 minutes per minute" rule holds during rush hour. 😱</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">BUT — look after 9 AM. The STI goes negative. Traffic is clearing faster than I'm driving into it. The 9 AM commute is 30 minutes shorter than 8:30!</div>
+            </div>
+            <div class="bubble-row left">
+              <span class="speaker">Mio</span>
+              <div class="bubble mio">...so if you can't leave before 7, you should just wait until after 9?</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">Exactly. Unless I leave before 7 AM, I'm better off waiting until after 9. QED. 🎉</div>
+            </div>
+            <div class="bubble-row left">
+              <span class="speaker">Mio</span>
+              <div class="bubble mio">Fine. But you're still setting your alarm for 6:45.</div>
+            </div>
+            <div class="bubble-row right">
+              <span class="speaker">Fah</span>
+              <div class="bubble fah">Deal. 🤝</div>
+            </div>
+          </div>
+
+          <!-- ── Custom Analysis ───────────────────────────────────────── -->
+          <div class="custom-toggle" id="custom-toggle" onclick="toggleCustom()">
+            &#x25B6; Custom Analysis &#x2014; run your own route with a Mapbox token
+          </div>
+          <div class="custom-body" id="custom-body">
+            <p style="font-size:13px; color:#555; margin-top:8px;">
+              Analyze any route using the
+              <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox Directions API</a>
+              (free tier: 100,000 requests/month). Your token is used only in your browser
+              and is never sent to this server.
+            </p>
+
+            <div class="form-row">
+              <label class="flabel">Mapbox Token</label>
+              <input type="password" id="token" placeholder="pk.eyJ1Ij..." autocomplete="off"/>
+            </div>
+            <div class="token-note">
+              Get a free token at
+              <a href="https://account.mapbox.com/access-tokens/" target="_blank" rel="noopener">account.mapbox.com</a>.
+              Restrict it to your domain for safety.
+            </div>
+
+            <div class="form-row" style="margin-top:14px;">
+              <label class="flabel">Point A (origin)</label>
+              <input type="text" id="addr-a" value="Fairfield, CA"/>
+            </div>
+            <div class="form-row">
+              <label class="flabel">Point B (destination)</label>
+              <input type="text" id="addr-b" value="Mountain View, CA"/>
+            </div>
+            <div class="form-row">
+              <label class="flabel">Days</label>
+              <span class="day-checks">
+                <label><input type="checkbox" class="day-cb" value="0" checked/> Mon</label>
+                <label><input type="checkbox" class="day-cb" value="1" checked/> Tue</label>
+                <label><input type="checkbox" class="day-cb" value="2" checked/> Wed</label>
+                <label><input type="checkbox" class="day-cb" value="3" checked/> Thu</label>
+                <label><input type="checkbox" class="day-cb" value="4" checked/> Fri</label>
+              </span>
+            </div>
+            <div class="form-row">
+              <label class="flabel">Start time</label>
+              <select id="start-hour"></select>
+            </div>
+            <div class="form-row">
+              <label class="flabel">End time</label>
+              <select id="end-hour"></select>
+            </div>
+            <div class="form-row">
+              <label class="flabel">Interval</label>
+              <select id="interval">
+                <option value="15">15 min</option>
+                <option value="30" selected="selected">30 min</option>
+                <option value="60">60 min</option>
+              </select>
+            </div>
+
+            <div class="error-msg" id="error-msg"></div>
+
+            <button class="analyze-btn" id="analyze-btn" onclick="analyzeCustom()">Analyze Commute</button>
+
+            <div id="progress-wrap">
+              <progress id="progress-bar" value="0" max="100"></progress>
+              <div id="status-text">Fetching data&#x2026;</div>
+            </div>
+          </div><!-- end .custom-body -->
+
+        </div><!-- end #content -->
+
+        <!-- Google CSE Search Box -->
+        <form id="searchbox_009408533305800130436:xkx4srkjx9g" action="../search-results.html">
+          <input type="hidden" name="cx" value="009408533305800130436:xkx4srkjx9g"/>
+          <input type="hidden" name="cof" value="FORID:9"/>
+          <input name="q" type="text" size="40"/>
+          <input type="submit" name="sa" value="Search"/>
+        </form>
+        <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_009408533305800130436%3Axkx4srkjx9g"></script>
+
+        <br clear="all"/>
+        <div id="copyright">&copy; Copyright 2009-2015 Fah Sathirapongsasuti. All rights reserved.</div>
+      </div><!-- end #page-content -->
+      <br clear="all"/>
+    </div><!-- end #page -->
+    <div id="page-bottom"></div>
+  </div><!-- end #page-bg -->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try { var pageTracker = _gat._getTracker("UA-2424761-2"); pageTracker._trackPageview(); } catch(err) {}
+  </script>
+
+  <script>
+  // ── Demo Data ─────────────────────────────────────────────────────────────
+  const DEMO_ROUTES = [
+    {
+      id: "sf_winery",
+      label: "San Francisco \u2192 Sunset Suisun Winery",
+      interval: 30,
+      timeLabels: ["5:00 AM","5:30 AM","6:00 AM","6:30 AM","7:00 AM","7:30 AM","8:00 AM","8:30 AM","9:00 AM","9:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","1:00 PM","1:30 PM","2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM","6:30 PM","7:00 PM","7:30 PM","8:00 PM","8:30 PM","9:00 PM","9:30 PM","10:00 PM"],
+      days: {
+        Mon: [54.4,52.7,58.8,59.1,65.2,72.7,77.8,71.1,66.3,61.7,55.1,56.2,54.0,53.5,55.0,54.0,54.4,55.1,54.8,56.6,57.0,58.7,63.3,70.8,82.3,92.8,96.8,92.1,83.5,73.3,61.6,58.7,54.9,54.4,54.4],
+        Tue: [55.3,55.7,56.5,58.5,65.2,72.1,74.5,72.1,64.9,60.0,57.5,57.1,54.4,56.5,54.6,53.9,55.3,54.5,54.3,54.1,55.7,56.7,60.2,69.6,79.6,87.7,91.9,88.8,80.0,71.2,63.1,57.6,54.5,55.0,53.5],
+        Wed: [55.4,54.4,56.8,56.5,64.3,71.2,73.4,72.7,63.4,57.9,55.7,54.1,55.7,54.3,55.9,55.6,53.8,55.3,54.5,55.1,55.8,58.1,63.3,69.1,78.7,88.3,91.0,87.5,79.9,70.7,60.1,57.4,56.5,54.4,55.2],
+        Thu: [52.9,55.8,54.6,58.5,63.8,72.0,76.5,69.9,63.6,58.1,56.1,54.8,55.7,54.6,54.2,55.1,53.5,53.7,56.1,56.1,55.2,60.1,63.1,69.4,82.6,88.1,93.2,89.6,79.6,70.6,61.6,58.4,53.0,55.8,54.1],
+        Fri: [56.5,54.9,55.6,59.7,66.1,73.1,74.5,72.8,65.6,57.8,57.5,55.4,56.4,55.8,53.7,54.7,54.7,54.6,54.5,55.9,56.1,58.6,63.1,73.1,83.0,90.8,94.9,90.8,80.4,72.4,63.0,57.8,59.2,55.1,56.1]
+      }
+    },
+    {
+      id: "sf_sj",
+      label: "San Francisco \u2192 San Jose",
+      interval: 30,
+      timeLabels: ["5:00 AM","5:30 AM","6:00 AM","6:30 AM","7:00 AM","7:30 AM","8:00 AM","8:30 AM","9:00 AM","9:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","1:00 PM","1:30 PM","2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM","6:30 PM","7:00 PM","7:30 PM","8:00 PM","8:30 PM","9:00 PM","9:30 PM","10:00 PM"],
+      days: {
+        Mon: [49.2,49.6,54.0,52.1,56.1,68.3,78.5,84.0,77.7,70.0,59.2,56.7,51.6,50.5,52.2,51.4,48.9,51.3,49.1,52.3,50.8,55.8,61.3,73.9,86.1,90.3,83.0,71.3,63.6,54.2,50.5,51.5,48.2,51.3,51.7],
+        Tue: [50.1,48.8,50.3,54.9,57.8,68.1,75.8,80.2,76.0,66.4,58.0,53.9,52.5,49.9,48.6,49.0,48.6,46.9,50.1,49.3,54.3,53.9,59.2,71.9,80.9,86.4,81.2,74.1,60.3,55.1,50.9,49.7,47.6,51.0,47.5],
+        Wed: [50.6,50.8,51.3,50.0,58.4,64.4,75.1,78.0,77.4,64.5,56.8,52.9,48.4,49.4,49.7,50.4,49.5,52.8,53.0,52.3,51.5,55.5,64.0,72.9,80.4,82.5,81.1,71.4,61.0,54.3,49.5,48.2,48.2,50.5,50.4],
+        Thu: [49.0,49.8,52.8,50.8,56.9,64.4,78.8,79.5,77.9,67.4,56.5,53.5,51.0,50.9,50.4,51.0,50.9,48.9,51.3,49.2,49.6,54.2,60.0,70.2,79.3,86.3,82.2,70.3,63.4,54.6,50.4,48.9,50.7,49.9,50.4],
+        Fri: [54.5,51.6,50.6,51.1,57.3,66.0,76.1,77.9,77.2,65.3,61.2,52.3,52.1,50.7,48.9,50.4,49.4,49.5,50.0,47.4,53.7,55.8,61.7,74.4,80.9,82.9,82.8,71.0,61.8,54.1,51.3,48.9,50.0,51.1,50.6]
+      }
+    },
+    {
+      id: "home_23andme",
+      label: "Fairfield (Southlake Dr) \u2192 23andMe (Mountain View)",
+      interval: 30,
+      timeLabels: ["5:00 AM","5:30 AM","6:00 AM","6:30 AM","7:00 AM","7:30 AM","8:00 AM","8:30 AM","9:00 AM","9:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","1:00 PM","1:30 PM","2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM","6:30 PM","7:00 PM","7:30 PM","8:00 PM","8:30 PM","9:00 PM","9:30 PM","10:00 PM"],
+      days: {
+        Mon: [73.4,70.9,74.4,72.7,91.9,124.3,152.9,171.3,142.6,117.9,91.9,79.8,72.4,73.1,70.2,72.8,68.0,73.1,73.6,72.7,79.3,84.0,100.8,111.6,121.2,121.2,116.4,91.0,81.5,75.0,74.5,69.2,76.0,68.3,75.2],
+        Tue: [71.5,70.2,74.6,73.6,91.5,114.8,144.6,160.1,138.0,114.9,87.8,79.8,71.7,73.6,73.5,71.6,73.5,72.7,73.0,69.8,76.6,86.7,91.1,108.7,118.1,117.4,107.0,93.5,80.1,75.0,70.8,68.8,70.1,71.6,71.3],
+        Wed: [70.8,70.7,74.6,76.5,91.0,120.1,143.4,159.4,136.4,105.2,86.6,76.8,74.2,70.8,72.0,72.6,73.1,71.1,73.7,74.5,73.9,76.1,94.6,109.9,115.6,119.0,101.7,91.6,82.2,73.1,72.6,72.2,73.6,74.7,72.2],
+        Thu: [69.4,75.3,74.0,79.0,87.6,115.6,141.1,157.9,136.6,110.6,90.5,74.8,76.1,72.3,73.6,73.4,72.8,72.7,68.6,73.6,75.7,81.6,91.5,104.4,120.0,114.3,103.1,92.4,79.0,73.0,73.3,71.7,72.1,72.7,70.5],
+        Fri: [70.8,72.5,72.2,75.9,90.6,112.0,140.0,149.4,128.6,104.9,83.1,77.2,72.8,69.9,73.7,72.9,76.0,70.7,70.8,71.8,73.5,80.0,87.9,104.6,110.9,110.4,101.1,86.3,82.0,76.3,75.7,71.8,71.0,70.0,66.8]
+      }
+    }
+  ];
+
+  // ── Colors ────────────────────────────────────────────────────────────────
+  const DAY_COLORS = {
+    Mon: '#e6b800', // yellow (darkened for visibility on white)
+    Tue: '#e74c3c', // red
+    Wed: '#27ae60', // green
+    Thu: '#e67e22', // orange
+    Fri: '#2980b9', // blue
+    Sat: '#8e44ad', // purple
+    Sun: '#c0392b'  // dark red
+  };
+
+  // ── STI Calculation ───────────────────────────────────────────────────────
+  function computeSTI(durations, intervalMin) {
+    var sti = [];
+    for (var i = 0; i < durations.length - 1; i++) {
+      if (durations[i] != null && durations[i + 1] != null) {
+        sti.push(Math.round(((durations[i + 1] - durations[i]) / intervalMin) * 100) / 100);
+      } else {
+        sti.push(null);
+      }
+    }
+    return sti;
+  }
+
+  // ── Chart Instances ───────────────────────────────────────────────────────
+  var durationChart = null;
+  var stiChart      = null;
+
+  function makeOptions(yLabel) {
+    return {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: {
+            filter: function(item, data) {
+              return !data.datasets[item.datasetIndex].hideInLegend;
+            },
+            font: { family: 'Verdana, Arial, sans-serif', size: 11 },
+            boxWidth: 20
+          }
+        },
+        tooltip: {
+          filter: function(item) { return !item.dataset.hideInLegend; }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 45, maxTicksLimit: 13 },
+          grid: { color: '#f0f0f0' }
+        },
+        y: {
+          title: { display: true, text: yLabel, font: { size: 11 } },
+          ticks: { font: { size: 11 } },
+          grid: { color: '#f0f0f0' }
+        }
+      }
+    };
+  }
+
+  function renderCharts(data) {
+    var days    = Object.keys(data.days);
+    var durLbls = data.timeLabels;
+    var stiLbls = data.timeLabels.slice(0, -1);
+
+    var durDatasets = days.map(function(day) {
+      return {
+        label: day,
+        data: data.days[day],
+        borderColor: DAY_COLORS[day] || '#888',
+        backgroundColor: (DAY_COLORS[day] || '#888') + '20',
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.35,
+        fill: false
+      };
+    });
+
+    var stiDatasets = days.map(function(day) {
+      return {
+        label: day,
+        data: computeSTI(data.days[day], data.interval),
+        borderColor: DAY_COLORS[day] || '#888',
+        backgroundColor: (DAY_COLORS[day] || '#888') + '20',
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.35,
+        fill: false
+      };
+    });
+
+    // Reference lines for STI chart
+    var zeroLen = stiLbls.length;
+    stiDatasets.push({
+      label: 'STI = 0',
+      data: new Array(zeroLen).fill(0),
+      borderColor: '#bbb',
+      borderDash: [5, 4],
+      borderWidth: 1,
+      pointRadius: 0,
+      fill: false,
+      tension: 0,
+      hideInLegend: true
+    });
+    stiDatasets.push({
+      label: "Mio's rule (STI\u202F=\u202F2)",
+      data: new Array(zeroLen).fill(2),
+      borderColor: '#cc6600',
+      borderDash: [7, 4],
+      borderWidth: 1.5,
+      pointRadius: 0,
+      fill: false,
+      tension: 0,
+      hideInLegend: false
+    });
+
+    if (durationChart) durationChart.destroy();
+    durationChart = new Chart(document.getElementById('durationCanvas'), {
+      type: 'line',
+      data: { labels: durLbls, datasets: durDatasets },
+      options: makeOptions('minutes')
+    });
+
+    if (stiChart) stiChart.destroy();
+    stiChart = new Chart(document.getElementById('stiCanvas'), {
+      type: 'line',
+      data: { labels: stiLbls, datasets: stiDatasets },
+      options: makeOptions('min / min')
+    });
+  }
+
+  // ── Demo Loader ───────────────────────────────────────────────────────────
+  function loadDemo(routeId, btn) {
+    var route = null;
+    for (var i = 0; i < DEMO_ROUTES.length; i++) {
+      if (DEMO_ROUTES[i].id === routeId) { route = DEMO_ROUTES[i]; break; }
+    }
+    if (!route) return;
+    document.getElementById('chart-title').textContent = route.label;
+    var btns = document.querySelectorAll('.route-btn');
+    for (var j = 0; j < btns.length; j++) btns[j].classList.remove('active');
+    if (btn) btn.classList.add('active');
+    renderCharts(route);
+  }
+
+  // ── Custom Analysis ───────────────────────────────────────────────────────
+  function sleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+
+  async function geocode(query, token) {
+    var url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
+              encodeURIComponent(query) + '.json?access_token=' + token + '&limit=1';
+    var resp = await fetch(url);
+    if (!resp.ok) throw new Error('Geocoding failed (HTTP ' + resp.status + ')');
+    var data = await resp.json();
+    if (!data.features || data.features.length === 0)
+      throw new Error('Could not find location: "' + query + '"');
+    return data.features[0].center; // [lng, lat]
+  }
+
+  async function getDuration(origCoords, destCoords, departIso, token) {
+    var orig = origCoords[0] + ',' + origCoords[1];
+    var dest = destCoords[0] + ',' + destCoords[1];
+    var url = 'https://api.mapbox.com/directions/v5/mapbox/driving-traffic/' +
+              orig + ';' + dest + '?depart_at=' + departIso + '&access_token=' + token;
+    var resp = await fetch(url);
+    if (!resp.ok) throw new Error('Directions API error (HTTP ' + resp.status + ')');
+    var data = await resp.json();
+    if (data.routes && data.routes.length > 0) {
+      return Math.round(data.routes[0].duration / 60 * 10) / 10;
+    }
+    return null;
+  }
+
+  function nextWeekdayDate(dayIndex) { // 0=Mon ... 4=Fri
+    var today    = new Date();
+    var todayDow = today.getDay();           // 0=Sun, 1=Mon, ..., 6=Sat
+    var targetDow = (dayIndex + 1) % 7 || 7; // Mon=1 ... Fri=5 (0 never used for Mon-Fri)
+    // Actually: Mon=1,Tue=2,Wed=3,Thu=4,Fri=5 in JS getDay()
+    // dayIndex 0=Mon => targetDow=1; dayIndex 4=Fri => targetDow=5
+    targetDow = dayIndex + 1;
+    var daysAhead = targetDow - todayDow;
+    if (daysAhead <= 0) daysAhead += 7;
+    var d = new Date(today);
+    d.setDate(today.getDate() + daysAhead);
+    return d.toISOString().split('T')[0]; // YYYY-MM-DD
+  }
+
+  async function analyzeCustom() {
+    var token      = document.getElementById('token').value.trim();
+    var addrA      = document.getElementById('addr-a').value.trim();
+    var addrB      = document.getElementById('addr-b').value.trim();
+    var startHour  = parseInt(document.getElementById('start-hour').value, 10);
+    var endHour    = parseInt(document.getElementById('end-hour').value, 10);
+    var intervalMin = parseInt(document.getElementById('interval').value, 10);
+    var dayCbs     = document.querySelectorAll('.day-cb:checked');
+    var selectedDays = [];
+    for (var k = 0; k < dayCbs.length; k++) selectedDays.push(parseInt(dayCbs[k].value, 10));
+
+    var errDiv = document.getElementById('error-msg');
+    errDiv.style.display = 'none';
+    function showError(msg) { errDiv.textContent = msg; errDiv.style.display = 'block'; }
+
+    if (!token)                  return showError('Please enter a Mapbox access token.');
+    if (!addrA || !addrB)        return showError('Please enter both addresses.');
+    if (selectedDays.length === 0) return showError('Please select at least one day.');
+    if (startHour >= endHour)    return showError('Start time must be before end time.');
+
+    // Build time slots
+    var timeSlots = [];
+    for (var mins = startHour * 60; mins <= endHour * 60; mins += intervalMin) {
+      timeSlots.push({ h: Math.floor(mins / 60), m: mins % 60 });
+    }
+    var timeLabels = timeSlots.map(function(s) {
+      var suf = s.h < 12 ? 'AM' : 'PM';
+      var dh  = s.h % 12 || 12;
+      return dh + ':' + (s.m < 10 ? '0' : '') + s.m + ' ' + suf;
+    });
+
+    var total = selectedDays.length * timeSlots.length;
+    var done  = 0;
+    var btn   = document.getElementById('analyze-btn');
+    btn.disabled = true;
+    document.getElementById('progress-wrap').style.display = 'block';
+    var prog     = document.getElementById('progress-bar');
+    var statusEl = document.getElementById('status-text');
+    prog.max = total; prog.value = 0;
+
+    var dayNames = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+    try {
+      statusEl.textContent = 'Geocoding addresses\u2026';
+      var origCoords = await geocode(addrA, token);
+      var destCoords = await geocode(addrB, token);
+
+      var resultDays = {};
+      for (var di = 0; di < selectedDays.length; di++) {
+        var dayIdx  = selectedDays[di];
+        var dayName = dayNames[dayIdx];
+        var dateStr = nextWeekdayDate(dayIdx);
+        var durations = [];
+        for (var si = 0; si < timeSlots.length; si++) {
+          var s = timeSlots[si];
+          var hh = s.h < 10 ? '0' + s.h : '' + s.h;
+          var mm = s.m < 10 ? '0' + s.m : '' + s.m;
+          var departIso = dateStr + 'T' + hh + ':' + mm + ':00';
+          statusEl.textContent = 'Fetching ' + dayName + ' ' + timeLabels[si] +
+                                  ' (' + (done + 1) + '/' + total + ')\u2026';
+          var dur = await getDuration(origCoords, destCoords, departIso, token);
+          durations.push(dur);
+          done++;
+          prog.value = done;
+          await sleep(110);
+        }
+        resultDays[dayName] = durations;
+      }
+
+      document.getElementById('chart-title').textContent = addrA + ' \u2192 ' + addrB;
+      var btns = document.querySelectorAll('.route-btn');
+      for (var bi = 0; bi < btns.length; bi++) btns[bi].classList.remove('active');
+      renderCharts({ timeLabels: timeLabels, days: resultDays, interval: intervalMin });
+      statusEl.textContent = 'Done! Showing live results.';
+
+    } catch(err) {
+      showError('Error: ' + err.message);
+    } finally {
+      btn.disabled = false;
+      document.getElementById('progress-wrap').style.display = 'none';
+    }
+  }
+
+  // ── Toggle Custom Panel ───────────────────────────────────────────────────
+  var customOpen = false;
+  function toggleCustom() {
+    customOpen = !customOpen;
+    document.getElementById('custom-body').style.display = customOpen ? 'block' : 'none';
+    document.getElementById('custom-toggle').innerHTML =
+      (customOpen ? '&#x25BC;' : '&#x25B6;') +
+      ' Custom Analysis &#x2014; run your own route with a Mapbox token';
+  }
+
+  // ── Populate Time Selects ─────────────────────────────────────────────────
+  (function populateTimeSelects() {
+    var startSel = document.getElementById('start-hour');
+    var endSel   = document.getElementById('end-hour');
+    for (var h = 0; h <= 23; h++) {
+      var suf = h < 12 ? 'AM' : 'PM';
+      var dh  = h % 12 || 12;
+      var lbl = dh + ':00 ' + suf;
+      startSel.add(new Option(lbl, h, false, h === 5));
+      endSel.add(new Option(lbl, h, false, h === 22));
+    }
+  })();
+
+  // ── Init: load Route 3 demo on page load ──────────────────────────────────
+  renderCharts(DEMO_ROUTES[2]);
+  </script>
+
+</body>
+</html>
