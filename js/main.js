@@ -16,7 +16,7 @@
 
   function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
-    themeIcon.textContent = theme === 'dark' ? '\u263E' : '\u2600';
+    themeIcon.textContent = theme === 'dark' ? '\u2B21' : '\u2B22';
     localStorage.setItem('fah-theme', theme);
   }
 
