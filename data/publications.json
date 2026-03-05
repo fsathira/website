@@ -1,0 +1,1379 @@
+[
+  {
+    "id": "genomewide-association-study-metaanalysis-9619-2025",
+    "title": "Genome-Wide Association Study Meta-Analysis of 9619 Cases With Tic Disorders",
+    "authors": "Strom NI, Halvorsen MW, Grove J, Ásbjörnsdóttir B, Luðvígsson P, Thorarensen Ó, et al., (PGC TS Working Group; 23andMe Research Team)",
+    "journal": "Biol Psychiatry",
+    "year": 2025,
+    "volume": "",
+    "doi": "10.1016/j.biopsych.2024.07.025",
+    "pubmed_id": "39389409",
+    "pmcid": "PMC12036792",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "south-asian-cohorts-2023",
+    "title": "South Asian medical cohorts reveal strong founder effects and high rates of homozygosity",
+    "authors": "Wall JD, Sathirapongsasuti JF, Gupta R, Rasheed A, Venkatesan R, Belsare S, et al.",
+    "journal": "Nat Commun",
+    "year": 2023,
+    "volume": "",
+    "doi": "10.1038/s41467-023-38766-1",
+    "pubmed_id": "37291107",
+    "pmcid": "PMC10250394",
+    "role": "named_author",
+    "abstract": "South Asian populations are underrepresented in genetic studies despite harboring substantial genetic diversity. We analyze whole-genome sequencing data from multiple South Asian medical cohorts, revealing strong founder effects and high rates of homozygosity with implications for precision medicine in these populations.",
+    "tags": [
+      "population-genetics",
+      "precision-medicine",
+      "genomics"
+    ]
+  },
+  {
+    "id": "genomewide-polygenic-score-predicts-large-2022",
+    "title": "Genome-Wide Polygenic Score Predicts Large Number of High Risk Individuals in Monogenic Undiagnosed Young Onset Parkinson's Disease Patients from India",
+    "authors": "Kukkle PL, Geetha TS, Chaudhary R, Sathirapongsasuti JF, Goyal V, Kandadai RM, et al.",
+    "journal": "Adv Biol (Weinh)",
+    "year": 2022,
+    "volume": "326",
+    "doi": "10.1002/adbi.202101326",
+    "pubmed_id": "35810474",
+    "pmcid": "",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "genomewide-association-study-musical-beat-2022",
+    "title": "Genome-wide association study of musical beat synchronization demonstrates high polygenicity",
+    "authors": "Niarchou M, Gustavson DE, Sathirapongsasuti JF, Anglada-Tort M, Eising E, Bell E, et al., (23andMe Research Team)",
+    "journal": "Nat Hum Behav",
+    "year": 2022,
+    "volume": "",
+    "doi": "10.1038/s41562-022-01359-x",
+    "pubmed_id": "35710621",
+    "pmcid": "PMC9489530",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "genetic-overlap-analysis-endometriosis-asthma-2022",
+    "title": "Genetic overlap analysis of endometriosis and asthma identifies shared loci implicating sex hormones and thyroid signalling pathways",
+    "authors": "Adewuyi EO, Mehta D, (International Endogene Consortium (IEC); 23andMe Research Team)",
+    "journal": "Hum Reprod",
+    "year": 2022,
+    "volume": "",
+    "doi": "10.1093/humrep/deab254",
+    "pubmed_id": "35472084",
+    "pmcid": "PMC8804329",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-analysis-replication-810625-2022",
+    "title": "Genome-wide association analysis and replication in 810,625 individuals with varicose veins",
+    "authors": "Ahmed WU, Kleeman S, Ng M, Wang W, Auton A, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2022,
+    "volume": "",
+    "doi": "10.1038/s41467-022-30765-y",
+    "pubmed_id": "35654884",
+    "pmcid": "PMC9163161",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-metaanalysis-insomnia-prioritizes-genes-2022",
+    "title": "Genome-wide meta-analysis of insomnia prioritizes genes associated with metabolic and psychiatric pathways",
+    "authors": "Watanabe K, Jansen PR, Savage JE, Nandakumar P, Wang X, (23andMe Research Team)",
+    "journal": "Nat Genet",
+    "year": 2022,
+    "volume": "",
+    "doi": "10.1038/s41588-022-01124-w",
+    "pubmed_id": "35835914",
+    "pmcid": "",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "psychiatric-genetics",
+      "sleep-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "polygenic-prediction-educational-attainment-within-2022",
+    "title": "Polygenic prediction of educational attainment within and between families from genome-wide association analyses in 3 million individuals",
+    "authors": "Okbay A, Wu Y, Wang N, Jayashankar H, Bennett M, Nehzati SM, et al., (23andMe Research Team; Social Science Genetic Association Consortium)",
+    "journal": "Nat Genet",
+    "year": 2022,
+    "volume": "",
+    "doi": "10.1038/s41588-022-01016-z",
+    "pubmed_id": "35361970",
+    "pmcid": "PMC9005349",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genetic-architecture-pneumonia-susceptibility-implicates-2022",
+    "title": "The genetic architecture of pneumonia susceptibility implicates mucin biology and a relationship with psychiatric illness",
+    "authors": "Reay WR, Geaghan MP, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2022,
+    "volume": "",
+    "doi": "10.1038/s41467-022-31473-3",
+    "pubmed_id": "35768473",
+    "pmcid": "PMC9243103",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "psychiatric-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "human-ace2-receptor-polymorphisms-altered-2021",
+    "title": "Human ACE2 receptor polymorphisms and altered susceptibility to SARS-CoV-2",
+    "authors": "Suryamohan K, Diwanji D, Stawiski EW, Gupta R, Miersch S, Liu J, ..., Sathirapongsasuti JF, et al.",
+    "journal": "Commun Biol",
+    "year": 2021,
+    "volume": "4(1):475",
+    "doi": "10.1038/s42003-021-02030-3",
+    "pubmed_id": "33846513",
+    "pmcid": "PMC8041869",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "COVID-19",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "response-comment-largescale-gwas-reveals-2021",
+    "title": "Response to Comment on \"Large-scale GWAS reveals insights into the genetic architecture of same-sex sexual behavior\"",
+    "authors": "Ganna A, Verweij KJH, Nivard MG, Maier R, Wedow R, Busch AS, ..., Sathirapongsasuti JF, et al., (23andMe Research Team)",
+    "journal": "Science",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1126/science.aba5693",
+    "pubmed_id": "33766859",
+    "pmcid": "",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "comprehensive-reassessment-association-between-vitamin-2021",
+    "title": "A comprehensive re-assessment of the association between vitamin D and cancer susceptibility using Mendelian randomization",
+    "authors": "Ong JS, Dixon-Suen SC, Han X, An J, (Esophageal Cancer Consortium; 23 and Me Research Team)",
+    "journal": "Nat Commun",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41467-020-20368-w",
+    "pubmed_id": "33431812",
+    "pmcid": "PMC7801600",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "cancer",
+      "consortium"
+    ]
+  },
+  {
+    "id": "disease-risk-scores-skin-cancers-2021",
+    "title": "Disease risk scores for skin cancers",
+    "authors": "Fontanillas P, Alipanahi B, Furlotte NA, Johnson M, Wilson CH, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41467-020-20246-5",
+    "pubmed_id": "33420020",
+    "pmcid": "PMC7794415",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "cancer",
+      "consortium"
+    ]
+  },
+  {
+    "id": "distinct-clinical-phenotypes-crohns-disease-2021",
+    "title": "Distinct clinical phenotypes for Crohn's disease derived from patient surveys",
+    "authors": "Liu T, Han L, Tilley M, Afzelius L, Maciejewski M, Jelinsky S, et al., (23andMe Research Team)",
+    "journal": "BMC Gastroenterol",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1186/s12876-021-01740-6",
+    "pubmed_id": "33836648",
+    "pmcid": "PMC8034169",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "genetic-analyses-identify-widespread-sexdifferential-2021",
+    "title": "Genetic analyses identify widespread sex-differential participation bias",
+    "authors": "Pirastu N, Cordioli M, Nandakumar P, Mignogna G, Abdellaoui A, Hollis B, et al., (FinnGen Study; 23andMe Research Team)",
+    "journal": "Nat Genet",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41588-021-00846-7",
+    "pubmed_id": "33888908",
+    "pmcid": "PMC7611642",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "genetic-determinants-daytime-napping-effects-2021",
+    "title": "Genetic determinants of daytime napping and effects on cardiometabolic health",
+    "authors": "Dashti HS, Daghlas I, Lane JM, Huang Y, Udler MS, Wang H, et al., (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41467-020-20585-3",
+    "pubmed_id": "33568662",
+    "pmcid": "PMC7876146",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "sleep-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-analysis-53400-people-irritable-2021",
+    "title": "Genome-wide analysis of 53,400 people with irritable bowel syndrome highlights shared genetic pathways with mood and anxiety disorders",
+    "authors": "Eijsbouts C, Zheng T, Kennedy NA, Bonfiglio F, Anderson CA, Moutsianas L, et al., (23andMe Research Team; Voda AI)",
+    "journal": "Nat Genet",
+    "year": 2021,
+    "volume": "53(11):1543-1552",
+    "doi": "10.1038/s41588-021-00950-8",
+    "pubmed_id": "34741163",
+    "pmcid": "PMC8571093",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-study-problematic-opioid-2021",
+    "title": "Genome-wide association study of problematic opioid prescription use in 132,113 23andMe research participants of European ancestry",
+    "authors": "Sanchez-Roige S, Fontanillas P, Jennings MV, Bianchi SB, Huang Y, Hatoum AS, et al., (23andMe Research Team)",
+    "journal": "Mol Psychiatry",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41380-021-01335-3",
+    "pubmed_id": "34728798",
+    "pmcid": "PMC8562028",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "genomewide-metaanalysis-identifies-127-openangle-2021",
+    "title": "Genome-wide meta-analysis identifies 127 open-angle glaucoma loci with consistent effect across ancestries",
+    "authors": "Gharahkhani P, Jorgenson E, Hysi P, Khawaja AP, Pendergrass S, Han X, et al., (NEIGHBORHOOD consortium; ANZRAG consortium)",
+    "journal": "Nat Commun",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41467-020-20851-4",
+    "pubmed_id": "33627673",
+    "pmcid": "PMC7904932",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "incorporating-functional-priors-improves-polygenic-2021",
+    "title": "Incorporating functional priors improves polygenic prediction accuracy in UK Biobank and 23andMe data sets",
+    "authors": "Márquez-Luna C, Gazal S, Loh PR, Kim SS, Furlotte N, Auton A, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41467-021-25171-9",
+    "pubmed_id": "34663819",
+    "pmcid": "PMC8523709",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "resource-profile-user-guide-polygenic-2021",
+    "title": "Resource profile and user guide of the Polygenic Index Repository",
+    "authors": "Becker J, Burik CAP, Goldman G, Wang N, Jayashankar H, Bennett M, et al., (23andMe Research Group)",
+    "journal": "Nat Hum Behav",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.1038/s41562-021-01119-3",
+    "pubmed_id": "34140656",
+    "pmcid": "PMC8678380",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "ph-proton-sensor-gpr65-determine-2021",
+    "title": "pH and Proton Sensor GPR65 Determine Susceptibility to Atopic Dermatitis",
+    "authors": "Xie L, McKenzie CI, Qu X, Mu Y, Wang Q, Bing N, et al., (23andMe Research Team)",
+    "journal": "J Immunol",
+    "year": 2021,
+    "volume": "",
+    "doi": "10.4049/jimmunol.2001363",
+    "pubmed_id": "34135065",
+    "pmcid": "PMC8674371",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "human-ace2-receptor-polymorphisms-predict-2020",
+    "title": "Human ACE2 receptor polymorphisms predict SARS-CoV-2 susceptibility",
+    "authors": "Stawiski, Eric W, Diwanji, Devan, Suryamohan, Kushal, Gupta, Ravi, Fellouse, Frederic A, Sathirapongsasuti, J Fah, et al.",
+    "journal": "BioRxiv",
+    "year": 2020,
+    "volume": ":2020.04. 07.024752",
+    "doi": "",
+    "pubmed_id": "",
+    "pmcid": "",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "COVID-19",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "genomewide-crossphenotype-metaanalysis-association-blood-2020",
+    "title": "A genome-wide cross-phenotype meta-analysis of the association of blood pressure with migraine",
+    "authors": "Guo Y, Rist PM, Daghlas I, Giulianini F, (International Headache Genetics Consortium; 23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41467-020-17002-0",
+    "pubmed_id": "32632093",
+    "pmcid": "PMC7338361",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "fox-insight-collects-online-longitudinal-2020",
+    "title": "Fox Insight collects online, longitudinal patient-reported outcomes and genetic data on Parkinson's disease",
+    "authors": "Smolensky L, Amondikar N, Crawford K, Neu S, Kopil CM, Daeschler M, et al., (23andMe Research Team)",
+    "journal": "Sci Data",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41597-020-0401-2",
+    "pubmed_id": "32094335",
+    "pmcid": "PMC7039948",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genetic-identification-cell-types-underlying-2020",
+    "title": "Genetic identification of cell types underlying brain complex traits yields insights into the etiology of Parkinson's disease",
+    "authors": "Bryois J, Skene NG, Hansen TF, Kogelman LJA, Watson HJ, Liu Z, (Eating Disorders Working Group of the Psychiatric Genomics Consortium; International Headache Genetics Consortium)",
+    "journal": "Nat Genet",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41588-020-0610-9",
+    "pubmed_id": "32341526",
+    "pmcid": "PMC7930801",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genetic-variability-potential-effects-clinical-2020",
+    "title": "Genetic variability and potential effects on clinical trial outcomes: perspectives in Parkinson's disease",
+    "authors": "Leonard H, Blauwendraat C, Krohn L, Faghri F, Iwaki H, Ferguson G, et al.",
+    "journal": "J Med Genet",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1136/jmedgenet-2019-106283",
+    "pubmed_id": "31784483",
+    "pmcid": "PMC8474559",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-study-identifies-association-between-2020",
+    "title": "Genome-wide Study Identifies Association between HLA-B(∗)55:01 and Self-Reported Penicillin Allergy",
+    "authors": "Krebs K, Bovijn J, Zheng N, Lepamets M, Censin JC, Jürgenson T, et al., (23andMe Research Team)",
+    "journal": "Am J Hum Genet",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1016/j.ajhg.2020.08.008",
+    "pubmed_id": "32888428",
+    "pmcid": "PMC7536643",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-multiomic-analyses-reveal-2020",
+    "title": "Genome-wide association and multi-omic analyses reveal ACTN2 as a gene linked to heart failure",
+    "authors": "Arvanitis M, Tampakakis E, Zhang Y, Wang W, Auton A, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41467-020-14843-7",
+    "pubmed_id": "32111823",
+    "pmcid": "PMC7048760",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-studies-antidepressant-class-2020",
+    "title": "Genome-wide association studies of antidepressant class response and treatment-resistant depression",
+    "authors": "Li QS, Tian C, Hinds D",
+    "journal": "Transl Psychiatry",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41398-020-01035-6",
+    "pubmed_id": "33106475",
+    "pmcid": "PMC7589471",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "psychiatric-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomic-analysis-male-puberty-timing-2020",
+    "title": "Genomic analysis of male puberty timing highlights shared genetic basis with hair colour and lifespan",
+    "authors": "Hollis B, Day FR, Busch AS, Thompson DJ, Soares ALG, Timmers PRHJ, et al., (PRACTICAL Consortium; 23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41467-020-14451-5",
+    "pubmed_id": "32210231",
+    "pmcid": "PMC7093467",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "inherited-myeloproliferative-neoplasm-risk-affects-2020",
+    "title": "Inherited myeloproliferative neoplasm risk affects haematopoietic stem cells",
+    "authors": "Bao EL, Nandakumar SK, Liao X, Bick AG, Karjalainen J, Tabaka M, et al., (FinnGen; 23andMe Research Team)",
+    "journal": "Nature",
+    "year": 2020,
+    "volume": "586(7831):769-775",
+    "doi": "10.1038/s41586-020-2786-7",
+    "pubmed_id": "33057200",
+    "pmcid": "PMC7606745",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "insights-into-genetic-basis-retinal-2020",
+    "title": "Insights into the genetic basis of retinal detachment",
+    "authors": "Boutin TS, Charteris DG, Chandra A, Campbell S, Hayward C, Campbell A, (UK Biobank Eye & Vision Consortium; Nandakumar P, Hinds D)",
+    "journal": "Hum Mol Genet",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1093/hmg/ddz294",
+    "pubmed_id": "31816047",
+    "pmcid": "PMC7068119",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "overlapping-genetic-architecture-between-parkinson-2020",
+    "title": "Overlapping genetic architecture between Parkinson disease and melanoma",
+    "authors": "Dube U, Ibanez L, Budde JP, Benitez BA, Davis AA, Harari O, et al., (23andMe Research Team; Melanoma-Meta-analysis Consortium)",
+    "journal": "Acta Neuropathol",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1007/s00401-019-02110-z",
+    "pubmed_id": "31845298",
+    "pmcid": "PMC7379325",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "cancer",
+      "consortium"
+    ]
+  },
+  {
+    "id": "effect-lrrk2-lossoffunction-variants-humans-2020",
+    "title": "The effect of LRRK2 loss-of-function variants in humans",
+    "authors": "Whiffin N, Armean IM, Kleinman A, Marshall JL, Minikel EV, Goodrich JK, et al., (Genome Aggregation Database Production Team; Genome Aggregation Database Consortium)",
+    "journal": "Nat Med",
+    "year": 2020,
+    "volume": "",
+    "doi": "10.1038/s41591-020-0893-5",
+    "pubmed_id": "32461697",
+    "pmcid": "PMC7303015",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "upd-2019",
+    "title": "Characterization of Prevalence and Health Consequences of Uniparental Disomy in Four Million Individuals from the General Population",
+    "authors": "Nakka P, Pattillo Smith S, O'Donnell-Luria AH, McManus KF, (23andMe Research Team)",
+    "journal": "Am J Hum Genet",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1016/j.ajhg.2019.09.016",
+    "pubmed_id": "31607426",
+    "pmcid": "PMC6848996",
+    "role": "named_author",
+    "abstract": "We characterized uniparental disomy (UPD) events in approximately four million 23andMe research participants. We mapped UPD across all chromosomes and identified health consequences associated with UPD events, providing the largest population-based study of UPD to date.",
+    "tags": [
+      "23andMe",
+      "human-genetics",
+      "genomics"
+    ]
+  },
+  {
+    "id": "genome-studies-must-account-historyresponse-2019",
+    "title": "Genome studies must account for history-Response",
+    "authors": "Ganna A, Verweij KJH, Nivard MG, Maier R, Wedow R, Busch AS, ..., Sathirapongsasuti JF, et al., (23andMe Research Team)",
+    "journal": "Science",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1126/science.aaz8941",
+    "pubmed_id": "31857477",
+    "pmcid": "",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "genome-wide-analysis-mouth-ulcers-2019",
+    "title": "Genome wide analysis for mouth ulcers identifies associations at immune regulatory loci",
+    "authors": "Dudding T, Haworth S, Lind PA, Sathirapongsasuti JF, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41467-019-08923-6",
+    "pubmed_id": "30837455",
+    "pmcid": "PMC6400940",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "largescale-gwas-reveals-insights-into-2019",
+    "title": "Large-scale GWAS reveals insights into the genetic architecture of same-sex sexual behavior",
+    "authors": "Ganna A, Verweij KJH, Nivard MG, Maier R, Wedow R, Busch AS, ..., Sathirapongsasuti JF, et al., (23andMe Research Team)",
+    "journal": "Science",
+    "year": 2019,
+    "volume": "365(6456):eaat7693",
+    "doi": "10.1126/science.aat7693",
+    "pubmed_id": "31467194",
+    "pmcid": "PMC7082777",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "atlas-genetic-influences-osteoporosis-humans-2019",
+    "title": "An atlas of genetic influences on osteoporosis in humans and mice",
+    "authors": "Morris JA, Kemp JP, Youlten SE, Laurent L, Logan JG, Chai RC, et al., (23andMe Research Team)",
+    "journal": "Nat Genet",
+    "year": 2019,
+    "volume": "51(2):258-266",
+    "doi": "10.1038/s41588-018-0302-x",
+    "pubmed_id": "30598549",
+    "pmcid": "PMC6358485",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "association-wholegenome-netrin1-signaling-pathwayderived-2019",
+    "title": "Association of Whole-Genome and NETRIN1 Signaling Pathway-Derived Polygenic Risk Scores for Major Depressive Disorder and White Matter Microstructure in the UK Biobank",
+    "authors": "Barbu MC, Zeng Y, Shen X, Cox SR, Clarke TK, Gibson J, et al., (Major Depressive Disorder Working Group of the Psychiatric Genomics Consortium; 23andMe Research Team)",
+    "journal": "Biol Psychiatry Cogn Neurosci Neuroimaging",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1016/j.bpsc.2018.07.006",
+    "pubmed_id": "30197049",
+    "pmcid": "PMC6374980",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "psychiatric-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "association-studies-up-12-million-2019",
+    "title": "Association studies of up to 1.2 million individuals yield new insights into the genetic etiology of tobacco and alcohol use",
+    "authors": "Liu M, Jiang Y, Wedow R, Li Y, Brazel DM, Chen F, et al., (23andMe Research Team; HUNT All-In Psychiatry)",
+    "journal": "Nat Genet",
+    "year": 2019,
+    "volume": "51(2):237-244",
+    "doi": "10.1038/s41588-018-0307-5",
+    "pubmed_id": "30643251",
+    "pmcid": "PMC6358542",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "discovery-first-genomewide-significant-risk-2019",
+    "title": "Discovery of the first genome-wide significant risk loci for attention deficit/hyperactivity disorder",
+    "authors": "Demontis D, Walters RK, Martin J, Mattheisen M, Als TD, Agerbo E, et al., (ADHD Working Group of the Psychiatric Genomics Consortium (PGC); Early Lifecourse & Genetic Epidemiology (EAGLE) Consortium)",
+    "journal": "Nat Genet",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41588-018-0269-7",
+    "pubmed_id": "30478444",
+    "pmcid": "PMC6481311",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "psychiatric-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "gastroesophageal-reflux-gwas-identifies-risk-2019",
+    "title": "Gastroesophageal reflux GWAS identifies risk loci that also associate with subsequent severe esophageal diseases",
+    "authors": "An J, Gharahkhani P, Law MH, Ong JS, Han X, Olsen CM, et al., (BEACON; 23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41467-019-11968-2",
+    "pubmed_id": "31527586",
+    "pmcid": "PMC6746768",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-analysis-insomnia-1331010-individuals-2019",
+    "title": "Genome-wide analysis of insomnia in 1,331,010 individuals identifies new risk loci and functional pathways",
+    "authors": "Jansen PR, Watanabe K, Stringer S, Skene N, Bryois J, Hammerschlag AR, et al., (23andMe Research Team)",
+    "journal": "Nat Genet",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41588-018-0333-3",
+    "pubmed_id": "30804565",
+    "pmcid": "",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "sleep-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-analyses-risk-tolerance-2019",
+    "title": "Genome-wide association analyses of risk tolerance and risky behaviors in over 1 million individuals identify hundreds of loci and shared genetic influences",
+    "authors": "Karlsson Linnér R, Biroli P, Kong E, Meddens SFW, Wedow R, Fontana MA, et al., (23and Me Research Team; eQTLgen Consortium)",
+    "journal": "Nat Genet",
+    "year": 2019,
+    "volume": "51(2):245-257",
+    "doi": "10.1038/s41588-018-0309-3",
+    "pubmed_id": "30643258",
+    "pmcid": "PMC6713272",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-epidemiological-analyses-reveal-2019",
+    "title": "Genome-wide association and epidemiological analyses reveal common genetic origins between uterine leiomyomata and endometriosis",
+    "authors": "Gallagher CS, Mäkinen N, Harris HR, Rahmioglu N, Uimari O, Cook JP, et al., (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41467-019-12536-4",
+    "pubmed_id": "31649266",
+    "pmcid": "PMC6813337",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-study-knee-pain-2019",
+    "title": "Genome-wide association study of knee pain identifies associations with GDF5 and COL27A1 in UK Biobank",
+    "authors": "Meng W, Adams MJ, Palmer CNA, (23andMe Research Team)",
+    "journal": "Commun Biol",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s42003-019-0568-2",
+    "pubmed_id": "31482140",
+    "pmcid": "PMC6713725",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "identification-common-genetic-risk-variants-2019",
+    "title": "Identification of common genetic risk variants for autism spectrum disorder",
+    "authors": "Grove J, Ripke S, Als TD, Mattheisen M, Walters RK, Won H, et al., (Autism Spectrum Disorder Working Group of the Psychiatric Genomics Consortium; BUPGEN)",
+    "journal": "Nat Genet",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41588-019-0344-8",
+    "pubmed_id": "30804558",
+    "pmcid": "PMC6454898",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "identification-novel-risk-loci-causal-2019",
+    "title": "Identification of novel risk loci, causal insights, and heritable risk for Parkinson's disease: a meta-analysis of genome-wide association studies",
+    "authors": "Nalls MA, Blauwendraat C, Vallerga CL, Heilbron K, Bandres-Ciga S, Chang D, et al., (23andMe Research Team; System Genomics of Parkinson's Disease Consortium)",
+    "journal": "Lancet Neurol",
+    "year": 2019,
+    "volume": "18(12):1091-1102",
+    "doi": "10.1016/S1474-4422(19)30320-5",
+    "pubmed_id": "31701892",
+    "pmcid": "PMC8422160",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "neurogenetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "parkinsons-phenometraits-associated-parkinsons-disease-2019",
+    "title": "The Parkinson's phenome-traits associated with Parkinson's disease in a broadly phenotyped cohort",
+    "authors": "Heilbron K, Noyce AJ, Fontanillas P, Alipanahi B, Nalls MA, (23andMe Research Team)",
+    "journal": "NPJ Parkinsons Dis",
+    "year": 2019,
+    "volume": "",
+    "doi": "10.1038/s41531-019-0077-5",
+    "pubmed_id": "30937360",
+    "pmcid": "PMC6437217",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "placenta-appetite-genes-gdf15-igfbp7-2018",
+    "title": "Placenta and appetite genes GDF15 and IGFBP7 are associated with hyperemesis gravidarum",
+    "authors": "Fejzo MS, Sazonova OV, Sathirapongsasuti JF, Hallgrímsdóttir IB, Vacic V, MacGibbon KW, et al.",
+    "journal": "Nat Commun",
+    "year": 2018,
+    "volume": "9(1):1178",
+    "doi": "10.1038/s41467-018-03258-0",
+    "pubmed_id": "29563502",
+    "pmcid": "PMC5862842",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "genetic-investigation-sex-bias-prevalence-2018",
+    "title": "A Genetic Investigation of Sex Bias in the Prevalence of Attention-Deficit/Hyperactivity Disorder",
+    "authors": "Martin J, Walters RK, Demontis D, Mattheisen M, Lee SH, Robinson E, et al., (23andMe Research Team; Psychiatric Genomics Consortium: ADHD Subgroup)",
+    "journal": "Biol Psychiatry",
+    "year": 2018,
+    "volume": "83(12):1044-1053",
+    "doi": "10.1016/j.biopsych.2017.11.026",
+    "pubmed_id": "29325848",
+    "pmcid": "PMC5992329",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "psychiatric-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "assessment-genetic-clinical-determinants-fracture-2018",
+    "title": "Assessment of the genetic and clinical determinants of fracture risk: genome wide association and mendelian randomisation study",
+    "authors": "Trajanoska K, Morris JA, Oei L, Zheng HF, Evans DM, Kiel DP, et al.",
+    "journal": "BMJ",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1136/bmj.k3225",
+    "pubmed_id": "30158200",
+    "pmcid": "PMC6113773",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "common-variant-burden-contributes-familial-2018",
+    "title": "Common Variant Burden Contributes to the Familial Aggregation of Migraine in 1,589 Families",
+    "authors": "Gormley P, Kurki MI, Hiekkala ME, Veerapen K, Häppölä P, Mitchell AA, et al., (23andMe Research Team; International Headache Genetics Consortium (IHGC))",
+    "journal": "Neuron",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1016/j.neuron.2018.04.014",
+    "pubmed_id": "29731251",
+    "pmcid": "PMC5967411",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "gene-discovery-polygenic-prediction-genomewide-2018",
+    "title": "Gene discovery and polygenic prediction from a genome-wide association study of educational attainment in 1.1 million individuals",
+    "authors": "Lee JJ, Wedow R, Okbay A, Kong E, Maghzian O, Zacher M, et al., (23andMe Research Team; COGENT (Cognitive Genomics Consortium))",
+    "journal": "Nat Genet",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41588-018-0147-3",
+    "pubmed_id": "30038396",
+    "pmcid": "PMC6393768",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "gene-expression-imputation-identifies-candidate-2018",
+    "title": "Gene expression imputation identifies candidate genes and susceptibility loci associated with cutaneous squamous cell carcinoma",
+    "authors": "Ioannidis NM, Wang W, Furlotte NA, Hinds DA, (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41467-018-06149-6",
+    "pubmed_id": "30323283",
+    "pmcid": "PMC6189170",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-metaanalysis-highlights-lightinduced-2018",
+    "title": "Genome-wide association meta-analysis highlights light-induced signaling as a driver for refractive error",
+    "authors": "Tedja MS, Wojciechowski R, Hysi PG, Eriksson N, Furlotte NA, Verhoeven VJM, et al., (CREAM Consortium; 23andMe Research Team)",
+    "journal": "Nat Genet",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41588-018-0127-7",
+    "pubmed_id": "29808027",
+    "pmcid": "PMC5980758",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "genomewide-association-study-depression-phenotypes-2018",
+    "title": "Genome-wide association study of depression phenotypes in UK Biobank identifies variants in excitatory synaptic pathways",
+    "authors": "Howard DM, Adams MJ, Shirali M, Clarke TK, Marioni RE, Davies G, et al., (23andMe Research Team)",
+    "journal": "Nat Commun",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41467-018-03819-3",
+    "pubmed_id": "29662059",
+    "pmcid": "PMC5902628",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "psychiatric-genetics",
+      "sleep-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "metaanalysis-genomewide-association-studies-neuroticism-2018",
+    "title": "Meta-analysis of genome-wide association studies for neuroticism in 449,484 individuals identifies novel genetic loci and pathways",
+    "authors": "Nagel M, Jansen PR, Stringer S, Watanabe K, de Leeuw CA, Bryois J, et al., (23andMe Research Team)",
+    "journal": "Nat Genet",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41588-018-0151-7",
+    "pubmed_id": "29942085",
+    "pmcid": "",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "multitrait-analysis-genomewide-association-summary-2018",
+    "title": "Multi-trait analysis of genome-wide association summary statistics using MTAG",
+    "authors": "Turley P, Walters RK, Maghzian O, Okbay A, Lee JJ, Fontana MA, et al., (23andMe Research Team; Social Science Genetic Association Consortium)",
+    "journal": "Nat Genet",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41588-017-0009-4",
+    "pubmed_id": "29292387",
+    "pmcid": "PMC5805593",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "transancestral-gwas-alcohol-dependence-reveals-2018",
+    "title": "Transancestral GWAS of alcohol dependence reveals common genetic underpinnings with psychiatric disorders",
+    "authors": "Walters RK, Polimanti R, Johnson EC, McClintick JN, Adams MJ, Adkins AE, et al., (23andMe Research Team)",
+    "journal": "Nat Neurosci",
+    "year": 2018,
+    "volume": "",
+    "doi": "10.1038/s41593-018-0275-1",
+    "pubmed_id": "30482948",
+    "pmcid": "PMC6430207",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "psychiatric-genetics",
+      "consortium"
+    ]
+  },
+  {
+    "id": "identification-novel-risk-loci-restless-2017",
+    "title": "Identification of novel risk loci for restless legs syndrome in genome-wide association studies in individuals of European ancestry: a meta-analysis",
+    "authors": "Schormair B, Zhao C, Bell S, Tilch E, Salminen AV, Pütz B, et al., (23andMe Research Team)",
+    "journal": "Lancet Neurol",
+    "year": 2017,
+    "volume": "16(11):898-907",
+    "doi": "10.1016/S1474-4422(17)30327-7",
+    "pubmed_id": "29029846",
+    "pmcid": "PMC5755468",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "multiethnic-gwas-reveals-polygenic-architecture-2017",
+    "title": "Multiethnic GWAS Reveals Polygenic Architecture of Earlobe Attachment",
+    "authors": "Shaffer JR, Li J, Lee MK, Roosenboom J, Orlova E, Adhikari K, (23andMe Research Team)",
+    "journal": "Am J Hum Genet",
+    "year": 2017,
+    "volume": "",
+    "doi": "10.1016/j.ajhg.2017.10.001",
+    "pubmed_id": "29198719",
+    "pmcid": "PMC5812923",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "GWAS",
+      "consortium"
+    ]
+  },
+  {
+    "id": "replication-characterization-cadm2-msra-genes-2017",
+    "title": "Replication and characterization of CADM2 and MSRA genes on human behavior",
+    "authors": "Boutwell B, Hinds D, (23andMe Research Team)",
+    "journal": "Heliyon",
+    "year": 2017,
+    "volume": "9",
+    "doi": "10.1016/j.heliyon.2017.e00349",
+    "pubmed_id": "28795158",
+    "pmcid": "PMC5537199",
+    "role": "consortium",
+    "abstract": "",
+    "tags": [
+      "consortium"
+    ]
+  },
+  {
+    "id": "quantifying-prion-disease-penetrance-using-2016",
+    "title": "Quantifying prion disease penetrance using large population control cohorts",
+    "authors": "Minikel EV, Vallabh SM, Lek M, Estrada K, Samocha KE, Sathirapongsasuti JF, et al., (Exome Aggregation Consortium (ExAC))",
+    "journal": "Sci Transl Med",
+    "year": 2016,
+    "volume": "8(322):322ra9-322ra9",
+    "doi": "10.1126/scitranslmed.aad5169",
+    "pubmed_id": "26791950",
+    "pmcid": "PMC4774245",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "neurogenetics",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "pushing-boundaries-somatic-copynumber-variation-2015",
+    "title": "Pushing the boundaries of somatic copy-number variation detection: advances and challenges",
+    "authors": "Sathirapongsasuti JF.",
+    "journal": "Ann Oncol",
+    "year": 2015,
+    "volume": "",
+    "doi": "10.1093/annonc/mdu536",
+    "pubmed_id": "25403588",
+    "pmcid": "",
+    "role": "first_author",
+    "abstract": "",
+    "tags": [
+      "cancer",
+      "bioinformatics",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "crossbiome-comparison-microbial-association-networks-2015",
+    "title": "Cross-biome comparison of microbial association networks",
+    "authors": "Faust K, Lima-Mendez G, Lerat JS, Sathirapongsasuti JF, Knight R, Huttenhower C, et al.",
+    "journal": "Front Microbiol",
+    "year": 2015,
+    "volume": "6:1200",
+    "doi": "10.3389/fmicb.2015.01200",
+    "pubmed_id": "26579106",
+    "pmcid": "PMC4621437",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "microbiome",
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "phewas-drug-2014",
+    "title": "Accelerating drug development with phenome-wide association studies",
+    "authors": "Sathirapongsasuti JF, Informatics Team, 23andMe Research",
+    "journal": "ASHG Annual Meeting (poster)",
+    "year": 2014,
+    "volume": "",
+    "doi": "",
+    "pubmed_id": "",
+    "pmcid": "",
+    "role": "first_author",
+    "abstract": "Viewing human genetics as 'experiments of nature' allows us to predict the efficacy and side effects of drugs in development. We present the first statistical evidence of the effectiveness of this approach, using 23andMe phenome-wide association studies (PheWAS) and historical data on drug approval to accelerate pharmaceutical R&D.",
+    "tags": [
+      "drug-discovery",
+      "PheWAS",
+      "23andMe",
+      "AI-drug-development"
+    ]
+  },
+  {
+    "id": "bber-2013",
+    "title": "Bicluster-based error rate control for eQTL analysis",
+    "authors": "Sathirapongsasuti JF, Lange C",
+    "journal": "BMC Bioinformatics (submitted)",
+    "year": 2013,
+    "volume": "",
+    "doi": "",
+    "pubmed_id": "",
+    "pmcid": "",
+    "role": "first_author",
+    "abstract": "We developed an efficient approach that addresses the inappropriate independence assumption in standard eQTL multiple-testing adjustment. By clustering highly correlated tests together, BBER reduces the effective number of tests to adjust for dramatically, improving statistical power in eQTL studies.",
+    "tags": [
+      "eQTL",
+      "statistical-methods",
+      "bioinformatics"
+    ]
+  },
+  {
+    "id": "gene-expression-analysis-uncovers-novel-2013",
+    "title": "Gene expression analysis uncovers novel hedgehog interacting protein (HHIP) effects in human bronchial epithelial cells",
+    "authors": "Zhou X, Qiu W, Sathirapongsasuti JF, Cho MH, Mancini JD, Lao T, et al.",
+    "journal": "Genomics",
+    "year": 2013,
+    "volume": "",
+    "doi": "10.1016/j.ygeno.2013.02.010",
+    "pubmed_id": "23459001",
+    "pmcid": "PMC3659826",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "histone-deacetylase-6mediated-selective-autophagy-2013",
+    "title": "Histone deacetylase 6-mediated selective autophagy regulates COPD-associated cilia dysfunction",
+    "authors": "Lam HC, Cloonan SM, Bhashyam AR, Haspel JA, Singh A, Sathirapongsasuti JF, et al.",
+    "journal": "J Clin Invest",
+    "year": 2013,
+    "volume": "123(12):5212-5230",
+    "doi": "10.1172/JCI69636",
+    "pubmed_id": "24200693",
+    "pmcid": "PMC3859407",
+    "role": "named_author",
+    "abstract": "",
+    "tags": [
+      "human-genetics"
+    ]
+  },
+  {
+    "id": "microbial-cooccurrence-2012",
+    "title": "Microbial co-occurrence relationships in the human microbiome",
+    "authors": "Faust K*, Sathirapongsasuti JF*, Izard J, Segata N, Gevers D, Raes J, Huttenhower C (*co-first authors)",
+    "journal": "PLoS Comput Biol",
+    "year": 2012,
+    "volume": "8(7):e1002606",
+    "doi": "10.1371/journal.pcbi.1002606",
+    "pubmed_id": "22807668",
+    "pmcid": "PMC3395616",
+    "role": "co_first_author",
+    "abstract": "The healthy human body is colonized by communities of commensal microbes varying widely across individuals and body habitats. We provide the first comprehensive network of ecological relationships among microbes within and across different human body sites, revealing that microbial interactions are highly habitat-specific.",
+    "tags": [
+      "microbiome",
+      "HMP",
+      "network-analysis",
+      "computational-biology"
+    ]
+  },
+  {
+    "id": "hmp-framework-2012",
+    "title": "A framework for human microbiome research",
+    "authors": "Human Microbiome Project Consortium.",
+    "journal": "Nature",
+    "year": 2012,
+    "volume": "486(7402):215-221",
+    "doi": "10.1038/nature11209",
+    "pubmed_id": "22699610",
+    "pmcid": "PMC3377744",
+    "role": "consortium",
+    "abstract": "A variety of methodologies for comprehensive characterization of human microbiomes are developed through the NIH Human Microbiome Project. Here we present a framework for human microbiome research, including the resources, analytical tools, and clinical protocols developed through this effort.",
+    "tags": [
+      "microbiome",
+      "HMP",
+      "metagenomics"
+    ]
+  },
+  {
+    "id": "hmp-structure-2012",
+    "title": "Structure, function and diversity of the healthy human microbiome",
+    "authors": "Human Microbiome Project Consortium.",
+    "journal": "Nature",
+    "year": 2012,
+    "volume": "486(7402):207-214",
+    "doi": "10.1038/nature11234",
+    "pubmed_id": "22699609",
+    "pmcid": "PMC3564958",
+    "role": "consortium",
+    "abstract": "Studies of the human microbiome have revealed that even healthy individuals differ remarkably in the microbes that occupy habitats such as the gut, skin, and vagina. We present the analysis of the largest cohort and set of distinct, clinically relevant body habitats to characterize the ecology of human-associated microbial communities.",
+    "tags": [
+      "microbiome",
+      "HMP",
+      "metagenomics"
+    ]
+  },
+  {
+    "id": "exomecnv-2011",
+    "title": "Exome sequencing-based copy-number variation and loss of heterozygosity detection: ExomeCNV",
+    "authors": "Sathirapongsasuti JF, Lee H, Horst BA, Brunner G, Cochran AJ, Binder S, et al.",
+    "journal": "Bioinformatics",
+    "year": 2011,
+    "volume": "27(19):2648-2654",
+    "doi": "10.1093/bioinformatics/btr462",
+    "pubmed_id": "21828086",
+    "pmcid": "PMC3179661",
+    "role": "first_author",
+    "abstract": "We developed ExomeCNV, a statistical method to detect copy number variation (CNV) and loss of heterozygosity (LOH) from exome sequencing data. ExomeCNV uses read depth and B-allele frequencies in a paired tumor-normal analysis, providing an R package for routine clinical and research use.",
+    "tags": [
+      "CNV",
+      "exome-sequencing",
+      "bioinformatics",
+      "cancer"
+    ]
+  },
+  {
+    "id": "ucs-2010",
+    "title": "Ultraconserved cDNA segments in the human transcriptome exhibit resistance to folding and implicate function in translation and alternative splicing",
+    "authors": "Sathirapongsasuti JF, Sathira N, Suzuki Y, Huttenhower C, Sugano S.",
+    "journal": "Nucleic Acids Res",
+    "year": 2011,
+    "volume": "",
+    "doi": "10.1093/nar/gkq949",
+    "pubmed_id": "21062826",
+    "pmcid": "PMC3064809",
+    "role": "first_author",
+    "abstract": "We identified 96 stretches of cDNA longer than 200bp with perfect conservation between human, mouse, and rat, termed Ultraconserved cDNA Segments (UCSs). GO and InterPro enrichment tests suggest function in RNA regulation and alternative splicing. The UCSs exhibit resistance to secondary structure formation, implying functional roles in mRNA biogenesis.",
+    "tags": [
+      "conservation",
+      "non-coding-RNA",
+      "genomics",
+      "splicing"
+    ]
+  },
+  {
+    "id": "propensity-score-2011",
+    "title": "Propensity score analysis in the Genetic Analysis Workshop 17 simulated data set on independent individuals",
+    "authors": "Lin CM, Sathirapongsasuti FJ, Kerner B.",
+    "journal": "BMC Proc",
+    "year": 2011,
+    "volume": "",
+    "doi": "10.1186/1753-6561-5-S9-S71",
+    "pubmed_id": "22373075",
+    "pmcid": "PMC3287911",
+    "role": "named_author",
+    "abstract": "We applied propensity score methods to the Genetic Analysis Workshop 17 simulated data to assess the utility of propensity scores for adjusting confounding in genetic association studies of complex diseases.",
+    "tags": [
+      "statistical-methods",
+      "GWAS",
+      "biostatistics"
+    ]
+  },
+  {
+    "id": "mlncrna-2008",
+    "title": "Characterization of mRNA-like noncoding RNAs by tissue-specific expression profiling",
+    "authors": "Sathirapongsasuti JF, et al.",
+    "journal": "BMB Conference (Molecular Biology Society of Japan)",
+    "year": 2008,
+    "volume": "",
+    "doi": "",
+    "pubmed_id": "",
+    "pmcid": "",
+    "role": "first_author",
+    "abstract": "We characterized mRNA-like noncoding RNAs (mlncRNAs) through expression profiling across 21 tissues and cell lines. Clustering analysis classified mlncRNAs by tissue specificity, and conservation analysis revealed long stretches of highly conserved sequences within mlncRNAs, identifying candidates for further experimental study.",
+    "tags": [
+      "non-coding-RNA",
+      "expression-profiling",
+      "genomics"
+    ]
+  },
+  {
+    "id": "great-2007",
+    "title": "Enrichment test for analysis of cis-regulatory elements (precursor to GREAT)",
+    "authors": "Sathirapongsasuti JF, Bejerano G",
+    "journal": "Stanford University (evolved into GREAT, published in Nature Biotechnology 2010)",
+    "year": 2007,
+    "volume": "",
+    "doi": "",
+    "pubmed_id": "",
+    "pmcid": "",
+    "role": "first_author",
+    "abstract": "Designed and developed a tool for statistical analysis of putative cis-regulatory elements, performing binomial, hypergeometric, and foreground-background hypergeometric enrichment tests. This work was later developed into GREAT (Genomic Regions Enrichment of Annotations Tool) by Cory McLean and published in Nature Biotechnology.",
+    "tags": [
+      "cis-regulatory",
+      "enrichment-analysis",
+      "tool-development"
+    ]
+  },
+  {
+    "id": "waterfall-2007",
+    "title": "Waterfall-generated ground vibrations: a second look",
+    "authors": "Sathirapongsasuti JF, Haugen A, Fraser-Smith AC",
+    "journal": "Stanford EE/CS Research Journal",
+    "year": 2007,
+    "volume": "",
+    "doi": "",
+    "pubmed_id": "",
+    "pmcid": "",
+    "role": "first_author",
+    "abstract": "We reexamined the long-held linear relationship between the reciprocal of waterfall height and the frequency of waterfall-generated ground vibrations. New data and analysis using fast Fourier transform and regression cast doubt on the validity of the linear model and suggest alternative explanations.",
+    "tags": [
+      "signal-processing",
+      "geophysics"
+    ]
+  }
+]

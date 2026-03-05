@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Publications by Fah Sathirapongsasuti — searchable catalog of peer-reviewed papers in genomics, computational biology, and AI-driven drug discovery.">
+  <title>Publications — Fah Sathirapongsasuti</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-accent">&gt;</span> fah.bio
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="playground.html">Playground</a></li>
+        <li><a href="updates.html">Updates</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">&#9790;</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Research Output</p>
+      <h1 class="section-title">Publications</h1>
+      <p class="section-subtitle">Peer-reviewed papers, preprints, and conference proceedings in genomics, computational biology, and AI-driven drug discovery.</p>
+    </div>
+  </div>
+
+  <!-- Publications -->
+  <section class="section">
+    <div class="section-inner">
+
+      <!-- Toolbar -->
+      <div class="pub-toolbar">
+        <div class="pub-search">
+          <span class="pub-search-icon">&#128269;</span>
+          <input type="text" id="pubSearchInput" placeholder="Search by title, author, journal, keyword...">
+        </div>
+        <div class="pub-sort">
+          <label for="pubSortSelect">Sort:</label>
+          <select id="pubSortSelect" class="bio-select" style="width:auto;min-width:130px;">
+            <option value="year-desc" selected>Newest first</option>
+            <option value="year-asc">Oldest first</option>
+            <option value="title-asc">Title A-Z</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filter chips -->
+      <div class="pub-filters" id="pubFilters">
+        <button class="pub-filter-chip active" data-filter="all">All</button>
+      </div>
+
+      <!-- Count -->
+      <p class="pub-count" id="pubCount"></p>
+
+      <!-- Publication list -->
+      <div class="pub-list" id="pubList"></div>
+
+      <div class="pub-empty" id="pubEmpty" style="display:none;">
+        No publications match your search. Try a different query.
+      </div>
+
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=sathirapongsasuti+j+%5Bauth%5D+OR+sathirapongsasuti+f+%5Bauth%5D" target="_blank" class="btn btn-outline">
+          View full list on PubMed &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jsathirapongsasuti" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=r62lrt4AAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8157-3665" target="_blank">ORCID</a>
+        <a href="https://instagram.com/fah_shine" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Fah Sathirapongsasuti. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/publications.js"></script>
+</body>
+</html>
