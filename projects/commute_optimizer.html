@@ -1,398 +1,446 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <link rel="stylesheet" href="../mainstyle.css" type="text/css" media="screen" charset="utf-8"/>
-  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Commute Optimizer — how does your drive change depending on when you leave? Charts commute duration and the Sakata Traffic Index by departure time.">
   <title>Commute Optimizer — Fah Sathirapongsasuti</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     /* ── Chat bubbles ──────────────────────────────────────────────────── */
     .chat-wrap {
       max-width: 480px;
-      margin: 18px 0 22px 10px;
-      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      margin: 1.5rem 0 2rem 0;
+      font-family: 'Inter', -apple-system, "Helvetica Neue", Arial, sans-serif;
       font-size: 14px;
     }
     .bubble-row {
       display: flex;
       flex-direction: column;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .bubble-row.left  { align-items: flex-start; }
     .bubble-row.right { align-items: flex-end; }
     .speaker {
       font-size: 11px;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 3px;
-      font-family: Verdana, sans-serif;
+      font-family: 'JetBrains Mono', monospace;
     }
     .bubble {
       padding: 10px 14px;
       border-radius: 18px;
       max-width: 78%;
-      line-height: 1.45;
+      line-height: 1.5;
       word-wrap: break-word;
     }
-    .bubble.mio { background: #34c759; color: #fff; border-bottom-left-radius: 4px; }
-    .bubble.fah { background: #007aff; color: #fff; border-bottom-right-radius: 4px; }
+    .bubble.mio {
+      background: var(--success);
+      color: #fff;
+      border-bottom-left-radius: 4px;
+    }
+    .bubble.fah {
+      background: var(--primary);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
 
     /* ── Route selector ─────────────────────────────────────────────────── */
-    .route-btns { margin: 10px 0 16px 0; }
+    .route-btns { margin: 0.75rem 0 1.25rem 0; display: flex; flex-wrap: wrap; gap: 6px; }
     .route-btn {
-      font-family: Verdana, Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 12px;
-      padding: 7px 13px;
-      margin: 3px 4px 3px 0;
-      border: 2px solid #990000;
-      border-radius: 4px;
-      background: #fff;
-      color: #990000;
+      padding: 7px 14px;
+      border: 1.5px solid var(--primary);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--primary);
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
     }
     .route-btn.active, .route-btn:hover {
-      background: #990000;
+      background: var(--primary);
       color: #fff;
     }
 
     /* ── Charts ─────────────────────────────────────────────────────────── */
     .chart-label {
-      font-family: Verdana, sans-serif;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      font-weight: bold;
-      color: #555;
+      font-weight: 600;
+      color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin: 14px 0 4px 0;
+      letter-spacing: 0.08em;
+      margin: 1rem 0 0.4rem 0;
     }
     #chart-title {
-      font-family: Verdana, sans-serif;
-      font-size: 14px;
-      font-weight: bold;
-      color: #333;
-      margin: 4px 0 8px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0.25rem 0 0.75rem 0;
     }
     .chart-wrap {
       position: relative;
-      width: 720px;
+      width: 100%;
+      max-width: 720px;
       height: 255px;
       margin-bottom: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
     }
     .chart-note {
-      font-size: 11px;
-      color: #aaa;
+      font-size: 12px;
+      color: var(--text-muted);
       font-style: italic;
-      margin: 2px 0 20px 0;
+      margin: 0.25rem 0 1.5rem 0;
     }
 
     /* ── STI key ────────────────────────────────────────────────────────── */
     .sti-key {
-      font-size: 12px;
-      color: #555;
-      background: #fafafa;
-      border-left: 3px solid #990000;
-      padding: 7px 12px;
-      margin: 4px 0 8px 0;
-      line-height: 1.65;
+      font-size: 13px;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 10px 14px;
+      margin: 0.5rem 0 0.75rem 0;
+      line-height: 1.7;
+      max-width: 720px;
     }
 
     /* ── Custom analysis panel ──────────────────────────────────────────── */
     .custom-toggle {
-      font-family: Optima, Geneva, sans-serif;
-      font-size: 16px;
-      color: #74001d;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-secondary);
       cursor: pointer;
       user-select: none;
-      margin-top: 26px;
-      padding: 8px 0 6px 0;
-      border-top: 1px solid #ddd;
+      margin-top: 2rem;
+      padding: 0.75rem 0 0.5rem 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.15s;
     }
-    .custom-toggle:hover { color: #990000; }
-    .custom-body { display: none; margin-top: 10px; }
+    .custom-toggle:hover { color: var(--primary); }
+    .custom-body { display: none; margin-top: 0.75rem; }
     .form-row {
-      margin: 9px 0;
+      margin: 10px 0;
       font-size: 13px;
       display: flex;
       align-items: flex-start;
     }
     .form-row label.flabel {
-      width: 140px;
-      font-weight: bold;
-      color: #555;
-      padding-top: 5px;
+      width: 150px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding-top: 6px;
       flex-shrink: 0;
+      font-family: 'Inter', sans-serif;
     }
     .form-row input[type="text"],
     .form-row input[type="password"] {
-      font-family: Verdana, sans-serif;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
-      padding: 5px 8px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-card);
+      color: var(--text);
       width: 310px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-row input[type="text"]:focus,
+    .form-row input[type="password"]:focus {
+      border-color: var(--primary);
     }
     .form-row select {
-      font-family: Verdana, sans-serif;
-      font-size: 12px;
-      padding: 5px 8px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      width: 120px;
-    }
-    .day-checks { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-top: 4px; }
-    .day-checks label { font-weight: normal; color: #333; cursor: pointer; }
-    .token-note {
-      font-size: 11px;
-      color: #999;
-      margin: 3px 0 0 140px;
-    }
-    .analyze-btn {
-      font-family: Verdana, Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
-      font-weight: bold;
-      padding: 9px 22px;
-      background: #990000;
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-card);
+      color: var(--text);
+      width: 130px;
+      outline: none;
+      cursor: pointer;
+    }
+    .day-checks { display: flex; flex-wrap: wrap; gap: 6px 16px; padding-top: 6px; }
+    .day-checks label { font-weight: normal; color: var(--text-secondary); cursor: pointer; font-family: 'Inter', sans-serif; }
+    .token-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 4px 0 0 150px;
+    }
+    .token-note a { color: var(--accent); }
+    .analyze-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 24px;
+      background: var(--primary);
       color: #fff;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
-      margin-top: 14px;
+      margin-top: 1rem;
+      transition: background 0.15s;
     }
-    .analyze-btn:hover   { background: #740000; }
-    .analyze-btn:disabled { background: #999; cursor: default; }
-    #progress-wrap { margin: 12px 0; display: none; }
-    #progress-bar  { width: 100%; height: 8px; }
-    #status-text   { font-size: 12px; color: #666; margin-top: 5px; }
+    .analyze-btn:hover   { background: var(--primary-hover); }
+    .analyze-btn:disabled { background: var(--text-muted); cursor: default; }
+    #progress-wrap { margin: 1rem 0; display: none; }
+    #progress-bar  { width: 100%; height: 6px; border-radius: 3px; accent-color: var(--primary); }
+    #status-text   { font-size: 12px; color: var(--text-muted); margin-top: 6px; font-family: 'JetBrains Mono', monospace; }
     .error-msg {
       font-size: 13px;
-      color: #cc0000;
-      background: #fff0f0;
-      border: 1px solid #ffcccc;
-      border-radius: 3px;
-      padding: 8px 12px;
+      color: #f87171;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: 6px;
+      padding: 10px 14px;
       margin: 10px 0;
       display: none;
     }
+    .custom-intro {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    .custom-intro a { color: var(--accent); }
   </style>
 </head>
-
 <body>
-  <div id="page-bg">
-    <div id="page">
-      <div id="page-content">
-        <div id="logo"></div>
 
-        <div id="nav">
-          <ul>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="../projects/research.html">Research</a></li>
-            <li><a href="../cv/cv.html">Vitae</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-          </ul>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-accent">&gt;</span> fah.bio
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../playground.html" class="active">Playground</a></li>
+        <li><a href="../updates.html">Updates</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">&#9790;</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Playground &rsaquo; Data</p>
+      <h1 class="section-title">Commute Optimizer</h1>
+      <p class="section-subtitle">
+        How does your commute change depending on when you leave? Charts driving time
+        at every 30-minute departure window, plus the
+        <strong>STI &mdash; Sakata Traffic Index</strong>: extra minutes in traffic
+        per minute of delayed departure.
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section">
+      <div class="section-inner">
+
+        <!-- ── The Origin Story ─────────────────────────────────────────── -->
+        <h2 style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.75rem;">The Origin Story</h2>
+
+        <div class="chat-wrap">
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">Fah, you really need to leave before 7 AM.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Mio 😩 7 AM is so early...</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">I'm serious. Every minute you leave after 7, you'll be stuck in traffic for 2 more minutes. Every. Single. Minute.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Two extra minutes <em>per minute</em>? That can't be right all morning. What about after 9 when traffic clears?</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">YES. Still terrible. Just leave early. I drive this every day.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">...okay but I'm building a chart first. 📊</div>
+          </div>
         </div>
 
-        <div id="content">
+        <!-- ── Route selector + charts ─────────────────────────────────── -->
+        <h2 style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.5rem;">Explore the Data</h2>
 
-          <h1 id="header">Commute Optimizer</h1>
+        <div class="route-btns">
+          <button class="route-btn" onclick="loadDemo('sf_winery', this)">SF &#x2192; Suisun Winery</button>
+          <button class="route-btn" onclick="loadDemo('sf_sj', this)">SF &#x2192; San Jose</button>
+          <button class="route-btn active" id="btn-home" onclick="loadDemo('home_23andme', this)">Fairfield &#x2192; 23andMe &#x2605;</button>
+        </div>
 
-          <p>
-            How does your commute change depending on when you leave? This tool charts
-            driving time for a route at every 30-minute departure window across the day,
-            for each weekday. Beneath the duration chart is the
-            <strong>STI — Sakata Traffic Index</strong>: the rate of change of commute
-            time with respect to departure time, in minutes per minute. An STI of&nbsp;2
-            means "each extra minute you wait costs you 2 extra minutes in traffic."
-            A negative STI means waiting actually <em>shortens</em> your drive (though
-            you still arrive later overall).
+        <div id="chart-title">Fairfield (Southlake Dr) &#x2192; 23andMe (Mountain View)</div>
+
+        <div class="chart-label">Commute Duration</div>
+        <div class="chart-wrap"><canvas id="durationCanvas"></canvas></div>
+
+        <div class="chart-label">STI &#x2014; Sakata Traffic Index</div>
+        <div class="sti-key">
+          <strong>How to read STI:</strong>
+          &nbsp;STI &gt; 0: leaving later adds to your commute time.
+          &nbsp;<strong>STI = 2</strong>: Mio's rule — every extra minute costs 2 minutes in traffic.
+          &nbsp;STI &lt; 0: traffic is clearing fast enough that <em>waiting</em> shortens your drive.
+          &nbsp;STI &#x2248; 0: departure time doesn't matter much.
+        </div>
+        <div class="chart-wrap"><canvas id="stiCanvas"></canvas></div>
+
+        <p class="chart-note">
+          Demo data is modeled on typical Bay Area traffic patterns (I-80, Bay Bridge,
+          US-101) using historical rush-hour curves. For live data based on current
+          conditions, use Custom Analysis below with your own Mapbox token.
+        </p>
+
+        <!-- ── Post-chart chat ─────────────────────────────────────────── -->
+        <div class="chat-wrap">
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Okay Mio, look at the charts above. &#x2191;</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">You were RIGHT about 7–8 AM! The STI peaks at ~2.0. Your "2 minutes per minute" rule holds during rush hour. 😱</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">BUT — look after 9 AM. The STI goes negative. Traffic is clearing faster than I'm driving into it. The 9 AM commute is 30 minutes shorter than 8:30!</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">...so if you can't leave before 7, you should just wait until after 9?</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Exactly. Unless I leave before 7 AM, I'm better off waiting until after 9. QED. 🎉</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">Fine. But you're still setting your alarm for 6:45.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Deal. 🤝</div>
+          </div>
+        </div>
+
+        <!-- ── Custom Analysis ─────────────────────────────────────────── -->
+        <div class="custom-toggle" id="custom-toggle" onclick="toggleCustom()">
+          <span id="custom-arrow">&#x25B6;</span>
+          Custom Analysis &mdash; run your own route with a Mapbox token
+        </div>
+        <div class="custom-body" id="custom-body">
+          <p class="custom-intro">
+            Analyze any route using the
+            <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox Directions API</a>
+            (free tier: 100,000 requests/month). Your token is used only in your browser
+            and is never sent to this server.
           </p>
 
-          <!-- ── The Origin Story ───────────────────────────────────────── -->
-          <h3 id="topic">The Origin Story</h3>
-
-          <div class="chat-wrap">
-            <div class="bubble-row left">
-              <span class="speaker">Mio</span>
-              <div class="bubble mio">Fah, you really need to leave before 7 AM.</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">Mio 😩 7 AM is so early...</div>
-            </div>
-            <div class="bubble-row left">
-              <span class="speaker">Mio</span>
-              <div class="bubble mio">I'm serious. Every minute you leave after 7, you'll be stuck in traffic for 2 more minutes. Every. Single. Minute.</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">Two extra minutes <em>per minute</em>? That can't be right all morning. What about after 9 when traffic clears?</div>
-            </div>
-            <div class="bubble-row left">
-              <span class="speaker">Mio</span>
-              <div class="bubble mio">YES. Still terrible. Just leave early. I drive this every day.</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">...okay but I'm building a chart first. 📊</div>
-            </div>
+          <div class="form-row">
+            <label class="flabel">Mapbox Token</label>
+            <input type="password" id="token" placeholder="pk.eyJ1Ij..." autocomplete="off"/>
+          </div>
+          <div class="token-note">
+            Get a free token at
+            <a href="https://account.mapbox.com/access-tokens/" target="_blank" rel="noopener">account.mapbox.com</a>.
+            Restrict it to your domain for safety.
           </div>
 
-          <!-- ── Route selector + charts ───────────────────────────────── -->
-          <h3 id="topic">Explore the Data</h3>
-
-          <div class="route-btns">
-            <button class="route-btn" onclick="loadDemo('sf_winery', this)">SF &#x2192; Suisun Winery</button>
-            <button class="route-btn" onclick="loadDemo('sf_sj', this)">SF &#x2192; San Jose</button>
-            <button class="route-btn active" id="btn-home" onclick="loadDemo('home_23andme', this)">Fairfield &#x2192; 23andMe &#x2605;</button>
+          <div class="form-row" style="margin-top:1rem;">
+            <label class="flabel">Point A (origin)</label>
+            <input type="text" id="addr-a" value="Fairfield, CA"/>
+          </div>
+          <div class="form-row">
+            <label class="flabel">Point B (destination)</label>
+            <input type="text" id="addr-b" value="Mountain View, CA"/>
+          </div>
+          <div class="form-row">
+            <label class="flabel">Days</label>
+            <span class="day-checks">
+              <label><input type="checkbox" class="day-cb" value="0" checked/> Mon</label>
+              <label><input type="checkbox" class="day-cb" value="1" checked/> Tue</label>
+              <label><input type="checkbox" class="day-cb" value="2" checked/> Wed</label>
+              <label><input type="checkbox" class="day-cb" value="3" checked/> Thu</label>
+              <label><input type="checkbox" class="day-cb" value="4" checked/> Fri</label>
+            </span>
+          </div>
+          <div class="form-row">
+            <label class="flabel">Start time</label>
+            <select id="start-hour"></select>
+          </div>
+          <div class="form-row">
+            <label class="flabel">End time</label>
+            <select id="end-hour"></select>
+          </div>
+          <div class="form-row">
+            <label class="flabel">Interval</label>
+            <select id="interval">
+              <option value="15">15 min</option>
+              <option value="30" selected>30 min</option>
+              <option value="60">60 min</option>
+            </select>
           </div>
 
-          <div id="chart-title">Fairfield (Southlake Dr) &#x2192; 23andMe (Mountain View)</div>
+          <div class="error-msg" id="error-msg"></div>
 
-          <div class="chart-label">Commute Duration</div>
-          <div class="chart-wrap"><canvas id="durationCanvas"></canvas></div>
+          <button class="analyze-btn" id="analyze-btn" onclick="analyzeCustom()">Analyze Commute</button>
 
-          <div class="chart-label">STI &#x2014; Sakata Traffic Index</div>
-          <div class="sti-key">
-            <strong>How to read STI:</strong>
-            &nbsp;STI &gt; 0: leaving later adds to your commute time.
-            &nbsp;<strong>STI = 2</strong>: Mio's rule — every extra minute costs 2 minutes in traffic.
-            &nbsp;STI &lt; 0: traffic is clearing fast enough that <em>waiting</em> shortens your drive.
-            &nbsp;STI &#x2248; 0: departure time doesn't matter much.
+          <div id="progress-wrap">
+            <progress id="progress-bar" value="0" max="100"></progress>
+            <div id="status-text">Fetching data&#x2026;</div>
           </div>
-          <div class="chart-wrap"><canvas id="stiCanvas"></canvas></div>
+        </div><!-- end .custom-body -->
 
-          <p class="chart-note">
-            Demo data is modeled on typical Bay Area traffic patterns (I-80, Bay Bridge,
-            US-101) using historical rush-hour curves. For live data based on current
-            conditions, use Custom Analysis below with your own Mapbox token.
-          </p>
+      </div>
+    </section>
+  </main>
 
-          <!-- ── Post-chart chat ───────────────────────────────────────── -->
-          <div class="chat-wrap">
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">Okay Mio, look at the charts above. &#x2191;</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">You were RIGHT about 7–8 AM! The STI peaks at ~2.0. Your "2 minutes per minute" rule holds during rush hour. 😱</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">BUT — look after 9 AM. The STI goes negative. Traffic is clearing faster than I'm driving into it. The 9 AM commute is 30 minutes shorter than 8:30!</div>
-            </div>
-            <div class="bubble-row left">
-              <span class="speaker">Mio</span>
-              <div class="bubble mio">...so if you can't leave before 7, you should just wait until after 9?</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">Exactly. Unless I leave before 7 AM, I'm better off waiting until after 9. QED. 🎉</div>
-            </div>
-            <div class="bubble-row left">
-              <span class="speaker">Mio</span>
-              <div class="bubble mio">Fine. But you're still setting your alarm for 6:45.</div>
-            </div>
-            <div class="bubble-row right">
-              <span class="speaker">Fah</span>
-              <div class="bubble fah">Deal. 🤝</div>
-            </div>
-          </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jsathirapongsasuti" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=r62lrt4AAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8157-3665" target="_blank">ORCID</a>
+        <a href="https://instagram.com/fah_shine" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Fah Sathirapongsasuti. All rights reserved.</p>
+    </div>
+  </footer>
 
-          <!-- ── Custom Analysis ───────────────────────────────────────── -->
-          <div class="custom-toggle" id="custom-toggle" onclick="toggleCustom()">
-            &#x25B6; Custom Analysis &#x2014; run your own route with a Mapbox token
-          </div>
-          <div class="custom-body" id="custom-body">
-            <p style="font-size:13px; color:#555; margin-top:8px;">
-              Analyze any route using the
-              <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox Directions API</a>
-              (free tier: 100,000 requests/month). Your token is used only in your browser
-              and is never sent to this server.
-            </p>
-
-            <div class="form-row">
-              <label class="flabel">Mapbox Token</label>
-              <input type="password" id="token" placeholder="pk.eyJ1Ij..." autocomplete="off"/>
-            </div>
-            <div class="token-note">
-              Get a free token at
-              <a href="https://account.mapbox.com/access-tokens/" target="_blank" rel="noopener">account.mapbox.com</a>.
-              Restrict it to your domain for safety.
-            </div>
-
-            <div class="form-row" style="margin-top:14px;">
-              <label class="flabel">Point A (origin)</label>
-              <input type="text" id="addr-a" value="Fairfield, CA"/>
-            </div>
-            <div class="form-row">
-              <label class="flabel">Point B (destination)</label>
-              <input type="text" id="addr-b" value="Mountain View, CA"/>
-            </div>
-            <div class="form-row">
-              <label class="flabel">Days</label>
-              <span class="day-checks">
-                <label><input type="checkbox" class="day-cb" value="0" checked/> Mon</label>
-                <label><input type="checkbox" class="day-cb" value="1" checked/> Tue</label>
-                <label><input type="checkbox" class="day-cb" value="2" checked/> Wed</label>
-                <label><input type="checkbox" class="day-cb" value="3" checked/> Thu</label>
-                <label><input type="checkbox" class="day-cb" value="4" checked/> Fri</label>
-              </span>
-            </div>
-            <div class="form-row">
-              <label class="flabel">Start time</label>
-              <select id="start-hour"></select>
-            </div>
-            <div class="form-row">
-              <label class="flabel">End time</label>
-              <select id="end-hour"></select>
-            </div>
-            <div class="form-row">
-              <label class="flabel">Interval</label>
-              <select id="interval">
-                <option value="15">15 min</option>
-                <option value="30" selected="selected">30 min</option>
-                <option value="60">60 min</option>
-              </select>
-            </div>
-
-            <div class="error-msg" id="error-msg"></div>
-
-            <button class="analyze-btn" id="analyze-btn" onclick="analyzeCustom()">Analyze Commute</button>
-
-            <div id="progress-wrap">
-              <progress id="progress-bar" value="0" max="100"></progress>
-              <div id="status-text">Fetching data&#x2026;</div>
-            </div>
-          </div><!-- end .custom-body -->
-
-        </div><!-- end #content -->
-
-        <!-- Google CSE Search Box -->
-        <form id="searchbox_009408533305800130436:xkx4srkjx9g" action="../search-results.html">
-          <input type="hidden" name="cx" value="009408533305800130436:xkx4srkjx9g"/>
-          <input type="hidden" name="cof" value="FORID:9"/>
-          <input name="q" type="text" size="40"/>
-          <input type="submit" name="sa" value="Search"/>
-        </form>
-        <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_009408533305800130436%3Axkx4srkjx9g"></script>
-
-        <br clear="all"/>
-        <div id="copyright">&copy; Copyright 2009-2015 Fah Sathirapongsasuti. All rights reserved.</div>
-      </div><!-- end #page-content -->
-      <br clear="all"/>
-    </div><!-- end #page -->
-    <div id="page-bottom"></div>
-  </div><!-- end #page-bg -->
-
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try { var pageTracker = _gat._getTracker("UA-2424761-2"); pageTracker._trackPageview(); } catch(err) {}
-  </script>
+  <script src="../js/main.js"></script>
 
   <script>
   // ── Demo Data ─────────────────────────────────────────────────────────────
@@ -440,13 +488,13 @@
 
   // ── Colors ────────────────────────────────────────────────────────────────
   const DAY_COLORS = {
-    Mon: '#e6b800', // yellow (darkened for visibility on white)
-    Tue: '#e74c3c', // red
-    Wed: '#27ae60', // green
-    Thu: '#e67e22', // orange
-    Fri: '#2980b9', // blue
-    Sat: '#8e44ad', // purple
-    Sun: '#c0392b'  // dark red
+    Mon: '#e6b800',
+    Tue: '#e74c3c',
+    Wed: '#27ae60',
+    Thu: '#e67e22',
+    Fri: '#2980b9',
+    Sat: '#8e44ad',
+    Sun: '#c0392b'
   };
 
   // ── STI Calculation ───────────────────────────────────────────────────────
@@ -467,6 +515,9 @@
   var stiChart      = null;
 
   function makeOptions(yLabel) {
+    var isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    var gridColor  = isDark ? 'rgba(255,255,255,0.07)' : '#f0f0f0';
+    var labelColor = isDark ? '#94a3b8' : '#555';
     return {
       responsive: true,
       maintainAspectRatio: false,
@@ -477,7 +528,8 @@
             filter: function(item, data) {
               return !data.datasets[item.datasetIndex].hideInLegend;
             },
-            font: { family: 'Verdana, Arial, sans-serif', size: 11 },
+            font: { family: 'Inter, sans-serif', size: 11 },
+            color: labelColor,
             boxWidth: 20
           }
         },
@@ -487,13 +539,13 @@
       },
       scales: {
         x: {
-          ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 45, maxTicksLimit: 13 },
-          grid: { color: '#f0f0f0' }
+          ticks: { font: { size: 10 }, color: labelColor, maxRotation: 45, minRotation: 45, maxTicksLimit: 13 },
+          grid: { color: gridColor }
         },
         y: {
-          title: { display: true, text: yLabel, font: { size: 11 } },
-          ticks: { font: { size: 11 } },
-          grid: { color: '#f0f0f0' }
+          title: { display: true, text: yLabel, font: { size: 11 }, color: labelColor },
+          ticks: { font: { size: 11 }, color: labelColor },
+          grid: { color: gridColor }
         }
       }
     };
@@ -535,7 +587,7 @@
     stiDatasets.push({
       label: 'STI = 0',
       data: new Array(zeroLen).fill(0),
-      borderColor: '#bbb',
+      borderColor: '#64748b',
       borderDash: [5, 4],
       borderWidth: 1,
       pointRadius: 0,
@@ -546,7 +598,7 @@
     stiDatasets.push({
       label: "Mio's rule (STI\u202F=\u202F2)",
       data: new Array(zeroLen).fill(2),
-      borderColor: '#cc6600',
+      borderColor: '#f59e0b',
       borderDash: [7, 4],
       borderWidth: 1.5,
       pointRadius: 0,
@@ -614,11 +666,8 @@
 
   function nextWeekdayDate(dayIndex) { // 0=Mon ... 4=Fri
     var today    = new Date();
-    var todayDow = today.getDay();           // 0=Sun, 1=Mon, ..., 6=Sat
-    var targetDow = (dayIndex + 1) % 7 || 7; // Mon=1 ... Fri=5 (0 never used for Mon-Fri)
-    // Actually: Mon=1,Tue=2,Wed=3,Thu=4,Fri=5 in JS getDay()
-    // dayIndex 0=Mon => targetDow=1; dayIndex 4=Fri => targetDow=5
-    targetDow = dayIndex + 1;
+    var todayDow = today.getDay();
+    var targetDow = dayIndex + 1;
     var daysAhead = targetDow - todayDow;
     if (daysAhead <= 0) daysAhead += 7;
     var d = new Date(today);
@@ -714,9 +763,7 @@
   function toggleCustom() {
     customOpen = !customOpen;
     document.getElementById('custom-body').style.display = customOpen ? 'block' : 'none';
-    document.getElementById('custom-toggle').innerHTML =
-      (customOpen ? '&#x25BC;' : '&#x25B6;') +
-      ' Custom Analysis &#x2014; run your own route with a Mapbox token';
+    document.getElementById('custom-arrow').innerHTML = customOpen ? '&#x25BC;' : '&#x25B6;';
   }
 
   // ── Populate Time Selects ─────────────────────────────────────────────────
