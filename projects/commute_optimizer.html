@@ -114,23 +114,28 @@
     }
 
     /* ── Custom analysis panel ──────────────────────────────────────────── */
-    .custom-toggle {
+    .custom-featured {
+      background: var(--bg-card);
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 720px;
+    }
+    .custom-featured-title {
       font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--text-secondary);
-      cursor: pointer;
-      user-select: none;
-      margin-top: 2rem;
-      padding: 0.75rem 0 0.5rem 0;
-      border-top: 1px solid var(--border);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 0.25rem 0;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      transition: color 0.15s;
     }
-    .custom-toggle:hover { color: var(--primary); }
-    .custom-body { display: none; margin-top: 0.75rem; }
+    .custom-featured-title::before {
+      content: '★';
+      font-size: 0.9rem;
+    }
     .form-row {
       margin: 10px 0;
       font-size: 13px;
@@ -263,105 +268,10 @@
     <section class="section">
       <div class="section-inner">
 
-        <!-- ── The Origin Story ─────────────────────────────────────────── -->
-        <h2 style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.75rem;">The Origin Story</h2>
-
-        <div class="chat-wrap">
-          <div class="bubble-row left">
-            <span class="speaker">Mio</span>
-            <div class="bubble mio">Fah, you really need to leave before 7 AM.</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">Mio 😩 7 AM is so early...</div>
-          </div>
-          <div class="bubble-row left">
-            <span class="speaker">Mio</span>
-            <div class="bubble mio">I'm serious. Every minute you leave after 7, you'll be stuck in traffic for 2 more minutes. Every. Single. Minute.</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">Two extra minutes <em>per minute</em>? That can't be right all morning. What about after 9 when traffic clears?</div>
-          </div>
-          <div class="bubble-row left">
-            <span class="speaker">Mio</span>
-            <div class="bubble mio">YES. Still terrible. Just leave early. I drive this every day.</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">...okay but I'm building a chart first. 📊</div>
-          </div>
-        </div>
-
-        <!-- ── Route selector + charts ─────────────────────────────────── -->
-        <h2 style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.5rem;">Explore the Data</h2>
-
-        <div class="route-btns">
-          <button class="route-btn" onclick="loadDemo('sf_winery', this)">SF &#x2192; Suisun Winery</button>
-          <button class="route-btn" onclick="loadDemo('sf_sj', this)">SF &#x2192; San Jose</button>
-          <button class="route-btn active" id="btn-home" onclick="loadDemo('home_23andme', this)">Fairfield &#x2192; 23andMe &#x2605;</button>
-        </div>
-
-        <div id="chart-title">Fairfield (Southlake Dr) &#x2192; 23andMe (Mountain View)</div>
-
-        <div class="chart-label">Commute Duration</div>
-        <div class="chart-wrap"><canvas id="durationCanvas"></canvas></div>
-
-        <div class="chart-label">STI &#x2014; Sakata Traffic Index</div>
-        <div class="sti-key">
-          <strong>How to read STI:</strong>
-          &nbsp;STI &gt; 0: leaving later adds to your commute time.
-          &nbsp;<strong>STI = 2</strong>: Mio's rule — every extra minute costs 2 minutes in traffic.
-          &nbsp;STI &lt; 0: traffic is clearing fast enough that <em>waiting</em> shortens your drive.
-          &nbsp;STI &#x2248; 0: departure time doesn't matter much.
-        </div>
-        <div class="chart-wrap"><canvas id="stiCanvas"></canvas></div>
-
-        <p class="chart-note">
-          Demo data is modeled on typical Bay Area traffic patterns (I-80, Bay Bridge,
-          US-101) using historical rush-hour curves. For live data based on current
-          conditions, use Custom Analysis below with your own Mapbox token.
-        </p>
-
-        <!-- ── Post-chart chat ─────────────────────────────────────────── -->
-        <div class="chat-wrap">
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">Okay Mio, look at the charts above. &#x2191;</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">You were RIGHT about 7–8 AM! The STI peaks at ~2.0. Your "2 minutes per minute" rule holds during rush hour. 😱</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">BUT — look after 9 AM. The STI goes negative. Traffic is clearing faster than I'm driving into it. The 9 AM commute is 30 minutes shorter than 8:30!</div>
-          </div>
-          <div class="bubble-row left">
-            <span class="speaker">Mio</span>
-            <div class="bubble mio">...so if you can't leave before 7, you should just wait until after 9?</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">Exactly. Unless I leave before 7 AM, I'm better off waiting until after 9. QED. 🎉</div>
-          </div>
-          <div class="bubble-row left">
-            <span class="speaker">Mio</span>
-            <div class="bubble mio">Fine. But you're still setting your alarm for 6:45.</div>
-          </div>
-          <div class="bubble-row right">
-            <span class="speaker">Fah</span>
-            <div class="bubble fah">Deal. 🤝</div>
-          </div>
-        </div>
-
-        <!-- ── Custom Analysis ─────────────────────────────────────────── -->
-        <div class="custom-toggle" id="custom-toggle" onclick="toggleCustom()">
-          <span id="custom-arrow">&#x25B6;</span>
-          Custom Analysis &mdash; run your own route with a Mapbox token
-        </div>
-        <div class="custom-body" id="custom-body">
-          <p class="custom-intro">
+        <!-- ── Custom Analysis (featured) ─────────────────────────────── -->
+        <div class="custom-featured">
+          <p class="custom-featured-title">Custom Analysis &mdash; run your own route</p>
+          <p class="custom-intro" style="margin-top:0.1rem;">
             Analyze any route using the
             <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox Directions API</a>
             (free tier: 100,000 requests/month). Your token is used only in your browser
@@ -421,7 +331,100 @@
             <progress id="progress-bar" value="0" max="100"></progress>
             <div id="status-text">Fetching data&#x2026;</div>
           </div>
-        </div><!-- end .custom-body -->
+        </div><!-- end .custom-featured -->
+
+        <!-- ── The Origin Story ─────────────────────────────────────────── -->
+        <h2 style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.75rem;">The Origin Story</h2>
+
+        <div class="chat-wrap">
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">Fah, you really need to leave before 7 AM.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Mio 😩 7 AM is so early...</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">I'm serious. Every minute you leave after 7, you'll be stuck in traffic for 2 more minutes. Every. Single. Minute.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Two extra minutes <em>per minute</em>? That can't be right all morning. What about after 9 when traffic clears?</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">YES. Still terrible. Just leave early. I drive this every day.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">...okay but I'm building a chart first. 📊</div>
+          </div>
+        </div>
+
+        <!-- ── Route selector + charts ─────────────────────────────────── -->
+        <h2 style="font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.5rem;">Explore the Data</h2>
+
+        <div class="route-btns">
+          <button class="route-btn" onclick="loadDemo('sf_winery', this)">SF &#x2192; Suisun Winery</button>
+          <button class="route-btn" onclick="loadDemo('sf_sj', this)">SF &#x2192; San Jose</button>
+          <button class="route-btn active" id="btn-home" onclick="loadDemo('home_23andme', this)">Fairfield &#x2192; 23andMe &#x2605;</button>
+        </div>
+
+        <div id="chart-title">Fairfield (Southlake Dr) &#x2192; 23andMe (Mountain View)</div>
+
+        <div class="chart-label">Commute Duration</div>
+        <div class="chart-wrap"><canvas id="durationCanvas"></canvas></div>
+
+        <div class="chart-label">STI &#x2014; Sakata Traffic Index</div>
+        <div class="sti-key">
+          <strong>How to read STI:</strong>
+          &nbsp;STI &gt; 0: leaving later adds to your commute time.
+          &nbsp;<strong>STI = 2</strong>: Mio's rule — every extra minute costs 2 minutes in traffic.
+          &nbsp;STI &lt; 0: traffic is clearing fast enough that <em>waiting</em> shortens your drive.
+          &nbsp;STI &#x2248; 0: departure time doesn't matter much.
+        </div>
+        <div class="chart-wrap"><canvas id="stiCanvas"></canvas></div>
+
+        <p class="chart-note">
+          Demo data is modeled on typical Bay Area traffic patterns (I-80, Bay Bridge,
+          US-101) using historical rush-hour curves. For live data based on current
+          conditions, use Custom Analysis above with your own Mapbox token.
+        </p>
+
+        <!-- ── Post-chart chat ─────────────────────────────────────────── -->
+        <div class="chat-wrap">
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Okay Mio, look at the charts above. &#x2191;</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">You were RIGHT about 7–8 AM! The STI peaks at ~2.0. Your "2 minutes per minute" rule holds during rush hour. 😱</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">BUT — look after 9 AM. The STI goes negative. Traffic is clearing faster than I'm driving into it. The 9 AM commute is 30 minutes shorter than 8:30!</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">...so if you can't leave before 7, you should just wait until after 9?</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Exactly. Unless I leave before 7 AM, I'm better off waiting until after 9. QED. 🎉</div>
+          </div>
+          <div class="bubble-row left">
+            <span class="speaker">Mio</span>
+            <div class="bubble mio">Fine. But you're still setting your alarm for 6:45.</div>
+          </div>
+          <div class="bubble-row right">
+            <span class="speaker">Fah</span>
+            <div class="bubble fah">Deal. 🤝</div>
+          </div>
+        </div>
+
 
       </div>
     </section>
@@ -756,14 +759,6 @@
       btn.disabled = false;
       document.getElementById('progress-wrap').style.display = 'none';
     }
-  }
-
-  // ── Toggle Custom Panel ───────────────────────────────────────────────────
-  var customOpen = false;
-  function toggleCustom() {
-    customOpen = !customOpen;
-    document.getElementById('custom-body').style.display = customOpen ? 'block' : 'none';
-    document.getElementById('custom-arrow').innerHTML = customOpen ? '&#x25BC;' : '&#x25B6;';
   }
 
   // ── Populate Time Selects ─────────────────────────────────────────────────
