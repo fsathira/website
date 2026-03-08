@@ -1,3 +1,6 @@
 [submodule "projects/california-vineyards"]
 	path = projects/california-vineyards
 	url = https://github.com/fsathira/CaliforniaHistoricVineyards.git
+[submodule "projects/sunset_harvest_data"]
+	path = projects/sunset_harvest_data
+	url = https://github.com/fsathira/SunsetHarvestData.git

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sunset Harvest Data — interactive fermentation dashboard for Sunset Cellars, Suisun Valley, CA. Tracks Brix, must temperature, and Fairfield weather by fermentation day.">
+  <title>Sunset Harvest Data — Fah Sathirapongsasuti</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="../images/favicon.ico" type="image/x-icon">
+  <style>
+    /* ── Project page layout ─────────────────────────────────────────────── */
+    .project-hero {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .project-hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .project-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+    .project-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0 0 0.75rem;
+      color: var(--text);
+      line-height: 1.15;
+    }
+    .project-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin: 0 0 1.75rem;
+      line-height: 1.6;
+    }
+    .launch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .launch-btn:hover {
+      background: var(--primary-hover, #2563eb);
+      transform: translateY(-1px);
+    }
+    .launch-btn svg { flex-shrink: 0; }
+    .gh-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+      margin-left: 1rem;
+      padding: 0.7rem 0;
+      transition: color 0.15s;
+    }
+    .gh-link:hover { color: var(--primary); }
+
+    /* ── Status banner ──────────────────────────────────────────────────── */
+    .status-banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 6px;
+      padding: 0.85rem 1.1rem;
+      margin: 2rem 0 0;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .status-banner code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      background: var(--bg);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      color: var(--accent, #06b6d4);
+    }
+
+    /* ── Detail sections ────────────────────────────────────────────────── */
+    .project-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 3rem;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 600px) { .detail-grid { grid-template-columns: 1fr; } }
+    .detail-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+    }
+    .detail-card h3 {
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin: 0 0 0.65rem;
+    }
+    .detail-card p, .detail-card ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.65;
+    }
+    .detail-card ul { padding-left: 1.2rem; }
+    .detail-card li { margin-bottom: 0.3rem; }
+
+    /* ── Quick-start block ──────────────────────────────────────────────── */
+    .quickstart {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 1.6rem;
+    }
+    .quickstart h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      color: var(--text);
+    }
+    .quickstart pre {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--text);
+      overflow-x: auto;
+      line-height: 1.7;
+      margin: 0 0 1rem;
+    }
+    .quickstart pre:last-child { margin-bottom: 0; }
+    .qs-comment { color: var(--text-muted); }
+    .qs-cmd     { color: var(--accent, #06b6d4); }
+    .qs-flag    { color: #a78bfa; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-accent">&gt;</span> fah.bio
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../playground.html" class="active">Playground</a></li>
+        <li><a href="../updates.html">Updates</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">&#9790;</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">&#9776;</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Project hero -->
+  <div class="project-hero">
+    <div class="project-hero-inner">
+      <div class="project-meta">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Dash</span>
+        <span class="project-tag">Plotly</span>
+        <span class="project-tag">Google Sheets</span>
+        <span class="project-tag">Open-Meteo</span>
+      </div>
+      <h1 class="project-title">Sunset Harvest Data</h1>
+      <p class="project-subtitle">
+        Interactive fermentation dashboard for <strong>Sunset Cellars</strong> (Suisun Valley, Fairfield, CA).
+        Tracks Brix, must temperature, and Fairfield weather by fermentation day — live from Google Sheets.
+      </p>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.25rem;">
+        <a href="http://corn.stanford.edu:8050" target="_blank" rel="noopener" class="launch-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9"/>
+            <polyline points="10 1 15 1 15 6"/><line x1="15" y1="1" x2="7" y2="9"/>
+          </svg>
+          Open Dashboard
+        </a>
+        <a href="https://github.com/fsathira/SunsetHarvestData" target="_blank" rel="noopener" class="gh-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+      <div class="status-banner">
+        <strong>Live app:</strong> The dashboard runs on the Stanford CS server at
+        <code>http://&lt;machine&gt;.stanford.edu:8050</code>. If it doesn't load,
+        the server process may be down — see the
+        <a href="https://github.com/fsathira/SunsetHarvestData#hosting-on-the-stanford-cs-server" target="_blank" rel="noopener" style="color:var(--primary);">README</a>
+        for how to restart it, or connect via
+        <a href="https://uit.stanford.edu/service/vpn" target="_blank" rel="noopener" style="color:var(--primary);">Stanford VPN</a>
+        if you're off-campus.
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="project-body">
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>What it shows</h3>
+        <ul>
+          <li>Brix (sugar) vs. fermentation day</li>
+          <li>Must temperature vs. fermentation day</li>
+          <li>Fairfield air temp &amp; rain (Open-Meteo) over the same window</li>
+          <li>Per-point notes on hover and click</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h3>Data sources</h3>
+        <ul>
+          <li>Live from Google Sheets (2025-first layout)</li>
+          <li>Falls back to local CSV if credentials are absent</li>
+          <li>Weather via <a href="https://open-meteo.com" target="_blank" rel="noopener" style="color:var(--primary);">Open-Meteo</a> — no API key needed</li>
+          <li>Vintage → varietal → bin selection in the UI</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h3>Filters</h3>
+        <p>Vintage, Varietal / Vineyard, and Bin dropdowns filter to a single fermentation lot. Day 0 = first recorded measurement for that lot.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Stack</h3>
+        <ul>
+          <li>Python 3.10+, Dash 2.14+, Plotly 5.18+</li>
+          <li>gspread + google-auth for live Sheets</li>
+          <li>Cormorant Garamond / Lato typography</li>
+          <li>Sunset Cellars palette (burgundy, cream)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quickstart">
+      <h2>Run it locally</h2>
+      <pre><span class="qs-comment"># clone</span>
+<span class="qs-cmd">git clone</span> https://github.com/fsathira/SunsetHarvestData.git
+<span class="qs-cmd">cd</span> SunsetHarvestData
+
+<span class="qs-comment"># one-time setup</span>
+<span class="qs-cmd">./setup.sh</span>
+
+<span class="qs-comment"># run (uses sample CSV if no Google credentials)</span>
+<span class="qs-cmd">./run.sh</span> <span class="qs-flag">--no-sheets</span>
+<span class="qs-comment"># open http://127.0.0.1:8050</span></pre>
+
+      <h2 style="margin-top:1.25rem;">Run on Stanford CS server</h2>
+      <pre><span class="qs-comment"># SSH in — note the exact machine name</span>
+<span class="qs-cmd">ssh</span> &lt;sunet&gt;@corn.stanford.edu
+<span class="qs-cmd">hostname</span>                        <span class="qs-comment"># e.g. corn30.stanford.edu</span>
+
+<span class="qs-comment"># clone into your web directory and set up</span>
+<span class="qs-cmd">cd</span> ~/WWW
+<span class="qs-cmd">git clone</span> https://github.com/fsathira/SunsetHarvestData.git projects/sunset_harvest_data
+<span class="qs-cmd">cd</span> projects/sunset_harvest_data
+<span class="qs-cmd">./setup.sh</span>
+
+<span class="qs-comment"># run inside screen so it survives logout</span>
+<span class="qs-cmd">screen</span> <span class="qs-flag">-S</span> sunset-harvest
+<span class="qs-cmd">./run.sh</span> <span class="qs-flag">--host</span> 0.0.0.0 <span class="qs-flag">--no-debug</span>
+<span class="qs-comment"># Ctrl-A D to detach   |   screen -r sunset-harvest to reattach</span></pre>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jsathirapongsasuti" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=r62lrt4AAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8157-3665" target="_blank">ORCID</a>
+        <a href="https://instagram.com/fah_shine" target="_blank">Instagram</a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Fah Sathirapongsasuti. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
